@@ -26,6 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Bootstrap
 gem 'bootstrap-sass', '~> 3.2.0'
+# Automatically adds prefixes to CSS to cross-browser compatability.
 gem 'autoprefixer-rails'
 
 # Font Awesome
