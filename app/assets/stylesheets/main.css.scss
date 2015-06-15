@@ -2,7 +2,6 @@
 
 body {
   background-image: url("ggbridge-1920x1282.jpg");
-  background-color: #101010;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -11,6 +10,10 @@ body {
 
   h1 {
     text-align: center;
+    background-color: #e7e7e7;
+    border: 2px solid #000;
+    border-radius: 1em;
+    padding: .2em 0;
   }
 }
 
@@ -20,10 +23,15 @@ figure {
 }
 
 .section {
+  background-color: #e7e7e7;
   text-align: center;
   margin-top: 60px;
-  border: 2px solid black;
+  border: 2px solid #000;
   border-radius: 1em 4em 1em 4em;
+
+  p {
+    color: #000;
+  }
 }
 
 .about-me-section {
