@@ -15,6 +15,10 @@ body {
     border-radius: 1em;
     padding: .2em 0;
   }
+
+  p {
+    font-size: 1.3em;
+  }
 }
 
 figure {
@@ -28,10 +32,6 @@ figure {
   margin-top: 60px;
   border: 2px solid #000;
   border-radius: 1em;
-
-  p {
-    color: #000;
-  }
 }
 
 .about-me-section {
