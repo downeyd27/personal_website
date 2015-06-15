@@ -22,7 +22,6 @@ body {
 }
 
 figure {
-
   margin: 10px auto;
 }
 
@@ -49,4 +48,18 @@ figure {
 .interests-section {
 
 }
+
+.projects-section {
+
+  img {
+    vertical-align: center;
+  }
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 70%;
+  margin: auto;
+}
+
 
