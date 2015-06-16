@@ -1,4 +1,4 @@
-.debug { outline: 0px solid red }
+.debug { outline: 1px solid red }
 
 body {
   background-image: url("ggbridge-1920x1282.jpg");
@@ -33,21 +33,7 @@ figure {
   border-radius: 1em;
 }
 
-.about-me-section {
-
-}
-
-.skills-section {
-
-}
-
-.history-section {
-
-}
-
-.interests-section {
-
-}
+.about-me-section { }
 
 .projects-section {
 
@@ -55,6 +41,15 @@ figure {
     vertical-align: center;
   }
 }
+
+.video-section { }
+
+.skills-section { }
+
+.history-section { }
+
+.interests-section { }
+
 
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
