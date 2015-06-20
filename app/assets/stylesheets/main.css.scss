@@ -22,6 +22,11 @@ body {
 
 figure {
   margin: 10px auto;
+
+  .img-circle {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 .section {
@@ -41,7 +46,11 @@ figure {
   }
 }
 
-.video-section { }
+.video-section {
+  video {
+    display: block;
+  }
+}
 
 .skills-section { }
 
@@ -52,7 +61,8 @@ figure {
 
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-  width: 70%;
+  /*width: 70%;*/
+  display: block;
   margin: auto;
 }
 
