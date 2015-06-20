@@ -1,3 +1,7 @@
+b {
+  color: red;
+}
+
 .debug { outline: 0px solid red }
 
 body {
@@ -30,6 +34,7 @@ figure {
   }
 }
 
+
 .section {
   background-color: #e7e7e7;
   text-align: center;
@@ -38,13 +43,30 @@ figure {
   border-radius: 1em;
 }
 
-.about-me-section { }
+.intro-section {
+
+  .social-media-nav {
+    padding-bottom: 10px;
+  }
+}
+
+.about-me-section {
+  text-align: left;
+}
 
 .projects-section {
 
   img {
     vertical-align: center;
   }
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 70%;
+  display: block;
+  margin: auto;
+  height: 360px !important;
 }
 
 .video-section {
@@ -57,31 +79,28 @@ figure {
 
   div {
     height: 500px;
-    margin: auto;
-  }
 
-  figure {
-    padding: 10px 0;
   }
 }
 
-.history-section { }
+.history-section {
 
-.interests-section { }
-
-
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-  width: 70%;
-  display: block;
-  margin: auto;
-  height: 360px !important;
+  div {
+    padding: 20px 0;
+  }
 }
 
-.carousel-inner > .item > img {
+.interests-section {
+
+  div {
+    padding: 20px 0;
+  }
 }
 
+footer {
 
-b {
-  color: red;
+  .social-media-nav {
+    padding-top: 5px;
+  }
 }
+
