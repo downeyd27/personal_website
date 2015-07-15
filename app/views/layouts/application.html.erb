@@ -6,9 +6,16 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
+<!-- PolyFill for IE and Safari HTML5 input type color -->
+<!-- >>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.7.0/spectrum.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.6.1/spectrum.min.css">
+<!-- <<<PolyFill for IE and Safari HTML5 input type color -->
+<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
 </head>
 <body>
-  <h1 class="col-md-offset-3 col-md-6"><b>WARNING</b>: <span  translate="no">Dillon Downey</span>'s Personal Website is currently <b>UNDER CONSTRUCTION</b></h1>
+  <h1 class="col-md-offset-3 col-md-6"><span  translate="no">Dillon Downey</span>'s Personal Website is currently in progress</h1>
   <%= render 'partials/navbar_top' %>
   <!-- Main -->
   <main class="main-container container">
