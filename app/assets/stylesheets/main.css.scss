@@ -109,6 +109,10 @@ output {
   padding:2px;
 }
 
-#myCanvas {
-  border: 1px solid black;
+.canvas-section {
+  height: 600px;
+
+  #myCanvas {
+    border: 1px solid black;
+  }
 }
