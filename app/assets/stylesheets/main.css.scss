@@ -5,12 +5,8 @@ b {
 .debug { outline: 0px solid red }
 
 body {
-/*  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;*/
   padding-top: 70px;
   padding-bottom: 70px;
-
   h1 {
     text-align: center;
     background-color: #e7e7e7;
@@ -18,7 +14,6 @@ body {
     border-radius: 1em;
     padding: .2em 0;
   }
-
   p {
     font-size: 1.3em;
   }
@@ -34,7 +29,6 @@ figure {
   }
 }
 
-
 .section {
   background-color: #e7e7e7;
   text-align: center;
@@ -44,7 +38,6 @@ figure {
 }
 
 .intro-section {
-
   .social-media-nav {
     padding-bottom: 10px;
   }
@@ -76,7 +69,6 @@ figure {
 }
 
 .skills-section {
-
   div {
     height: 500px;
 
@@ -84,21 +76,18 @@ figure {
 }
 
 .history-section {
-
   div {
     padding: 20px 0;
   }
 }
 
 .interests-section {
-
   div {
     padding: 20px 0;
   }
 }
 
 footer {
-
   .social-media-nav {
     padding-top: 5px;
   }
@@ -110,9 +99,10 @@ output {
 }
 
 .canvas-section {
-  height: 600px;
+  height: 400px;
 
   #myCanvas {
     border: 1px solid black;
   }
 }
+
