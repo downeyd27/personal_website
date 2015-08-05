@@ -1,6 +1,6 @@
 ## README
 
-[my personal website] (dillondowney.herokuapp.com)
+[My personal website] (dillondowney.herokuapp.com)
 
 ## Motivation
 
