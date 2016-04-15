@@ -1,3 +1,14 @@
+$orange: #c86208;
+$grey: #e6eaed;
+$blue: #b5cae1;
+$navy:  #455060;
+$black: #05080f;
+
+body {
+  background-color: $navy !important;
+}
+
+
 b {
   color: red;
 }
@@ -34,7 +45,7 @@ figure {
 }
 
 .section {
-  background-color: #e7e7e7;
+  background-color: $grey;
   text-align: center;
   margin-top: 60px;
   border: 2px solid #000;
@@ -45,6 +56,11 @@ figure {
   .social-media-nav {
     padding-bottom: 10px;
   }
+  figure {
+    img {
+      margin-top: 20px;
+    }
+  }
 }
 
 .about-me-section {
@@ -52,7 +68,6 @@ figure {
 }
 
 .projects-section {
-
   img {
     vertical-align: center;
   }
@@ -91,6 +106,14 @@ figure {
   }
 }
 
+.link {
+  color: $black;
+}
+
+.blue {
+  background-color: $blue !important;
+}
+
 footer {
   .social-media-nav {
     padding-top: 5px;
@@ -109,4 +132,3 @@ output {
     border: 1px solid black;
   }
 }
-
