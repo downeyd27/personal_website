@@ -1,5 +1,6 @@
 ## README
 
+Personal Website to learn a little bit about myself and to show my growing web development skills and projects.
 [My personal website] (dillondowney.herokuapp.com)
 
 ## Motivation
