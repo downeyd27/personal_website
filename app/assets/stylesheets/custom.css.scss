@@ -4,19 +4,13 @@ $blue: #b5cae1;
 $navy:  #455060;
 $black: #05080f;
 
+.debug  { outline: 0px solid red }
+.center { text-align: center; }
+.link   { color: $black; }
+.blue   { background-color: $blue !important; }
+
 body {
   background-color: $navy !important;
-}
-
-
-b {
-  color: red;
-}
-
-.debug { outline: 0px solid red }
-
-.center {
-  text-align: center;
 }
 
 body {
@@ -67,68 +61,16 @@ figure {
   text-align: left;
 }
 
-.projects-section {
-  img {
-    vertical-align: center;
-  }
-}
-
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-  width: 70%;
-  display: block;
-  margin: auto;
-  height: 360px !important;
-}
-
-.video-section {
-  video {
-    margin: 0 auto;
-  }
-}
-
-.skills-section {
-  div {
-    height: 500px;
-
-  }
-}
-
-.history-section {
-  div {
-    padding: 20px 0;
-  }
-}
-
-.interests-section {
-  div {
-    padding: 20px 0;
-  }
-}
-
-.link {
-  color: $black;
-}
-
-.blue {
-  background-color: $blue !important;
-}
-
-footer {
-  .social-media-nav {
-    padding-top: 5px;
-  }
-}
-
-output {
-  border:1px solid black;
-  padding:2px;
-}
-
 .just-for-fun-section {
   height: 400px;
 
   #myCanvas {
     border: 1px solid black;
+  }
+}
+
+footer {
+  .social-media-nav {
+    padding-top: 5px;
   }
 }
