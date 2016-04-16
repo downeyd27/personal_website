@@ -13,16 +13,25 @@
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.6.1/spectrum.min.css">
 <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
 </head>
-<body>
-  <h1 class="col-md-offset-3 col-md-6"><span  translate="no">Dillon Downey</span>'s Personal Website is currently in progress</h1>
 
+
+
+<body>
+  <h1 class="col-md-offset-3 col-md-6"><span translate="no">Dillon Downey</span> - Junior Web Developer</h1>
+  <!-- NAVBAR -->
   <%= render 'partials/navbar_top' %>
+
   <main class="main-container container">
     <%= yield %>
   </main>
 
+  <!-- FOOTER -->
   <%= render 'partials/footer.html' %>
-  <!-- Bottom of page so page will load faster -->
+
+
+
+
+  <!-- At bottom of page so page will load faster -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" defer></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" defer></script>
 </body>
