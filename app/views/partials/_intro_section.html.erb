@@ -1,11 +1,57 @@
-<section class="debug" itemscope itemtype="http://schema.org/Person">
-  <!-- MAIN PICTURE OF ME -->
-  <figure class="debug" itemprop="image">
-    <%= image_tag("Dillon-900x600.jpg", alt: "Dillon Downey\'s portfolio picture", class: "image-responsive img-circle") %>
-    <figcaption>
-      <h2>Dev BootCamp Graduate Seeking Web Developer Opportunities </h2>
-    </figcaption>
-  </figure>
+<div class="flex-container">
+  <section id="portfolio-pic-section" class="debug flex-item" itemscope itemtype="http://schema.org/Person">
+    <figure class="debug" itemprop="image">
+      <%= image_tag("Dillon-900x600.jpg", width: "800", height: "600", alt: "Dillon Downey\'s portfolio picture") %>
+      <figcaption>
+        <h2>Junior Web Developer Seeking New Opportunities </h2>
+      </figcaption>
 
-  <%= render 'partials/social_media_nav' %>
-</section>
+
+
+
+
+
+
+
+
+
+      <nav id="figure__nav" class="debug flex-container social-media-nav " itemscope itemtype="http://schema.org/Person">
+        <h2 class="sr-only">Social-media Navigation</h2>
+        <a class="flex-item" href="mailto:downeydillon@gmail.com" itemprop="email">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        <a class="flex-item" href="https://twitter.com/downeydillon1" itemprop="url">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle-o fa-stack-2x"></i>
+            <i class="fa fa-twitter fa-stack-1x"></i>
+          </span>
+        </a>
+        <a class="flex-item" href="https://github.com/downeyd27" itemprop="url">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        <a class="flex-item" href="https://www.linkedin.com/in/dillondowney" itemprop="url">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-linkedin fa-inverse fa-stack-1x"></i>
+          </span>
+        </a>
+      </nav>
+
+      <%# render 'partials/social_media_nav' %>
+    </figure>
+
+  </section>
+  <section id="about-me-section" itemscope itemtype="http://schema.org/Person" class="debug flex-item">
+    <h2 class="debug">About Me</h2>
+    <p class="debug">
+      Hi, my name is <span itemprop="name" translate="no" >Dillon</span><span itemprop="familyName" translate="no">Downey</span>
+      I recently made a career change and graduated from Dev Bootcamp</span> in <time datetime="2015-05">May 2015</time>.  Prior to attending DBC, I was a Store Manager for <span translate="no">GNC</span>(General Nutrition Center) in the San Francisco region for the last three years where my store was ranked in the top five.  Through personal acquaintances I became intrigued by the tech industry.  As I researched the possibility of becoming a <span itemprop="JobTitle">web developer</span>, I discovered this would be a fulfilling path to utilize my creativity and analytical thinking. Having gone through <span itemprop="alumniof"translate="no"> Dev BootCamp</span>’s 19-week intensive course, I feel my decision is the right one and I look forward to the many challenges and opportunities that the tech community will provide.  I am excited to incorporate my skills and experience I have acquired in a new position within the industry.
+      </p>
+  </section>
+</div>
