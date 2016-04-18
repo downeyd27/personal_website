@@ -50,10 +50,6 @@ h1 {
   padding: .4em .4em;
 }
 
-img {
-  margin: 0 auto;
-}
-
 h2 {
   font-size: 1.5em;
   text-align: center;
@@ -83,34 +79,26 @@ width: 45%;
 margin: 0 auto;
 }
 
-#portfolio-pic-section {
-
-}
-
 figure {
   display: table;
+
+  figcaption {
+    margin: 10px;
+    font-size: 1.3em;
+    color: $black;
+  }
 }
 
-figcaption {
-  margin: 10px;
-  font-size: 1.3em;
-  color: $black;
-}
+img { margin: 0 auto; }
+
 img, figcaption {
   display: table-cell;
   vertical-align: bottom;
 }
 
-#about-me-section {
-  align-items: center;
-  // margin: 0 auto;
+#linkedin-link {
+  margin: 0;
 }
-
-// #projects-yago, #project-website {
-//   flex-flow: row wrap;
-//   justify-content: space-around;
-// }
-
 .section {
   background-color: $grey;
   text-align: center;

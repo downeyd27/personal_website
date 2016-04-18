@@ -1,4 +1,17 @@
-<nav class="debug social-media-nav text-center" itemscope itemtype="http://schema.org/Person">
+<nav class="debug social-media-nav text-center flex-container social-media-container" itemscope itemtype="http://schema.org/Person">
+  <h2 class="sr-only">Social-media Navigation</h2>
+  <a href="mailto:downeydillon@gmail.com" itemprop="email">
+    <%= image_tag("social-icons/gmail-64x64.png", width:"64", height:"64", alt:"Gmail link icon", id:"gmail-icon", class:"flex-item icon") %>
+  </a>
+  <a href="https://github.com/downeyd27" itemprop="url">
+    <%= image_tag("social-icons/github-64x64.png", width:"64", height:"64", alt:"Github link icon", id:"github-icon", class:"flex-item icon") %>
+  </a>
+  <a id="linkedin-link" href="https://www.linkedin.com/in/dillondowney" itemprop="url">
+    <%= image_tag("social-icons/linkedin-64x64.png", width:"64", height:"64", alt:"Linkedin link icon", id:"linkedin-icon", class:"flex-item icon") %>
+  </a>
+</nav>
+
+<!-- <nav class="debug social-media-nav text-center" itemscope itemtype="http://schema.org/Person">
   <h2 class="sr-only">Social-media Navigation</h2>
   <a href="mailto:downeydillon@gmail.com" itemprop="email">
     <span class="fa-stack fa-lg">
@@ -25,3 +38,4 @@
     </span>
   </a>
 </nav>
+ -->

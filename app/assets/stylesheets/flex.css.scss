@@ -9,6 +9,11 @@
   justify-content: center;
 }
 
+.social-media-container {
+  flex-direction: row;
+  justify-content: center;
+}
+
 .thumbnail-container,
 .projects-container {
   flex-flow: row wrap;
@@ -16,7 +21,7 @@
 }
 
 #figure__nav, #footer__nav {
-  justify-content: center;
+  // justify-content: center;
 }
 
 /* Large */
