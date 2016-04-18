@@ -5,9 +5,19 @@ $navy:  #455060;
 $black: #05080f;
 
 .debug  { outline: 2px solid red }
-.center { text-align: center; }
 .blue   { background-color: $blue !important; }
 .text-align-left { text-align: left; }
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
 
 html {
   height: 100%;
@@ -41,6 +51,10 @@ a {
   opacity: 1;
 }
 
+h1, h2, h3 {
+  margin: 0;
+}
+
 h1 {
   font-size: 2em;
   text-align: center;
@@ -48,6 +62,7 @@ h1 {
   border: 2px solid $black;
   border-radius: 1em;
   padding: .4em .4em;
+  margin: 25px 0 !important;
 }
 
 h2 {
@@ -71,12 +86,16 @@ body {
   background-color: $navy !important;
   color: $black;
 }
+
 #about-me-section,
 #portfolio-pic-section,
 #project-yago,
 #project-website,  {
 width: 45%;
 margin: 0 auto;
+background-color: $grey;
+border: 2px solid $black;
+border-radius: 1em;
 }
 
 figure {
@@ -98,13 +117,6 @@ img, figcaption {
 
 #linkedin-link {
   margin: 0;
-}
-.section {
-  background-color: $grey;
-  text-align: center;
-  border: 2px solid $black;
-  border-radius: 1em;
-  justify-content: space-around;
 }
 
 footer {
