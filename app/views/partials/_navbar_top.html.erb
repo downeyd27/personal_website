@@ -1,5 +1,12 @@
 <nav class="debug blue flex-nav">
   <h1 id="main-h1" class="sr-only flex-item">Main Navigation</h1>
-  <a class="flex-item top-nav-link" href="https://downeyd27.github.io/blog/blog-index.html">Old Blog</a>
-  <a class="flex-item top-nav-link" href="https://resume.creddle.io/resume/1rktq4ubpei">R&#233;sum&#233;</a>
+  <div class="nav-top-left flex-container">
+    <a id="brand-logo-link" class="top-nav-link justify-content-left" href="#">
+      <%= image_tag("#", width: "64", height:"64", alt:"Web page brand logo", id:"brand-logo") %>
+    </a>
+  </div>
+  <div class="nav-top-right flex-container">
+    <a class="flex-item top-nav-link" href="https://downeyd27.github.io/blog/blog-index.html">Old Blog</a>
+    <a class="flex-item top-nav-link" href="https://resume.creddle.io/resume/1rktq4ubpei">R&#233;sum&#233;</a>
+  </div>
 </nav>

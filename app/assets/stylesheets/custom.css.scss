@@ -5,7 +5,7 @@ $navy:  #455060;
 $black: #05080f;
 
 .debug  { outline: 2px solid red }
-.blue   { background-color: $blue !important; }
+.blue   { background-color: $blue; }
 .text-align-left { text-align: left; }
 
 .sr-only {
@@ -19,9 +19,7 @@ $black: #05080f;
     border: 0;
 }
 
-html {
-  height: 100%;
-}
+html { height: 100%; }
 
 p {
   font-size: 1.5em;
@@ -38,6 +36,13 @@ a {
   box-shadow: 0 1px 2px rgba(0,0,0,0.15);
 }
 
+#brand-logo-link {
+  background-color: $navy;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  transition: all 0.3s ease-in-out;
+  justify-content: flex-start;
+}
+
 /* Pre-render the bigger shadow, but hide it */
 .top-nav-link {
   border-radius: 5px;
@@ -47,7 +52,8 @@ a {
 }
 
 /* Transition to showing the bigger shadow on hover */
-.top-nav-link:hover::after {
+.top-nav-link:hover::after,
+.brand-logo-link:hover::after {
   opacity: 1;
 }
 
@@ -62,7 +68,6 @@ h1 {
   border: 2px solid $black;
   border-radius: 1em;
   padding: .4em .4em;
-  margin: 25px 0 !important;
 }
 
 h2 {
@@ -121,4 +126,5 @@ img, figcaption {
 
 footer {
   background-color: $blue;
+  margin-top: 25px;
 }
