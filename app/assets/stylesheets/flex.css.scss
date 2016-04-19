@@ -1,0 +1,34 @@
+.flex-container         { display: flex; }
+.justify-content-left   { justify-content: left; }
+.justify-content-center { justify-content: center; }
+.justify-content-right  { justify-content: right; }
+.justify-content-space-between  { justify-content: space-between; }
+.social-media-container { justify-content: center; }
+
+#projects-section {
+  flex-flow: row wrap;
+}
+/* Large screens */
+.flex-nav {
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  height: 75px;
+  justify-content: space-between;;
+}
+
+/* Medium screens */
+@media all and (max-width: 800px) {
+  .flex-nav {
+    /* Center evenly by distributing empty space around items */
+    justify-content: space-around;
+  }
+}
+
+/* Small screens */
+@media all and (max-width: 500px) {
+  .flex-nav, .flex-container {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}

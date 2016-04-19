@@ -1,25 +1,15 @@
-<!-- Navigation -->
-<nav class="debug blue navbar navbar-default navbar-fixed-top">
-  <h2 class="sr-only">Main Navigation</h2>
-  <div id="collapsed-navbar-container" class="container-fluid">
-    <div class="navbar-header">
+<nav class="debug blue flex-nav">
+  <h1 id="main-h1" class="sr-only">Main Navigation</h1>
+  <!-- NOTE: For some reason flex-container needs to be on div or a tag hover and other psuedo elements don't work.  Will probably need to change pseudo elements when there is a picture in place of the text anyways. -->
 
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="http://dillondowney.herokuapp.com/">
-        <span translate="no">Dillon Downey</span>
-      </a>
-    </div> <!-- closes navbar-header -->
-
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav navbar-right close">
-        <li><a class="link" href="https://downeyd27.github.io/blog/blog-index.html">Blog</a></li>
-        <li><a class="link" href="https://resume.creddle.io/resume/1rktq4ubpei">R&#233;sum&#233;</a></li>
-      </ul>
-    </div><!--/.nav-collapse -->
+  <div class="flex-container">
+    <!-- TODO: Add a brand logo -->
+    <a id="brand-logo-link" class="top-nav-link" href="http://dillondowney.herokuapp.com/" target="_blank">
+      Dillon Downey
+    </a>
+  </div>
+  <div>
+    <a class="top-nav-link" href="https://downeyd27.github.io/blog/blog-index.html" target="_blank">Old Blog</a>
+    <a class="top-nav-link" href="https://resume.creddle.io/resume/1rktq4ubpei" target="_blank">R&#233;sum&#233;</a>
   </div>
 </nav>

@@ -47,9 +47,6 @@ figure .img-circle {
 }
 
 /* line 41, /Users/dillondowney/Desktop/Projects/personal_site/app/assets/stylesheets/main.css.scss */
-.intro-section .social-media-nav {
-  padding-bottom: 10px;
-}
 
 /* line 46, /Users/dillondowney/Desktop/Projects/personal_site/app/assets/stylesheets/main.css.scss */
 .about-me-section {
@@ -62,44 +59,19 @@ figure .img-circle {
 }
 
 /* line 57, /Users/dillondowney/Desktop/Projects/personal_site/app/assets/stylesheets/main.css.scss */
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-  width: 70%;
-  display: block;
-  margin: auto;
-  height: 360px !important;
-}
 
 /* line 66, /Users/dillondowney/Desktop/Projects/personal_site/app/assets/stylesheets/main.css.scss */
-.video-section video {
-  margin: 0 auto;
-}
 
 /* line 72, /Users/dillondowney/Desktop/Projects/personal_site/app/assets/stylesheets/main.css.scss */
-.skills-section div {
-  height: 500px;
-}
 
 /* line 79, /Users/dillondowney/Desktop/Projects/personal_site/app/assets/stylesheets/main.css.scss */
-.history-section div {
-  padding: 20px 0;
-}
 
 /* line 85, /Users/dillondowney/Desktop/Projects/personal_site/app/assets/stylesheets/main.css.scss */
-.interests-section div {
-  padding: 20px 0;
-}
 
 /* line 91, /Users/dillondowney/Desktop/Projects/personal_site/app/assets/stylesheets/main.css.scss */
-footer .social-media-nav {
-  padding-top: 5px;
-}
+
 
 /* line 96, /Users/dillondowney/Desktop/Projects/personal_site/app/assets/stylesheets/main.css.scss */
-output {
-  border: 1px solid black;
-  padding: 2px;
-}
 
 /* line 101, /Users/dillondowney/Desktop/Projects/personal_site/app/assets/stylesheets/main.css.scss */
 .canvas-section {

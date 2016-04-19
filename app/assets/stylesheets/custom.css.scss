@@ -5,72 +5,129 @@ $navy:  #455060;
 $black: #05080f;
 
 .debug  { outline: 0px solid red }
-.center { text-align: center; }
-.link   { color: $black; }
-.blue   { background-color: $blue !important; }
+.blue   { background-color: $blue; }
+.text-align-left { text-align: left; }
+.margin-top-and-bottom { margin: 20px 0; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+html { height: 100%; }
 
 body {
   background-color: $navy !important;
+  color: $black;
 }
 
-body {
-  padding-top: 70px;
-  padding-bottom: 70px;
-  h1 {
-    text-align: center;
-    background-color: #e7e7e7;
-    border: 2px solid #000;
-    border-radius: 1em;
-    padding: .2em 0;
-  }
-  p {
-    font-size: 1.3em;
-  }
+h1 {
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+h1, h2, h3 {
+  margin: 0;
+  text-align: center;
+  background-color: $grey;
+  border: 2px solid $black;
+  border-radius: 1em;
+  padding: .4em .4em;
+}
+
+p {
+  margin: 0 20px;
+  font-size: 1.5em;
+  color: $black;
+  display: block;
+}
+
+.about-me-paragraph {
+  margin: 0 20px;
+}
+
+a:link    { color: #c00 }  /* unvisited links */
+// a:visited { color: #0c0 }  /* visited links   */
+a:hover   { color: #00c }  /* user hovers     */
+a:active  { color: #ccc }  /* active links    */
+
+a {
+  color: $black;
+  font-size: 1.75em;
+  margin: 0 20px 0 0;
+  padding: 2px 10px;
+}
+
+#linkedin-link { margin: 0; }
+#brand-logo-link {
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+/* Pre-render the bigger shadow, but hide it */
+.top-nav-link {
+  color: $black;
+  border-radius: 5px;
+  background-color: $grey;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Transition to showing the bigger shadow on hover */
+.top-nav-link:hover::after,
+.brand-logo-link:hover::after {
+  opacity: 1;
+}
+
+#projects-section {
+  // align-items: flex-start;
+  // align-content: center;
+}
+
+#about-me-section,
+#portfolio-pic-section,
+#project-yago,
+#project-website,  {
+width: 45%;
+height: 900px;
+margin: 0 auto;
+background-color: $grey;
+border: 2px solid $black;
+border-radius: 1em;
 }
 
 figure {
-  margin: 10px auto;
-  display: inline;
+  display: table;
 
-  .img-circle {
-    display: block;
-    margin: 0 auto;
+  figcaption {
+    margin: 10px;
+    font-size: 1.3em;
+    color: $black;
   }
 }
 
-.section {
-  background-color: $grey;
-  text-align: center;
-  margin-top: 60px;
-  border: 2px solid #000;
-  border-radius: 1em;
+img { margin: 0 auto; }
+
+img, figcaption {
+  display: table-cell;
+  vertical-align: bottom;
 }
 
-.intro-section {
-  .social-media-nav {
-    padding-bottom: 10px;
-  }
-  figure {
-    img {
-      margin-top: 20px;
-    }
-  }
-}
 
-.about-me-section {
-  text-align: left;
-}
-
-.just-for-fun-section {
-  height: 400px;
-
-  #myCanvas {
-    border: 1px solid black;
-  }
+#projects-banner {
+  min-width: 50px;
 }
 
 footer {
-  .social-media-nav {
-    padding-top: 5px;
-  }
+  background-color: $blue;
+  margin-top: 25px;
 }

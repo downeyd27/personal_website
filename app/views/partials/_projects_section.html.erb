@@ -1,13 +1,28 @@
-<section id="projects-section" class="debug section about-me-section container col-md-12">
-  <h2 class="center">Projects</h2>
-  <div class="row">
-    <div class="col-md-offset-2 col-md-8">
-      <a href="//github.com/downeyd27/yago_exp"><%= image_tag('team-yago-550x413.jpg', alt: "Team Yago", class: 'project-image') %></a>
-    </div>
-    <div class="col-md-offset-2 col-md-8">
-      <a href="http://dillondowney.herokuapp.com/">
-        <%= image_tag('website-project-360x360.png', alt: "Dillon Downey's Personal Website", class: 'project-image') %>
-      </a>
-    </div>
-  </div>
+<div class="debug margin-top-and-bottom flex-container justify-content-center">
+  <h1 id="projects-banner" class="debug ">Projects</h1>
+</div>
+
+<section id="projects-section" class="debug flex-container">
+  <figure id="project-yago" class="debug">
+    <a href="//github.com/downeyd27/yago_exp"><%= image_tag("team-yago-550x413.jpg", width: "500", height: "500", alt: "Team Yago", class: "project-image") %></a>
+    <figcaption class="debug text-align-left">
+        Yago is a JavaScript based app that is intended to improve upon static selfie photos by introducing a means of recording our life's events with a drone using GPS and video-feed images.  This app allows you to control a Parrot AR drone 2.0 via a keyboard and record videos to your local directory.  Yago uses Sockets.io for realtime communication to the web browser, Express.js as a web framework, and jQuery to interact with the hud (heads up display).  Built in a week.
+    </figcaption>
+  </figure>
+  <figure id="project-website" class="debug ">
+    <a href="http://dillondowney.herokuapp.com/">
+      <%= image_tag("website-project-360x360.png", width:"500", height: "500", alt: "Dillon Downey's Personal Website", class: "project-image") %>
+    </a>
+    <figcaption class="debug text-align-left">
+      This website is a constant work in progress to showcase projects and other personal endevours . Feel free to email me constructive feedback or bug issues.
+    </figcaption>
+  </figure>
+  <figure id="project-website" class="debug ">
+    <a href="http://dillondowney.herokuapp.com/">
+      <%= image_tag("website-project-360x360.png", width:"500", height: "500", alt: "Dillon Downey's Personal Website", class: "project-image") %>
+    </a>
+    <figcaption class="debug text-align-left">
+      This website is a constant work in progress to showcase projects and other personal endevours . Feel free to email me constructive feedback or bug issues.
+    </figcaption>
+  </figure>
 </section>
