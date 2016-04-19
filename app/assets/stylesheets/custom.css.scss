@@ -7,19 +7,42 @@ $black: #05080f;
 .debug  { outline: 2px solid red }
 .blue   { background-color: $blue; }
 .text-align-left { text-align: left; }
+.margin-top-and-bottom { margin: 20px 0; }
 
 .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0,0,0,0);
-    border: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
 }
 
 html { height: 100%; }
+
+body {
+  background-color: $navy !important;
+  color: $black;
+}
+
+h1 {
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+h1, h2, h3 {
+  margin: 0;
+  text-align: center;
+  background-color: $grey;
+  border: 2px solid $black;
+  border-radius: 1em;
+  padding: .4em .4em;
+}
 
 p {
   font-size: 1.5em;
@@ -31,16 +54,21 @@ a:link    { color: #c00 }  /* unvisited links */
 a:visited { color: #0c0 }  /* visited links   */
 a:hover   { color: $blue }  /* user hovers     */
 a:active  { color: #ccc }  /* active links    */
-/* The fast way */
+
 a {
+  color: $black;
+  font-size: 2em;
+  margin: 0 20px 0 0;
   box-shadow: 0 1px 2px rgba(0,0,0,0.15);
 }
 
+#linkedin-link { margin: 0; }
+
 #brand-logo-link {
+  margin-left: 20px;
   background-color: $navy;
   box-shadow: 0 1px 2px rgba(0,0,0,0.15);
   transition: all 0.3s ease-in-out;
-  justify-content: flex-start;
 }
 
 /* Pre-render the bigger shadow, but hide it */
@@ -57,39 +85,9 @@ a {
   opacity: 1;
 }
 
-h1, h2, h3 {
-  margin: 0;
-}
-
-h1 {
-  font-size: 2em;
-  text-align: center;
-  background-color: $grey;
-  border: 2px solid $black;
-  border-radius: 1em;
-  padding: .4em .4em;
-}
-
-h2 {
-  font-size: 1.5em;
-  text-align: center;
-  background-color: $grey;
-  border: 2px solid $black;
-  border-radius: 1em;
-  padding: .4em .4em;
-}
-
-nav {
-  a {
-    color: $black;
-    font-size: 2em;
-    margin: 0 20px 0 0;
-  }
-}
-
-body {
-  background-color: $navy !important;
-  color: $black;
+#projects-section {
+  align-items: flex-start;
+  align-content: center;
 }
 
 #about-me-section,
@@ -120,8 +118,9 @@ img, figcaption {
   vertical-align: bottom;
 }
 
-#linkedin-link {
-  margin: 0;
+
+#projects-banner {
+  min-width: 50px;
 }
 
 footer {

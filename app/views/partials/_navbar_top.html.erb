@@ -1,12 +1,13 @@
 <nav class="debug blue flex-nav">
-  <h1 id="main-h1" class="sr-only flex-item">Main Navigation</h1>
+  <h1 id="main-h1" class="sr-only">Main Navigation</h1>
+  <!-- NOTE: For some reason flex-container needs to be on div or a tag hover and other psuedo elements don't work.  Will probably need to change pseudo elements when there is a picture in place of the text anyways. -->
   <div class="nav-top-left flex-container">
-    <a id="brand-logo-link" class="top-nav-link justify-content-left" href="#">
+    <a id="brand-logo-link" class="top-nav-link" href="#">
       <%= image_tag("#", width: "64", height:"64", alt:"Web page brand logo", id:"brand-logo") %>
     </a>
   </div>
-  <div class="nav-top-right flex-container">
-    <a class="flex-item top-nav-link" href="https://downeyd27.github.io/blog/blog-index.html">Old Blog</a>
-    <a class="flex-item top-nav-link" href="https://resume.creddle.io/resume/1rktq4ubpei">R&#233;sum&#233;</a>
+  <div class="nav-top-right">
+    <a class="top-nav-link" href="https://downeyd27.github.io/blog/blog-index.html" target="_blank">Old Blog</a>
+    <a class="top-nav-link" href="https://resume.creddle.io/resume/1rktq4ubpei" target="_blank">R&#233;sum&#233;</a>
   </div>
 </nav>
