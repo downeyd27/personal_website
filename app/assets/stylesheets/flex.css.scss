@@ -1,9 +1,26 @@
-.flex-container         { display: flex; }
+.flex                   { display: flex; }
 .justify-content-left   { justify-content: left; }
 .justify-content-center { justify-content: center; }
 .justify-content-right  { justify-content: right; }
 .justify-content-space-between  { justify-content: space-between; }
-.social-media-container { justify-content: center; }
+
+#portfolio-pic-section,
+#about-me-section {
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+#portfolio-pic-section {
+  align-items: center;
+}
+
+.project {
+  padding-top: 5%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
 
 #projects-section {
   flex-flow: row wrap;
@@ -27,7 +44,7 @@
 
 /* Small screens */
 @media all and (max-width: 500px) {
-  .flex-nav, .flex-container {
+  .flex-nav, .flex {
     /* On small screens, we are no longer using row direction but column */
     flex-direction: column;
   }

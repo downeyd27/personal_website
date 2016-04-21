@@ -28,15 +28,10 @@ body {
 }
 
 h1 {
-  font-size: 2em;
   letter-spacing: 1px;
 }
 
-h2 {
-  font-size: 1.5em;
-}
 h1, h2, h3 {
-  margin: 0;
   text-align: center;
   background-color: $grey;
   border: 2px solid $black;
@@ -88,28 +83,23 @@ a {
   opacity: 1;
 }
 
-#projects-section {
-  // align-items: flex-start;
-  // align-content: center;
-}
+
 
 #about-me-section,
 #portfolio-pic-section,
-#project-yago,
-#project-website,  {
+.project {
 width: 45%;
 height: 900px;
 margin: 0 auto;
 background-color: $grey;
 border: 2px solid $black;
-border-radius: 1em;
 }
 
 figure {
-  display: table;
+  border-radius: 20px;
 
   figcaption {
-    margin: 10px;
+    margin: 20px;
     font-size: 1.3em;
     color: $black;
   }
