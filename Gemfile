@@ -11,7 +11,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'autoprefixer-rails'
-gem 'font-awesome-sass'
+gem 'web-console', '~> 2.0', group: :development
 # Recommendation for Heroku
 gem 'rails_12factor', group: :production
 # Use ActiveModel has_secure_password
@@ -22,9 +22,8 @@ gem 'rails_12factor', group: :production
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
   gem 'spring'
 end
