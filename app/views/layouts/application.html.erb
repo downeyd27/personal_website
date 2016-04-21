@@ -3,19 +3,23 @@
 <head>
   <title>Dillon Downey's Personal Website</title>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <!-- TODO: Figure out why old favicon will not change -->
+  <%= favicon_link_tag 'favicon.ico' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
 </head>
 
 <body>
-  <h1 class="sr-only">Dillon Downey's Web Portfolio</h1>
+  <a href="#main-section" class="sr-only">Skip to main content</a>
+  <a href="#projects-section" class="sr-only">Skip to projects section</a>
   <!-- ################################# -->
   <!-- ###########  NAVBAR ############# -->
   <%= render 'partials/navbar_top' %>
   <!-- ###########  NAVBAR ############## -->
   <!-- ################################## -->
-  <main>
+  <main id="main-content">
+    <h1 class="sr-only">Dillon Downey's Web Portfolio</h1>
     <!-- ################################# -->
     <!-- ############# YIELD ############# -->
     <%= yield %>
