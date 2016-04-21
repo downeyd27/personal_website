@@ -1,6 +1,5 @@
 class StaticPagesController < ApplicationController
   def index
-    # @page_title = "Index"
-    # @description = "Find out more about me and projects I have been working on.  Open to junior web development opportunities."
+    @description = "Find out more about me and projects I have been working on.  Open to junior web development opportunities."
   end
 end
