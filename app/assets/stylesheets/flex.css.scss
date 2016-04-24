@@ -4,6 +4,7 @@
 .justify-content-right  { justify-content: right; }
 .justify-content-space-between  { justify-content: space-between; }
 
+
 footer {
   align-items: center;
 }
@@ -31,6 +32,7 @@ footer {
 #projects-section {
   flex-flow: row wrap;
 }
+
 /* Large screens */
 .flex-nav {
   display: flex;
@@ -50,8 +52,9 @@ footer {
 
 /* Small screens */
 @media all and (max-width: 500px) {
-  .flex-nav, .flex {
+  .flex-nav {
     /* On small screens, we are no longer using row direction but column */
+
     flex-direction: column;
   }
 }

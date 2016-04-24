@@ -50,14 +50,15 @@ p {
   display: block;
 }
 
-a:link    { color: #c00 }  /* unvisited links */
-// a:visited { color: #0c0 }  /* visited links   */
-a:hover   { color: #00c }  /* user hovers     */
-a:active  { color: #ccc }  /* active links    */
+// a:visited { color: #0c0 }
+a:link    { color: #c00 }
+a:hover   { color: #00c }
+a:active  { color: #ccc }
 
 a {
   color: $black;
   font-size: 1.75em;
+  text-decoration: none;
 }
 
 #linkedin-link { margin: 0; }
@@ -102,7 +103,7 @@ figure {
 
 img {
   margin: 0 auto;
-  max-width: 100%;
+  max-width: 90%;
 }
 
 img, figcaption {
