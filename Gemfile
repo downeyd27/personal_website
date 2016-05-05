@@ -22,6 +22,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 group :development do
+  gem 'rails_real_favicon'
   gem 'better_errors', '~> 2.1', '>= 2.1.1'
   gem 'binding_of_caller', '~> 0.7.2'
   gem 'quiet_assets', '~> 1.1'
@@ -31,6 +32,7 @@ group :development do
 end
 
 gem 'rails_12factor', group: :production # Recommendation for Heroku
+
 group :test do
   gem 'capybara', '~> 2.7'
   gem 'shoulda-matchers', '~> 3.1', '>= 3.1.1'
