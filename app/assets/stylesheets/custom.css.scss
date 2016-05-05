@@ -23,6 +23,7 @@ html { height: 100%; }
 body {
   background-color: $navy !important;
   color: $black;
+  font-family: 'Droid Sans', serif;
 }
 
 h1 {
@@ -35,6 +36,7 @@ h1, h2, h3 {
   border: 2px solid $black;
   border-radius: 1em;
   padding: .4em .4em;
+  font-family: 'Droid Serif', serif;
 }
 
 p {
@@ -74,6 +76,7 @@ a {
 figure {
   overflow-y: auto;
 }
+
 
 img {
   margin: 0 auto;
