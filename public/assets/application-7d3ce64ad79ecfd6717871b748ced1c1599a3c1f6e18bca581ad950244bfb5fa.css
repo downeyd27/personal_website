@@ -107,7 +107,7 @@ a {
 
 /* Pre-render the bigger shadow, but hide it */
 /* line 72, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/custom.css.scss */
-.top-nav-link {
+.navContainer__link {
   color: #05080f;
   border-radius: 5px;
   background-color: #e6eaed;
@@ -118,7 +118,7 @@ a {
 
 /* Transition to showing the bigger shadow on hover */
 /* line 81, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/custom.css.scss */
-.top-nav-link:hover::after,
+.navContainer__link:hover::after,
 .brand-logo-link:hover::after {
   opacity: 1;
 }
