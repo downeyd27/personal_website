@@ -1,15 +1,16 @@
 <div class="debug">
-  <h1 class="debug "><span translate="no">Dillon Downey</span> - Junior Web Developer</h1>
+  <h2 class="debug "><span translate="no">Dillon Downey</span> - Junior Web Developer</h2>
 </div>
 
 <div class="debug introContainer">
-  <h1 class="sr-only">Welcome</h1>
+  <!-- <h2 class="sr-only">Intro Section</h2> -->
 
   <section class="debug introContainer__portfolioPicSection" itemscope itemtype="http://schema.org/Person">
+    <h3 class="sr-only">Portfolio picture</h3>
     <figure class="debug introContainer__figure" itemprop="image">
       <%= image_tag("Dillon-500x333.jpg", width:"500", height:"333", alt:"Dillon Downey\'s portfolio picture", class:"debug") %>
       <figcaption>
-        <h2 class="debug">Junior Web Developer Seeking New Opportunities </h2>
+        <h3 class="debug">Junior Web Developer Seeking New Opportunities </h3>
       </figcaption>
 
       <%= render 'partials/social_media_nav' %>
