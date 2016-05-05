@@ -12,6 +12,7 @@ RSpec.describe Project, type: :model do
   it { should respond_to(:id) }
   it { should respond_to(:name) }
   it { should respond_to(:url) }
+  it { should respond_to(:description) }
   it { should respond_to(:created_at) }
   it { should respond_to(:updated_at) }
   it { should be_valid }
