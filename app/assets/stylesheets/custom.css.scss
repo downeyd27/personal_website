@@ -4,10 +4,8 @@ $blue: #b5cae1;
 $navy:  #455060;
 $black: #05080f;
 
-.debug  { outline: 0px solid red }
+.debug  { outline: 1px solid red }
 .blue   { background-color: $blue; }
-.text-align-left { text-align: left; }
-.margin-top-and-bottom { margin: 20px 0; }
 
 .sr-only {
   position: absolute;
@@ -25,10 +23,7 @@ html { height: 100%; }
 body {
   background-color: $navy !important;
   color: $black;
-}
-
-footer {
-  height: 75px;
+  font-family: 'Droid Sans', serif;
 }
 
 h1 {
@@ -41,11 +36,12 @@ h1, h2, h3 {
   border: 2px solid $black;
   border-radius: 1em;
   padding: .4em .4em;
+  font-family: 'Droid Serif', serif;
 }
 
 p {
   margin: 0.5em 25px;
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: $black;
   display: block;
 }
@@ -57,49 +53,30 @@ a:active  { color: #ccc }
 
 a {
   color: $black;
-  font-size: 1.75em;
+  font-size: 1.5em;
   text-decoration: none;
 }
 
-#linkedin-link { margin: 0; }
-#brand-logo-link {
-  margin-left: 20px;
-  text-decoration: none;
-}
-
-/* Pre-render the bigger shadow, but hide it */
-.top-nav-link {
-  color: $black;
-  padding: 10px;
-  border-radius: 5px;
+.introContainer__aboutMeSection,
+.introContainer__portfolioPicSection{
+  width: 45%;
   background-color: $grey;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
-  transition: all 0.3s ease-in-out;
+  border: 2px solid $black;
+  overflow-y: auto;
 }
 
-/* Transition to showing the bigger shadow on hover */
-.top-nav-link:hover::after,
-.brand-logo-link:hover::after {
-  opacity: 1;
+@media all and (max-width: 400px) {
+  .introContainer__aboutMeSection,
+  .introContainer__portfolioPicSection,
+  .projectSection {
+    width: 95%;
+  }
 }
-
-
-
-#about-me-section,
-#portfolio-pic-section,
-.project {
-width: 45%;
-height: 900px;
-margin: 0 auto;
-background-color: $grey;
-border: 2px solid $black;
-}
-figure, #about-me-section { overflow-y: auto; }
 
 figure {
-  border-radius: 20px;
-  max-width: 100%;
+  overflow-y: auto;
 }
+
 
 img {
   margin: 0 auto;
@@ -109,14 +86,22 @@ img {
 img, figcaption {
   display: table-cell;
   vertical-align: bottom;
-}
-
-
-#projects-banner {
-  min-width: 50px;
+  text-align: left;
 }
 
 footer {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
   background-color: $blue;
   margin-top: 25px;
+  height: 75px;
+  align-items: center;
+}
+
+.socialMediaContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }

@@ -8,6 +8,7 @@
   <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
   <!-- <meta http-equiv="refresh" content="30"> -->
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans">
   <!-- TODO: Figure out why old favicon will not change -->
   <%= favicon_link_tag 'favicon.ico' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -19,11 +20,10 @@
   <a href="#projects-section" class="sr-only">Skip to projects section</a>
   <!-- ################################# -->
   <!-- ###########  NAVBAR ############# -->
-  <%= render 'partials/navbar_top' %>
+  <%= render 'layouts/navbar_top' %>
   <!-- ###########  NAVBAR ############## -->
   <!-- ################################## -->
-  <%= flash[:alert] %>
-  <%= flash[:notice] %>
+  <%= render "layouts/flash_message" %>
   <main id="main-content">
     <!-- ################################# -->
     <!-- ############# YIELD ############# -->
@@ -40,7 +40,7 @@
 
   <!-- ################################# -->
   <!-- ############ FOOTER ############# -->
-  <%= render 'partials/footer.html' %>
+  <%= render 'layouts/footer.html' %>
   <!-- ############ FOOTER ############# -->
   <!-- ################################# -->
 
