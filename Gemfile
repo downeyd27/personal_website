@@ -11,8 +11,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'turbolinks'
 gem 'meta-tags', '~> 2.1'
-gem 'actionpack-page_caching', '~> 1.0', '>= 1.0.2'
-gem 'actionpack-action_caching', '~> 1.1', '>= 1.1.1'
+gem 'newrelic_rpm'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
