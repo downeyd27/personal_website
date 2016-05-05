@@ -14,10 +14,6 @@ GEM
       rack-test (~> 0.6.2)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    actionpack-action_caching (1.1.1)
-      actionpack (>= 4.0.0, < 5.0)
-    actionpack-page_caching (1.0.2)
-      actionpack (>= 4.0.0, < 5)
     actionview (4.2.6)
       activesupport (= 4.2.6)
       builder (~> 3.1)
@@ -104,6 +100,7 @@ GEM
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     multi_json (1.11.2)
+    newrelic_rpm (3.15.2.317)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     pg (0.18.4)
@@ -212,8 +209,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  actionpack-action_caching (~> 1.1, >= 1.1.1)
-  actionpack-page_caching (~> 1.0, >= 1.0.2)
   autoprefixer-rails
   better_errors (~> 2.1, >= 2.1.1)
   binding_of_caller (~> 0.7.2)
@@ -225,6 +220,7 @@ DEPENDENCIES
   jquery-rails
   launchy (~> 2.4, >= 2.4.3)
   meta-tags (~> 2.1)
+  newrelic_rpm
   pg
   pry (~> 0.10.3)
   quiet_assets (~> 1.1)
