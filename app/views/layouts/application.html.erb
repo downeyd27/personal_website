@@ -8,10 +8,11 @@
   <%= display_meta_tags %>
   <%= csrf_meta_tags %>
   <!-- <meta http-equiv="refresh" content="30"> -->
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Droid+Sans", "http://fonts.googleapis.com/css?family=Droid+Serif" %>
-  <%= render 'favicon' %>
+  <%= stylesheet_link_tag 'application', "http://fonts.googleapis.com/css?family=Droid+Sans", "http://fonts.googleapis.com/css?family=Droid+Serif",
+  media: 'all',
+  'data-turbolinks-track' => true %>
 
+  <%= render 'favicon' %>
   <%= render 'layouts/shim' %>
 </head>
 
@@ -26,7 +27,7 @@
   <!-- ###########  NAVBAR ############## -->
   <!-- ################################## -->
   <%= render "layouts/flash_message" %>
-  <main id="mainSection" role="main">
+  <main id="mainSection">
     <!-- ################################# -->
     <!-- ############# YIELD ############# -->
     <%= yield %>
