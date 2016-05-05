@@ -5,10 +5,11 @@
   <%= display_meta_tags %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+  <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+  <meta charset="UTF-8">
   <!-- <meta http-equiv="refresh" content="30"> -->
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid">
   <!-- TODO: Figure out why old favicon will not change -->
   <%= favicon_link_tag 'favicon.ico' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -17,15 +18,16 @@
 
 <body>
   <h1 class="sr-only">Dillon Downey's Website</h1>
-  <a href="#main-section" class="sr-only">Skip to main content</a>
-  <a href="#projects-section" class="sr-only">Skip to projects section</a>
+  <a href="#mainSection" class="sr-only">Skip to main content</a>
+  <a href="#projectsHeader" class="sr-only">Skip to projects section</a>
+  <a href="#footerSection" class="sr-only">Skip to footer</a>
   <!-- ################################# -->
   <!-- ###########  NAVBAR ############# -->
   <%= render 'layouts/navbar_top' %>
   <!-- ###########  NAVBAR ############## -->
   <!-- ################################## -->
   <%= render "layouts/flash_message" %>
-  <main id="main-content">
+  <main id="mainSection" role="main">
     <!-- ################################# -->
     <!-- ############# YIELD ############# -->
     <%= yield %>

@@ -15,17 +15,12 @@ $white: #fdfdfd;
 
 .navLinkContainer {
 
-
   .navLinkContainer__unorderedList {
     display: flex;
     flex-flow: row wrap;
     list-style-type: none;
     padding: 0;
   }
-}
-
-.navLinkContainer__unorderedList li {
-
 }
 
 .navLinkContainer__link {
@@ -38,6 +33,7 @@ $white: #fdfdfd;
 
 .navLinkContainer__link:hover {
   background-color: $white;
+  box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
 }
 
 .brandLogoContainer {

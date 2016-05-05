@@ -32,22 +32,17 @@ $black: #05080f;
 
 .introContainer__portfolioPicSection {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   figure {
     margin: 20px 0;
 
-    h2 {
+    h3 {
       margin-left: 10px;
       margin-right: 10px;
     }
   }
-
-}
-
-.introContainer__aboutMeSection {
-
-}
-
-.introContainer__figure {
-
+  .socialMediaContainer {
+    margin-bottom: 20px;
+  }
 }
