@@ -56,7 +56,8 @@ class ProjectsController < ApplicationController
       :purpose,
       :technology,
       :url,
-      :image
+      :image,
+      :avatar
     )
   end
 

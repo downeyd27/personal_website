@@ -2,12 +2,12 @@
 
 <% @projects.each do |project| %>
 <ul class="debug">
-  <li><%= project.image %></li>
-  <li><%= project.name %></li>
-  <li><%= project.description %></li>
-  <li><%= project.purpose %></li>
-  <li><%= project.technology %></li>
-  <li><%= project.url %></li>
+  <li>Avatar: <%= project.avatar.url(:medium) %></li>
+  <li>Name: <%= project.name %></li>
+  <li>Description: <%= project.description %></li>
+  <li>Purpose: <%= project.purpose %></li>
+  <li>Technology: <%= project.technology %></li>
+  <li>Project: <%= project.url %></li>
 </ul>
 
 <% end %>
