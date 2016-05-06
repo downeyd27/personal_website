@@ -7,36 +7,34 @@ class ApplicationController < ActionController::Base
 
   def prepare_meta_tags(options={})
     site_name   = "Dillon Downey's website"
-    # title       = ["Dillon Downey's", action_name].join(" ")
+    title       = [controller_name, action_name].join(" ")
     description = "This website is a portfolio for showcasing my web development skills and personal endevours."
     image       = options[:image] || "../assets/images/Dillon-900x600.jpg"
     current_url = request.url
 
     defaults = {
       site:        site_name,
-      # title:       title,
+      title:       title,
       image:       image,
       description: description,
       keywords:    %w[web software development app junior  developer front-end back-end Full-stack ],
-    #   twitter: {
-    #    site_name: site_name,
-    #    site: '@downeydillon1',
-    #    card: 'summary',
-    #    description: description,
-    #    image: image
-    #  },
+      twitter: {
+        card: 'summary',
+        site: '@downeydillon1',
+        title: title,
+        description: description,
+        image: image
+      },
      og: {
-       url: current_url,
-       site_name: site_name,
-      #  title: title,
-       image: image,
-       description: description,
-       type: 'website'
-     }
+        url: current_url,
+        site_name: site_name,
+        title: title,
+        image: image,
+        description: description,
+        type: 'website'
+      }
     }
-
     options.reverse_merge!(defaults)
-
     set_meta_tags options
   end
 end
