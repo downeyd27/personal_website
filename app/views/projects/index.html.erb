@@ -1,0 +1,13 @@
+<h1 class="debug">Project Index</h1>
+
+<% @projects.each do |project| %>
+<ul class="debug">
+  <li><%= project.image %></li>
+  <li><%= project.name %></li>
+  <li><%= project.description %></li>
+  <li><%= project.purpose %></li>
+  <li><%= project.technology %></li>
+  <li><%= project.url %></li>
+</ul>
+
+<% end %>

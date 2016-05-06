@@ -2,9 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Project, type: :model do
   before do
-    @project = Project.new( name: "Dillon Downey's Portfolio",
-                            url:  "http://dillondowney@herokuapp.com"
-    )
+    @project = FactoryGirl.create(:project)
   end
 
   subject { @project }
@@ -13,7 +11,7 @@ RSpec.describe Project, type: :model do
   it { should respond_to(:name) }
   it { should respond_to(:description) }
   it { should respond_to(:url) }
-  it { should respond_to(:technologies) }
+  it { should respond_to(:technology) }
   it { should respond_to(:image) }
   it { should respond_to(:created_at) }
   it { should respond_to(:updated_at) }

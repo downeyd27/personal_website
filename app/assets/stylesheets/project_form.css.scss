@@ -1,0 +1,37 @@
+$orange: #c86208;
+$grey: #e6eaed;
+$blue: #b5cae1;
+$navy:  #455060;
+$black: #05080f;
+$white: #fdfdfd;
+
+form {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 400px;
+  border: 1px solid $black;
+  margin: 1em;
+  border-radius: 5px;
+  box-shadow: 2px 2px 7px 0px rgba(50, 50, 50, 0.75);
+
+  img {
+    margin-bottom: 7px;
+  }
+}
+
+.projectFormContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  display: block;
+  width: 250px;
+}
+
+input, textarea {
+  width: 250px;
+  margin-bottom: 7px;
+}

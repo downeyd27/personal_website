@@ -14,13 +14,12 @@
 
   <%= render 'layouts/shim' %>
 </head>
-<%= render 'favicon' %>
 
 <body>
   <h1 class="sr-only">Dillon Downey's Website</h1>
-  <a href="#mainSection" class="sr-only">Skip to main content</a>
+  <a href="#mainSection"    class="sr-only">Skip to main content</a>
   <a href="#projectsHeader" class="sr-only">Skip to projects section</a>
-  <a href="#footerSection" class="sr-only">Skip to footer</a>
+  <a href="#footerSection"  class="sr-only">Skip to footer</a>
   <!-- ################################# -->
   <!-- ###########  NAVBAR ############# -->
   <%= render 'layouts/navbar_top' %>
@@ -49,5 +48,7 @@
 
   <!-- At bottom of page so page will load faster -->
   <%= javascript_include_tag 'application', "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js", 'data-turbolinks-track' => true %>
+  <%= render 'favicon' %>
+  
 </body>
 </html>
