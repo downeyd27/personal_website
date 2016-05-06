@@ -3,6 +3,7 @@ $grey: #e6eaed;
 $blue: #b5cae1;
 $navy:  #455060;
 $black: #05080f;
+$white: #fdfdfd;
 
 .debug  { outline: 0px solid red }
 .blue   { background-color: $blue; }
@@ -21,9 +22,13 @@ $black: #05080f;
 html { height: 100%; }
 
 body {
-  background-color: $navy !important;
+  background-color: $navy;
   color: $black;
   font-family: 'Droid Sans', serif;
+}
+
+section {
+  box-shadow: 2px 2px 7px 0px rgba(50, 50, 50, 0.75);
 }
 
 h1 {
@@ -46,8 +51,12 @@ p {
   display: block;
 }
 
+ul {
+  list-style-type: none;
+}
+
 // a:visited { color: #0c0 }
-a:link    { color: #c00 }
+a:link    { color: #c00; }
 a:hover   { color: #00c }
 a:active  { color: #ccc }
 
@@ -90,6 +99,8 @@ img, figcaption {
 }
 
 footer {
+  border-top: 1px solid $black;
+  box-shadow: 0px -3px 7px 0px rgba(50, 50, 50, 0.75);
   display: flex !important;
   justify-content: center;
   align-items: center;
@@ -104,4 +115,8 @@ footer {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+img {
+  border: 1px solid $black;
+  box-shadow: 2px 2px 7px 0px rgba(50, 50, 50, 0.75);
 }
