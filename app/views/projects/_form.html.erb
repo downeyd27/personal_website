@@ -1,23 +1,22 @@
 <h2 class="debug sr-only">Project Form</h2>
 
-<%= form_for @project, html: { multipart: true } do |f| %>
+<%= form_for @project, multipart: true do |f| %>
   <%= render "shared/errors", object: @project %>
 
-    <%= f.label :name, "Name:" %>
+    <%= f.label      :name, "Name:" %>
     <%= f.text_field :name, class: "form-control" %>
 
-    <%= f.label :technology, "Technology:" %>
+    <%= f.label      :technology, "Technology:" %>
     <%= f.text_field :technology, class: "form-control" %>
 
-    <%= f.label :description, "Description:" %>
-    <%= f.text_area :description, class: "form-control" %>
+    <%= f.label      :description, "Description:" %>
+    <%= f.text_area  :description, class: "form-control" %>
 
-    <%= f.label :purpose, "Purpose:" %>
-    <%= f.text_area :purpose, class: "form-control" %>
+    <%= f.label      :purpose, "Purpose:" %>
+    <%= f.text_area  :purpose, class: "form-control" %>
 
-    <%= f.label :image, "Image Url:" %>
-    <%= f.text_field :image, class: "form-control" %>
-    <%= image_tag "# current image of project ", alt:"Projects current image.", width:250, height:250 %>
+    <%= f.label      :avatar, "Image Url:" %>
+    <%= f.file_field :avatar, class: "form-control" %>
 
     <%= f.submit %>
 <% end %>

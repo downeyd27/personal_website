@@ -1,10 +1,16 @@
 <h1 class="debug">Project Show Page</h1>
 
 <ul class="debug">
-  <li><%= @project.image %></li>
-  <li><%= @project.name %></li>
-  <li><%= @project.description %></li>
-  <li><%= @project.purpose %></li>
-  <li><%= @project.technology %></li>
-  <li><%= @project.url %></li>
+  <li>Image: <%= @project.avatar.url %></li>
+  <li>Name: <%= @project.name %></li>
+  <li>Description:<%= @project.description %></li>
+  <li>Prupose: <%= @project.purpose %></li>
+  <li>Technology: <%= @project.technology %></li>
+  <li>Url: <%= @project.url %></li>
 </ul>
+
+<div class="debug">
+  <%= link_to "Edit Project Page", edit_project_path(@project) %>
+  <%= link_to "Delete Project", project_path(@project), data: { confirm: "Are you sure you want to delete this project?", method: :delete } %>
+  <%= link_to "All Projects Page", projects_path %>
+</div>
