@@ -2,15 +2,15 @@
   <h2 class="sr-only">Main Navigation</h2>
   <!-- TODO: Add a brand logo -->
   <div class="debug brandLogoContainer">
-    <a class="brandLogoContainer__link" href="http://dillondowney.herokuapp.com/">Dillon Downey</a>
+    <%= link_to "Dillon Downey", root_path %>
   </div>
   <div class="debug navLinkContainer">
     <ul class="debug navLinkContainer__unorderedList">
       <li>
-        <a class="debug navLinkContainer__link" href="https://downeyd27.github.io/blog/blog-index.html" target="_blank">Old Blog</a>
+        <%= link_to "Old Blog", "https://downeyd27.github.io/blog/blog-index.html", target: "blank", class:"debug navLinkContainer__link" %>
       </li>
       <li>
-        <a class="debug navLinkContainer__link" href="https://resume.creddle.io/resume/1rktq4ubpei" target="_blank">R&#233;sum&#233;</a>
+        <%= link_to "Resume", "https://resume.creddle.io/resume/1rktq4ubpei", target:"blank", class:"debug navLinkContainer__link"  %>
       </li>
     </ul>
   </div>
