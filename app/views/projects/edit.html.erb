@@ -1,3 +1,26 @@
 <h1 class="debug">Project Edit Page</h1>
 
-<%= render "/projects/form" %>
+<section class="debug">
+  <h2 class="debug"><%= @project.name %></h2>
+
+  <figure class="debug projectSection__figure">
+    <%= link_to "#{@project.url}", class:"projectSection__Link" do %>
+      <%= image_tag("#{@project.avatar.url}", width: "300", height: "300", alt: "#{@project.description}", class: "debug projectSection__image") %>
+    <% end %>
+    <figcaption class="debug projectSection__figcaption">
+      <ul class="debug projectSection__attributeList">
+        <li>Description: <%= @project.description %></li>
+        <li>Purpose: <%= @project.purpose %></li>
+        <li>Technology: <%= @project.technology %></li>
+        <li>Project Url: <%= @project.url %></li>
+      </ul>
+    </figcaption>
+  </figure>
+
+  <div class="debug crudLinks">
+    <%= link_to "Edit Project Page", edit_project_path(@project) %>
+    <%= link_to "Delete Project", project_path(@project), data: { confirm: "Are you sure you want to delete this project?", method: :delete } %>
+    <%= link_to "All Projects Page", projects_path %>
+    <%= link_to 'Load new Project', new_project_path %>
+  </div>
+</section>
