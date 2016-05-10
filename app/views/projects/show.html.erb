@@ -2,13 +2,14 @@
 
 <ul class="debug">
   <li>
-    <%= link_to "https://dillondowney.herokuapp.com" do %>
+    <%= link_to @project.url do %>
       <%= image_tag("#{@project.avatar.url}", width: "500", height: "500", alt: "#{@project.description}", class: "debug projectSection__image") %>
     <% end %>
   </li>
   <li>Technology: <%= @project.technology %></li>
   <li>Description:<%= @project.description %></li>
   <li>Purpose: <%= @project.purpose %></li>
+  <li>URL: <%= @project.url %></li>
 </ul>
 
 <div class="debug">
