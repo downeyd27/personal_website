@@ -1,8 +1,31 @@
-$orange: #c86208;
-$grey: #e6eaed;
-$blue: #b5cae1;
-$navy:  #455060;
-$black: #05080f;
+
+.blue   { background-color: $blue; }
+
+.feedbackButton {
+  width: 35px;
+  height: 150px;
+  background-color: $grey;
+  position: fixed;
+
+}
+
+.introContainer__aboutMeSection,
+.introContainer__portfolioPicSection{
+  width: 45%;
+  background-color: $grey;
+  border: 2px solid $black;
+  overflow-y: auto;
+}
+
+@media all and (max-width: 400px) {
+  .introContainer__aboutMeSection,
+  .introContainer__portfolioPicSection,
+  .projectSection {
+    width: 95%;
+  }
+}
+
+// INTRO SECTION
 
 .introContainer {
   display: flex;
