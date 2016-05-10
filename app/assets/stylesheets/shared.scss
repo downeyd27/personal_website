@@ -82,10 +82,25 @@ img, figcaption {
 }
 
 #iframeContainer {
+  position: absolute;
+  height: 1100px;
+  width: 850px;
+  top: 75px;
+  right: 5%;
+  left: 5%;
+
+  justify-content: center;
+}
+#close {
   display: flex;
   justify-content: center;
-  iframe {
-
+  align-items: center;
+  background-color: $white;
+  height: 50px;
+  border: 1px solid $black;
+  font-size: 2em;
+  &:hover {
+    cursor: pointer;
   }
 }
 

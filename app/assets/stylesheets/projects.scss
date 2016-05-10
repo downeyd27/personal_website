@@ -25,6 +25,7 @@
   align-items: center;
   align-content: space-around;
   section {
+    margin-top: 25px;
     width: 45%;
     height: 800px;
     background-color: $grey;
@@ -35,12 +36,26 @@
       margin: 10px;
     }
   }
+  figure {
+    margin: 0em;
+  }
+
 }
 
 .projectSection__figcaption {
   margin-top: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  .figcaption__projectAttribute {
+    font-weight: bold;
+  }
+  ul {
+    padding: 0 15px;
+  }
+  li {
+    margin-bottom: 5px;
+  }
+
 }
 
 @media all and (max-width: 800px) {
@@ -75,6 +90,7 @@ form {
     margin-bottom: 7px;
   }
 }
+
 
 .projectFormContainer {
   display: flex;
