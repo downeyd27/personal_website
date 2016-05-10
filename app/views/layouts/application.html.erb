@@ -8,18 +8,20 @@
   <%= display_meta_tags %>
   <%= csrf_meta_tags %>
   <!-- <meta http-equiv="refresh" content="30"> -->
-  <%= stylesheet_link_tag 'application', "http://fonts.googleapis.com/css?family=Droid+Sans", "http://fonts.googleapis.com/css?family=Droid+Serif",
+  <%= stylesheet_link_tag 'application',
   media: 'all',
   'data-turbolinks-track' => true %>
 
   <%= render 'layouts/shim' %>
+  <%= render 'layouts/favicon' %>
 </head>
 
-<body>
+<body class="<%= controller_name %> <%= action_name %>">
   <h1 class="sr-only">Dillon Downey's Website</h1>
-  <a href="#mainSection"    class="sr-only">Skip to main content</a>
-  <a href="#projectsHeader" class="sr-only">Skip to projects section</a>
-  <a href="#footerSection"  class="sr-only">Skip to footer</a>
+  <%= link_to "Skip to main content", "#mainSection", class:"sr-only" %>
+  <%= link_to "Skip to project section", "#projectSection", class:"sr-only" %>
+  <%= link_to "Skip to footer", "#footerSection", class:"sr-only" %>
+  <%= link_to "Skip to main content", "#mainSection", class:"sr-only" %>
   <!-- ################################# -->
   <!-- ###########  NAVBAR ############# -->
   <%= render 'layouts/navbar_top' %>
@@ -32,12 +34,27 @@
     <%= yield %>
     <!-- ############# YIELD ############# -->
     <!-- ################################# -->
+    <% if @projects.present? %>
+      <% @projects.each do |project| %>
+        <section class="debug">
+          <h2 class="debug"><%= project.name %></h2>
 
-    <!-- ################################# -->
-    <!-- ###########DEBUG PARAMS########## -->
-    <%# debug(params) if Rails.env.development? %>
-    <!-- ###########DEBUG PARAMS########## -->
-    <!-- ################################# -->
+          <figure class="debug projectSection__figure">
+            <%= link_to "#{project.url}", class:"projectSection__Link" do %>
+              <%= image_tag("#{project.avatar.url}", width: "500", height: "500", alt: "#{project.description}", class: "debug projectSection__image") %>
+            <% end %>
+
+            <figcaption class="debug projectSection__figcaption">
+              <ul class="debug">
+                <li><span class="figcaption__projectAttribute">Description</span>: <%= project.description %></li>
+                <li><span class="figcaption__projectAttribute">Purpose</span>: <%= project.purpose %></li>
+                <li><span class="figcaption__projectAttribute">Technology</span>: <%= project.technology %></li>
+              </ul>
+            </figcaption>
+          </figure>
+        </section>
+      <% end %>
+    <% end %>
   </main>
 
   <!-- ################################# -->
@@ -48,6 +65,5 @@
 
   <!-- At bottom of page so page will load faster -->
   <%= javascript_include_tag 'application', "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js", 'data-turbolinks-track' => true %>
-  <%= render 'favicon' %>
 </body>
 </html>

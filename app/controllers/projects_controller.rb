@@ -43,7 +43,7 @@ class ProjectsController < ApplicationController
       redirect_to projects_path
     else
       flash[:error] = "ERROR: #{@project.name} did NOT delete."
-      redirect_to :back
+      redirect_to root_path
     end
   end
 

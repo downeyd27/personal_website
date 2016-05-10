@@ -1,12 +1,14 @@
-<h1 class="debug">Project Show Page</h1>
+<h1 class="debug"><%= @project.name %></h1>
 
 <ul class="debug">
-  <li>Image: <%= @project.avatar.url %></li>
-  <li>Name: <%= @project.name %></li>
-  <li>Description:<%= @project.description %></li>
-  <li>Prupose: <%= @project.purpose %></li>
+  <li>
+    <%= link_to "https://dillondowney.herokuapp.com" do %>
+      <%= image_tag("#{@project.avatar.url}", width: "500", height: "500", alt: "#{@project.description}", class: "debug projectSection__image") %>
+    <% end %>
+  </li>
   <li>Technology: <%= @project.technology %></li>
-  <li>Url: <%= @project.url %></li>
+  <li>Description:<%= @project.description %></li>
+  <li>Purpose: <%= @project.purpose %></li>
 </ul>
 
 <div class="debug">

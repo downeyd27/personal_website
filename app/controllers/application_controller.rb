@@ -3,7 +3,12 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  # before_action :find_all_projects
   before_action :prepare_meta_tags, if: "request.get?"
+
+  # def find_all_projects
+  #   @projects.all = Project.all
+  # end
 
   def prepare_meta_tags(options={})
     site_name   = "Dillon Downey's website"

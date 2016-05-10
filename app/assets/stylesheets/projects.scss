@@ -1,0 +1,93 @@
+.crudLinks {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid $black;
+  margin: 0 20px;
+  & a:hover {
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  }
+}
+
+.projectsHeader {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  h1 {
+    width: 100%;
+  }
+}
+
+.projectSection {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+  section {
+    width: 45%;
+    height: 800px;
+    background-color: $grey;
+    border: 1px solid $black;
+    border-radius: 5px;
+    overflow-y: scroll;
+    h2 {
+      margin: 10px;
+    }
+  }
+}
+
+.projectSection__figcaption {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+@media all and (max-width: 800px) {
+  .projectSection {
+    flex-direction: column;
+    & :first-child {
+      margin-top: 10px;
+    }
+    section {
+      margin-top: 20px;
+      width: 95%
+    }
+  }
+
+  figure.projectSection__figure {
+    width: 95% !important;
+    margin: 10px 0 !important;
+  }
+}
+
+form {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 400px;
+  border: 1px solid $black;
+  margin: 1em;
+  border-radius: 5px;
+  box-shadow: 2px 2px 7px 0px rgba(50, 50, 50, 0.75);
+
+  img {
+    margin-bottom: 7px;
+  }
+}
+
+.projectFormContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  display: block;
+  width: 250px;
+}
+
+input, textarea {
+  width: 250px;
+  margin-bottom: 7px;
+}

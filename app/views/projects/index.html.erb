@@ -5,7 +5,7 @@
     <h2 class="debug"><%= project.name %></h2>
 
     <figure class="debug projectSection__figure">
-      <%= link_to "#{project.url}", class:"projectSection__Link" do %>
+      <%= link_to project_path(project), class:"projectSection__Link" do %>
         <%= image_tag("#{project.avatar.url}", width: "500", height: "500", alt: "#{project.description}", class: "debug projectSection__image") %>
       <% end %>
 
