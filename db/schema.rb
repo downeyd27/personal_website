@@ -30,4 +30,15 @@ ActiveRecord::Schema.define(version: 20160506210707) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
   end
+
+  create_table "table_projects", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.text     "purpose"
+    t.string   "technology"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
 end
