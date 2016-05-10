@@ -13,7 +13,7 @@ gem 'turbolinks'
 gem 'meta-tags', '~> 2.1'
 gem 'newrelic_rpm'
 gem 'paperclip'
-gem 'aws-sdk', '~> 2.3'
+gem 'aws-sdk', '< 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
