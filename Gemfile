@@ -13,7 +13,6 @@ gem 'turbolinks'
 gem 'meta-tags', '~> 2.1'
 gem 'newrelic_rpm'
 gem 'paperclip'
-gem 'aws-sdk', '< 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
@@ -33,7 +32,10 @@ group :development do
   gem 'spring', '~> 1.7', '>= 1.7.1'
 end
 
-gem 'rails_12factor', group: :production # Recommendation for Heroku
+group :production do
+  gem 'rails_12factor' # Recommended for Heroku
+  gem 'aws-sdk', '< 2.0'
+end
 
 group :test do
   gem 'capybara', '~> 2.7'
