@@ -1,21 +1,15 @@
-<h1 class="debug">Project Edit Page</h1>
+<h1 class="debug"><%= @project.name %> Edit Page</h1>
 
 <section class="debug">
-  <h2 class="debug"><%= @project.name %></h2>
 
   <figure class="debug projectSection__figure">
     <%= link_to "#{@project.url}", class:"projectSection__Link" do %>
       <%= image_tag("#{@project.avatar.url}", width: "300", height: "300", alt: "#{@project.description}", class: "debug projectSection__image") %>
     <% end %>
-    <figcaption class="debug projectSection__figcaption">
-      <ul class="debug projectSection__attributeList">
-        <li>Description: <%= @project.description %></li>
-        <li>Purpose: <%= @project.purpose %></li>
-        <li>Technology: <%= @project.technology %></li>
-        <li>Project Url: <%= @project.url %></li>
-      </ul>
-    </figcaption>
+
+    <%= render "projects/form" %>
   </figure>
+
 
   <div class="debug crudLinks">
     <%= link_to "Edit Project Page", edit_project_path(@project) %>
