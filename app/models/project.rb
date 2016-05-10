@@ -13,7 +13,13 @@ class  Project < ActiveRecord::Base
     thumb: '100x100>',
     square: '200x200#',
     medium: '300x300>'
-  }, default_url: "/images/:style/missing.png"
+  },
+  default_url: "/images/:style/missing.png",
+  storage: :s3,
+  bucket: "downeyd27",
+  s3_credentials: S3_CREDENTIALS,
+  url: "/:image/:id/:style/:basename.:extension",
+  path: ":image/:id/:style/:basename.:extension"
 
   # Validate the attached image is image/jpg, image/png, etc
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
