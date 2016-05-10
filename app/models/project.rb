@@ -1,6 +1,6 @@
 class  Project < ActiveRecord::Base
-  validates_presence_of :name, :description, :purpose, :technology
-  
+  validates_presence_of :name, :description, :purpose, :technology, :url
+
   validates :name, length: { maximum: 50 },
                    uniqueness: true
 
