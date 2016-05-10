@@ -40,15 +40,25 @@
 
         <figure class="debug projectSection__figure">
           <%= link_to "#{project.url}", class:"projectSection__Link" do %>
-            <%= image_tag("#{project.avatar.url}", width: "500", height: "500", alt: "#{project.description}", class: "debug projectSection__image") %>
+            <%= image_tag("#{project.avatar.url(:medium)}", width: "300", height: "300", alt: "#{project.description}", class: "debug projectSection__image") %>
           <% end %>
 
           <figcaption class="debug projectSection__figcaption">
             <ul class="debug">
-              <li><span class="figcaption__projectAttribute">Description:</span> <%= project.description %></li>
-              <li><span class="figcaption__projectAttribute">Purpose:</span> <%= project.purpose %></li>
-              <li><span class="figcaption__projectAttribute">Technology:</span> <%= project.technology %></li>
-              <li><span class="figcaption__projectAttribute">Project Url:</span> <%= project.url %></li>
+              <li>
+                <span class="figcaption__projectAttribute">Description:</span> <%= project.description %>
+              </li>
+              <li>
+                <span class="figcaption__projectAttribute">Purpose:</span> <%= project.purpose %>
+              </li>
+              <li>
+                <span class="figcaption__projectAttribute">Technology:</span> <%= project.technology %>
+              </li>
+              <li>
+                <span class="figcaption__projectAttribute">Project Url:</span> <%= link_to project.url do %>
+                  <%= project.url %>
+                  <% end %>
+              </li>
             </ul>
           </figcaption>
         </figure>
