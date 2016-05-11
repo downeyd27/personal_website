@@ -54,7 +54,8 @@
       <span>Description: </span><p><%= project.description %></p>
       <span>Purpose: </span><p><%= project.purpose %></p>
       <span>Technology: </span><p><%= project.technology %></p>
-      <span>Project Url: </span><p>
+      <span>Project Url: </span>
+      <p>
         <%= link_to project.url, class:"projectCard__url" do %>
           <%= project.url %>
         <% end %>
