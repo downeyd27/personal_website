@@ -14,12 +14,12 @@
  */
 @import url("//fonts.googleapis.com/css?family=Droid+Sans:400,700,300");
 @import url("//fonts.googleapis.com/css?family=Droid+Serif:400,700,300");
-/* line 8, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
-.debug {
-  outline: 0px solid red;
+/* line 1, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
+.debug, h1, h2, h3, h4, h5, h6, p, div, span, section, figure, img, ul, ol, li, a, footer, nav, article, body {
+  outline: 0 solid red;
 }
 
-/* line 10, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
+/* line 5, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -31,39 +31,43 @@
   border: 0;
 }
 
-/* line 21, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
+/* line 16, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
 html {
   height: 100%;
 }
 
-/* line 23, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
+/* line 18, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
 body {
   background-color: #455060;
   color: #05080f;
   font-family: 'Droid Sans', serif;
 }
 
-/* line 29, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
+/* line 24, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
 section {
-  box-shadow: 2px 2px 7px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
 }
 
-/* line 33, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
-h1 {
+/* line 28, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
+h1, h2 {
   letter-spacing: 1px;
 }
 
-/* line 37, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
+/* line 31, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
+h2 {
+  width: 90%;
+}
+
+/* line 35, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
 h1, h2, h3 {
   text-align: center;
   background-color: #e6eaed;
   border: 2px solid #05080f;
-  border-radius: 1em;
   padding: .4em .4em;
   font-family: 'Droid Serif', serif;
 }
 
-/* line 46, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
+/* line 43, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
 p {
   margin: 0.5em 25px;
   font-size: 1.2em;
@@ -71,173 +75,62 @@ p {
   display: block;
 }
 
-/* line 53, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
+/* line 50, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
 ul {
   list-style-type: none;
 }
 
+/* line 54, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
+a {
+  color: #05080f;
+  text-decoration: none;
+}
 /* line 58, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
 a:link {
   color: #c00;
 }
-
 /* line 59, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
 a:hover {
   color: #00c;
 }
-
 /* line 60, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
 a:active {
   color: #ccc;
 }
 
-/* line 62, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
-a {
-  color: #05080f;
-  font-size: 1.5em;
-  text-decoration: none;
-}
-
-/* line 68, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
+/* line 63, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
 figure {
   overflow-y: auto;
 }
-
-/* line 73, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
-img {
+/* line 65, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
+figure img {
   margin: 0 auto;
   max-width: 90%;
-}
-
-/* line 78, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
-img, figcaption {
+  border: 1px solid #05080f;
+  box-shadow: 7px 7px 5px 0px;
   display: table-cell;
-  vertical-align: bottom;
-  text-align: left;
 }
 
-/* line 84, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
-#iframeContainer {
-  position: absolute;
-  height: 1100px;
-  width: 850px;
-  top: 75px;
-  right: 5%;
-  left: 5%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-/* line 94, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
-#close {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #fdfdfd;
-  height: 50px;
-  border: 1px solid #05080f;
-  font-size: 2em;
-}
-/* line 102, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
-#close:hover {
-  cursor: pointer;
-}
-
-/* line 107, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
-footer {
-  border-top: 1px solid #05080f;
-  box-shadow: 0px -3px 7px 0px rgba(50, 50, 50, 0.75);
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #b5cae1;
-  margin-top: 25px;
-  height: 75px;
-  align-items: center;
-}
-
-/* line 119, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
-.socialMediaContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-}
-
-/* line 125, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
-img {
-  border: 1px solid #05080f;
-  box-shadow: 2px 2px 7px 0px rgba(50, 50, 50, 0.75);
-}
-
-/* line 132, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
-.flash-message {
-  font-size: 2em;
-  color: black;
-  z-index: 999;
-  /*position: fixed;*/
-  font-weight: bold;
-  width: 96%;
-  margin: 20px;
-}
-/* line 141, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
-.flash-message .flash_error {
-  border: solid 4px #900;
-  background-color: #FF6565;
-}
-/* line 146, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
-.flash-message .flash_success {
-  border: solid 4px #26722D;
-  background-color: #A4E7A0;
-}
-/* line 151, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
-.flash-message .flash_notice {
-  border: solid 4px;
-  background-color: #f8f99d;
-  /* need to fill in border and background color for flash notice */
-}
-/* line 156, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
-.flash-message p {
-  font-size: 110%;
-  margin: 15px 0;
-}
-
-/* line 164, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
+/* line 76, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
 .navContainer {
   border-bottom: 1px solid #05080f;
-  box-shadow: 0px 3px 7px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75) 0px 3px 7px 0px rgba(50, 50, 50, 0.75);
+  font-size: 1.5em;
+}
+/* line 80, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
+.navContainer ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  list-style-type: none;
+  padding: 0;
 }
 
-/* line 168, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
+/* line 88, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
 .navContainer, .brandLogoContainer {
   display: -webkit-box;
   display: -webkit-flex;
@@ -256,36 +149,7 @@ img {
           justify-content: space-between;
 }
 
-/* line 177, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
-.navLinkContainer .navLinkContainer__unorderedList {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  list-style-type: none;
-  padding: 0;
-}
-
-/* line 185, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
-.navLinkContainer__link, .crudLinks a {
-  background-color: #e6eaed;
-  border: 1px solid black;
-  border-radius: 5px;
-  margin: 10px;
-  padding: 5px;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-/* line 194, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
-.navLinkContainer__link:hover {
-  box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
-}
-
-/* line 198, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
+/* line 95, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
 .brandLogoContainer {
   display: -webkit-box;
   display: -webkit-flex;
@@ -302,9 +166,112 @@ img {
   margin-left: 20px;
 }
 
+/* line 102, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
+.navLinkContainer__link, .crudLinks a {
+  background-color: #e6eaed;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  padding: 5px;
+}
+/* line 109, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
+.navLinkContainer__link:hover, .crudLinks a:hover {
+  box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+/* line 112, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
+.socialMediaContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/* line 115, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
+.socialMediaContainer img {
+  margin: 4px 0 0 0;
+}
+
+/* line 121, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
+footer {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  align-items: center;
+  margin-top: 25px;
+  height: 75px;
+  border-top: 1px solid #05080f;
+  box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  background-color: #b5cae1;
+}
+
+/* line 136, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
+.flashMessageContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+/* line 143, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
+.flash_message {
+  font-size: 2em;
+  color: black;
+  z-index: 999;
+  /*position: fixed;*/
+  font-weight: bold;
+  width: 96%;
+  margin: 20px;
+}
+/* line 151, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
+.flash_message .flash_error {
+  border: solid 4px #900;
+  background-color: #FF6565;
+}
+/* line 155, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
+.flash_message .flash_success {
+  border: solid 4px #26722D;
+  background-color: #A4E7A0;
+}
+/* line 159, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
+.flash_message .flash_notice {
+  border: solid 4px #f9fb19;
+  background-color: #f8f99d;
+}
+/* line 163, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
+.flash_message p {
+  font-size: 110%;
+  margin: 15px 0;
+}
+
 /* Medium screens */
 @media all and (max-width: 800px) {
-  /* line 207, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
+  /* line 171, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
   .navContainer {
     -webkit-justify-content: space-around;
         -ms-flex-pack: distribute;
@@ -313,7 +280,7 @@ img {
 }
 /* Small screens */
 @media all and (max-width: 500px) {
-  /* line 214, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
+  /* line 178, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/shared.scss */
   .navContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -327,20 +294,12 @@ img {
             align-items: center;
   }
 }
-/* line 2, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/custom.scss */
+/* line 1, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/custom.scss */
 .blue {
   background-color: #b5cae1;
 }
 
-/* line 4, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/custom.scss */
-.feedbackButton {
-  width: 35px;
-  height: 150px;
-  background-color: #e6eaed;
-  position: fixed;
-}
-
-/* line 12, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/custom.scss */
+/* line 3, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/custom.scss */
 .introContainer__aboutMeSection,
 .introContainer__portfolioPicSection {
   width: 45%;
@@ -349,15 +308,7 @@ img {
   overflow-y: auto;
 }
 
-@media all and (max-width: 400px) {
-  /* line 21, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/custom.scss */
-  .introContainer__aboutMeSection,
-  .introContainer__portfolioPicSection,
-  .projectSection {
-    width: 95%;
-  }
-}
-/* line 30, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/custom.scss */
+/* line 13, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/custom.scss */
 .introContainer {
   display: -webkit-box;
   display: -webkit-flex;
@@ -372,34 +323,18 @@ img {
           justify-content: space-around;
 }
 
-/* line 36, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/custom.scss */
+/* line 19, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/custom.scss */
 .introContainer__aboutMeSection {
   margin-top: 20px;
 }
 
-/* line 40, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/custom.scss */
+/* line 23, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/custom.scss */
 .introContainer__aboutMeSection,
 .introContainer__portfolioPicSection {
   border-radius: 5px;
 }
 
-@media all and (max-width: 800px) {
-  /* line 46, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/custom.scss */
-  .introContainer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
-  /* line 49, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/custom.scss */
-  .introContainer__portfolioPicSection,
-  .introContainer__aboutMeSection {
-    width: 95%;
-  }
-}
-/* line 56, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/custom.scss */
+/* line 28, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/custom.scss */
 .introContainer__portfolioPicSection {
   display: -webkit-box;
   display: -webkit-flex;
@@ -415,20 +350,44 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
 }
-/* line 60, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/custom.scss */
+/* line 32, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/custom.scss */
 .introContainer__portfolioPicSection figure {
-  margin: 20px 0;
+  margin: 20px 0 0 0;
 }
-/* line 63, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/custom.scss */
-.introContainer__portfolioPicSection figure h3 {
+/* line 35, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/custom.scss */
+.introContainer__portfolioPicSection h3 {
   margin-left: 10px;
   margin-right: 10px;
 }
-/* line 68, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/custom.scss */
+/* line 39, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/custom.scss */
 .introContainer__portfolioPicSection .socialMediaContainer {
   margin-bottom: 20px;
 }
 
+@media all and (max-width: 400px) {
+  /* line 45, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/custom.scss */
+  .introContainer__aboutMeSection,
+  .introContainer__portfolioPicSection,
+  .projectSection {
+    width: 95%;
+  }
+}
+@media all and (max-width: 800px) {
+  /* line 54, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/custom.scss */
+  .introContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  /* line 57, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/custom.scss */
+  .introContainer__portfolioPicSection,
+  .introContainer__aboutMeSection {
+    width: 95%;
+  }
+}
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -876,7 +835,7 @@ textarea {
 }
 
 /* line 1, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
-.crudLinks {
+.crudLinkContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -892,29 +851,12 @@ textarea {
   margin: 0 20px;
 }
 /* line 7, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
-.crudLinks a:hover {
+.crudLinkContainer a:hover {
   box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
 }
 
 /* line 12, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
-.projectsHeader {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 20px 0;
-}
-/* line 16, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
-.projectsHeader h1 {
-  width: 100%;
-}
-
-/* line 21, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
-.projectSection {
+.projectsSection {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -925,85 +867,103 @@ textarea {
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-align-content: space-around;
-      -ms-flex-line-pack: distribute;
-          align-content: space-around;
 }
-/* line 27, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
-.projectSection section {
-  margin-top: 25px;
-  width: 45%;
-  height: 800px;
-  background-color: #e6eaed;
-  border: 1px solid #05080f;
-  border-radius: 5px;
-  overflow-y: scroll;
-}
-/* line 35, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
-.projectSection section h2 {
-  margin: 10px;
-}
-/* line 39, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
-.projectSection figure {
-  margin: 0em;
-}
-
-/* line 45, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
-.projectSection__figcaption {
-  margin-top: 10px;
+/* line 16, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
+.projectsSection .projectCard {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 45%;
+  margin-bottom: 20px;
+  background-color: #e6eaed;
+  box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  border: 1px solid #05080f;
+  border-radius: 5px;
+  overflow-y: scroll;
 }
-/* line 49, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
-.projectSection__figcaption .figcaption__projectAttribute {
+/* line 26, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
+.projectsSection .projectCard span:first-of-type {
+  margin-top: 10px;
+}
+/* line 29, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
+.projectsSection .projectCard .projectCard__header {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  width: 90%;
+}
+/* line 33, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
+.projectsSection .projectCard a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/* line 37, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
+.projectsSection .projectCard span {
   font-weight: bold;
+  margin-left: 10px;
 }
-/* line 52, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
-.projectSection__figcaption ul {
-  padding: 0 15px;
-}
-/* line 55, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
-.projectSection__figcaption li {
-  margin-bottom: 5px;
+/* line 41, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
+.projectsSection .projectCard .projectCard__url {
+  display: inline-block;
 }
 
 @media all and (max-width: 800px) {
-  /* line 62, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
-  .projectSection {
+  /* line 48, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
+  .projectsSection {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center;
   }
-  /* line 64, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
-  .projectSection :first-child {
+  /* line 51, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
+  .projectsSection :first-child {
     margin-top: 10px;
   }
-  /* line 67, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
-  .projectSection section {
+  /* line 54, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
+  .projectsSection section {
     margin-top: 20px;
     width: 95%;
   }
-
-  /* line 73, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
-  figure.projectSection__figure {
-    width: 95% !important;
-    margin: 10px 0 !important;
+  /* line 58, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
+  .projectsSection .projectCard {
+    width: 95%;
   }
 }
-/* line 79, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
-form {
+/* line 64, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
+.projectFormContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/* line 68, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
+.projectFormContainer form {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1021,35 +981,17 @@ form {
   border-radius: 5px;
   box-shadow: 2px 2px 7px 0px rgba(50, 50, 50, 0.75);
 }
-/* line 89, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
-form img {
-  margin-bottom: 7px;
-}
-
-/* line 95, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
-.projectFormContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-/* line 101, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
-label {
+/* line 77, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
+.projectFormContainer form label {
   display: block;
   width: 250px;
 }
-
-/* line 106, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
-input, textarea {
+/* line 81, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
+.projectFormContainer form input, .projectFormContainer form textarea {
   width: 250px;
+  margin-bottom: 7px;
+}
+/* line 85, /Users/dillondowney/Development/Projects/personal_site/app/assets/stylesheets/projects.scss */
+.projectFormContainer form img {
   margin-bottom: 7px;
 }

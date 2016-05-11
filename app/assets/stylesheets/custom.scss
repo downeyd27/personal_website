@@ -1,12 +1,8 @@
-
 .blue   { background-color: $blue; }
 
-.feedbackButton {
-  width: 35px;
-  height: 150px;
-  background-color: $grey;
-  position: fixed;
-
+.mainHeader {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .introContainer__aboutMeSection,
@@ -15,14 +11,6 @@
   background-color: $grey;
   border: 2px solid $black;
   overflow-y: auto;
-}
-
-@media all and (max-width: 400px) {
-  .introContainer__aboutMeSection,
-  .introContainer__portfolioPicSection,
-  .projectSection {
-    width: 95%;
-  }
 }
 
 // INTRO SECTION
@@ -42,6 +30,34 @@
   border-radius: 5px;
 }
 
+.introContainer__portfolioPicSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  figure {
+    margin: 20px 0 0 0;
+    img {
+      box-shadow: 2px 2px 5px 0px;
+    }
+  }
+  h3 {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .socialMediaContainer {
+    margin-bottom: 20px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .introContainer__aboutMeSection,
+  .introContainer__portfolioPicSection,
+  .projectSection {
+    width: 95%;
+  }
+}
+
+
 @media all and (max-width: 800px) {
   .introContainer {
     flex-direction: column;
@@ -51,21 +67,4 @@
     width: 95%;
   }
 
-}
-
-.introContainer__portfolioPicSection {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  figure {
-    margin: 20px 0;
-
-    h3 {
-      margin-left: 10px;
-      margin-right: 10px;
-    }
-  }
-  .socialMediaContainer {
-    margin-bottom: 20px;
-  }
 }

@@ -1,0 +1,37 @@
+<h1>Project Index</h1>
+
+<section>
+  <% @projects.each do |project| %>
+  <h2><%= project.name %></h2>
+
+  <%= link_to project_path(project), class:"projectSection__Link" do %>
+    <%= image_tag("#{project.avatar.url}",
+    width: "500",
+    height: "500",
+    alt: "#{project.description}",
+    class: "projectSection__image") %>
+  <% end %>
+  <ul>
+    <li>Description: <%= project.description %></li>
+    <li>Purpose: <%= project.purpose %></li>
+    <li>Technology: <%= project.technology %></li>
+    <li>Project Url: <%= project.url %></li>
+  </ul>
+
+  <div class="crudLinkContainer">
+    <ul>
+      <li>link_to "All Projects Page", projects_path %></li>
+      <li>link_to 'Load New Project', new_project_path %></li>
+      <li>link_to 'Show Project', project_path(project) %></li>
+      <li>link_to "Edit Project Page", edit_project_path(project) %></li>
+      <li>
+        <%= link_to "Delete Project", project_path(project)
+        data: {
+          confirm: "Are you sure you want to delete this project?",
+          method: :delete
+        } %>
+      </li>
+    </ul>
+  </div>
+  <% end %>
+</section>
