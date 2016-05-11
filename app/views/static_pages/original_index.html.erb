@@ -1,4 +1,6 @@
-<h2 class="mainHeader"><span translate="no">Dillon Downey</span> - Junior Web Developer</h2>
+<div>
+  <h2><span translate="no">Dillon Downey</span> - Junior Web Developer</h2>
+</div>
 
 <div class="introContainer" itemscope itemtype="http://schema.org/Person">
   <section class=" introContainer__portfolioPicSection">
@@ -38,27 +40,35 @@
 </div>
 <!-- TODO: Refactor so the h1 tag is within the section. -->
 
-<section class="projectsSection">
-  <h2>Projects</h2>
-
+<div class="projectsHeader">
+  <h1>Projects</h1>
+</div>
+<div class="projectSection">
   <% @projects.each do |project| %>
-    <div id="project<%= project.id %>" class="projectCard">
-      <h3 class="projectCard__header"><%= project.name %></h3>
+    <section>
+      <h2><%= project.name %></h2>
 
-      <%= link_to project.url do %>
-        <%= image_tag(project.avatar.url(:medium),
-        width: "300",
-        height: "300",
-        alt: "#{project.description}") %>
-      <% end %>
-      <span>Description: </span><p><%= project.description %></p>
-      <span>Purpose: </span><p><%= project.purpose %></p>
-      <span>Technology: </span><p><%= project.technology %></p>
-      <span>Project Url: </span><p>
-        <%= link_to project.url, class:"projectCard__url" do %>
-          <%= project.url %>
+      <figure id="<%= project.name %>" class=" projectSection__figure">
+        <%= link_to project.url, class:"projectSection__Link" do %>
+          <%= image_tag(project.avatar.url(:medium),
+          width: "300",
+          height: "300",
+          alt: "#{project.description}",
+          class: " projectSection__image") %>
         <% end %>
-      </p>
-    </div>
+        <figcaption class="projectSection__figcaption">
+          <ul>
+            <li><span>Description:</span><%= project.description %></li>
+            <li><span>Purpose:</span><%= project.purpose %></li>
+            <li><span>Technology:</span><%= project.technology %></li>
+            <li><span>Project Url:</span>
+              <%= link_to project.url do %>
+                <%= project.url %>
+              <% end %>
+            </li>
+          </ul>
+        </figcaption>
+      </figure>
+    </section>
   <% end %>
-</section>
+</div>

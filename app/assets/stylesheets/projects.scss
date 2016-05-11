@@ -1,4 +1,4 @@
-.crudLinks {
+.crudLinkContainer {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -9,58 +9,47 @@
   }
 }
 
-.projectsHeader {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-  h1 {
-    width: 100%;
-  }
-}
-
-.projectSection {
+.projectsSection {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  align-items: center;
-  align-content: space-around;
-  section {
-    margin-top: 25px;
+  .projectCard {
+    display: flex;
+    flex-direction: column;
     width: 45%;
-    height: 800px;
+    margin-bottom: 20px;
     background-color: $grey;
     border: 1px solid $black;
     border-radius: 5px;
     overflow-y: scroll;
-    h2 {
-      margin: 10px;
+    p {
+      border: 1px solid $black;
     }
-  }
-  figure {
-    margin: 0em;
-  }
-
-}
-
-.projectSection__figcaption {
-  margin-top: 10px;
-  display: flex;
-  justify-content: flex-start;
-
-  ul {
-    padding: 0 15px;
-    li {
-      margin-bottom: 5px;
-    }
-    li > span {
+    span {
       font-weight: bold;
+      margin-left: 10px;
+      &:first-of-type {
+        margin-top: 10px;
+      }
+    }
+    .projectCard__header {
+      align-self: center;
+      width: 90%;
+    }
+    a {
+      display: flex;
+      justify-content: center;
+    }
+    .projectCard__url {
+      display: inline-block;
     }
   }
 }
 
 @media all and (max-width: 800px) {
-  .projectSection {
+  .projectsSection {
     flex-direction: column;
+    align-items: center;
     & :first-child {
       margin-top: 10px;
     }
@@ -68,42 +57,35 @@
       margin-top: 20px;
       width: 95%
     }
-  }
-
-  figure.projectSection__figure {
-    width: 95% !important;
-    margin: 10px 0 !important;
+    .projectCard {
+      width: 95%;
+    }
   }
 }
-
-form {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  width: 400px;
-  border: 1px solid $black;
-  margin: 1em;
-  border-radius: 5px;
-  box-shadow: 2px 2px 7px 0px rgba(50, 50, 50, 0.75);
-
-  img {
-    margin-bottom: 7px;
-  }
-}
-
 
 .projectFormContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-label {
-  display: block;
-  width: 250px;
-}
-
-input, textarea {
-  width: 250px;
-  margin-bottom: 7px;
+  form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 400px;
+    border: 1px solid $black;
+    margin: 1em;
+    border-radius: 5px;
+    box-shadow: 2px 2px 7px 0px rgba(50, 50, 50, 0.75);
+    label {
+      display: block;
+      width: 250px;
+    }
+    input, textarea {
+      width: 250px;
+      margin-bottom: 7px;
+    }
+    img {
+      margin-bottom: 7px;
+    }
+  }
 }

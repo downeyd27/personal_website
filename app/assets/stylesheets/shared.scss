@@ -1,5 +1,6 @@
-.debug  { outline: 1px solid red }
-h1,h2,h2,h4,h5,h6,p,div,section,figure,img,ul,ol,li,a,footer,nav,article,body { @extend .debug }
+.debug { outline: 0 solid red }
+
+h1,h2,h3,h4,h5,h6,p,div,span,section,figure,img,ul,ol,li,a,footer,nav,article,body { @extend .debug }
 
 .sr-only {
   position: absolute;
@@ -20,19 +21,17 @@ body {
   font-family: 'Droid Sans', serif;
 }
 
-section {
-  box-shadow: 2px 2px 7px 0px rgba(50, 50, 50, 0.75);
-}
-
 h1, h2 {
   letter-spacing: 1px;
+}
+h2 {
+  width: 90%;
 }
 
 h1, h2, h3 {
   text-align: center;
   background-color: $grey;
   border: 2px solid $black;
-  border-radius: 1em;
   padding: .4em .4em;
   font-family: 'Droid Serif', serif;
 }
@@ -63,7 +62,7 @@ figure {
     margin: 0 auto;
     max-width: 90%;
     border: 1px solid $black;
-    box-shadow: 2px 2px 7px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 7px 7px 5px 0px;
     display: table-cell;
   }
 }
@@ -106,23 +105,19 @@ figure {
   &:hover { box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75); }
 }
 
+.socialMediaContainer {
+  display: flex;
+  justify-content: center;
+  img {
+    margin: 4px 0 0 0;
+  }
+}
+
 // FOOTER
 footer {
   border-top: 1px solid $black;
-  box-shadow: 0px -3px 7px 0px rgba(50, 50, 50, 0.75);
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
+  box-shadow: 0px -2px 7px 0px rgba(50, 50, 50, 0.75);
   background-color: $blue;
-  margin-top: 25px;
-  height: 75px;
-  align-items: center;
-}
-
-.socialMediaContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 // FLASH MESSAGE CSS
