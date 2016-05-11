@@ -1,5 +1,4 @@
 GEM
-  remote: https://rubygems.org/
   specs:
     actionmailer (4.2.6)
       actionpack (= 4.2.6)
@@ -127,6 +126,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    puma (2.12.2)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.4)
@@ -257,6 +257,7 @@ DEPENDENCIES
   paperclip
   pg
   pry (~> 0.10.3)
+  puma
   quiet_assets (~> 1.1)
   rails (= 4.2.6)
   rails_12factor
