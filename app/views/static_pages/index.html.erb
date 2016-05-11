@@ -1,69 +1,74 @@
-<div class="debug">
-  <h2 class="debug"><span translate="no">Dillon Downey</span> - Junior Web Developer</h2>
+<div>
+  <h2><span translate="no">Dillon Downey</span> - Junior Web Developer</h2>
 </div>
 
-<div class="debug introContainer" itemscope itemtype="http://schema.org/Person">
-  <section class="debug introContainer__portfolioPicSection">
+<div class="introContainer" itemscope itemtype="http://schema.org/Person">
+  <section class=" introContainer__portfolioPicSection">
     <h3 class="sr-only">Portfolio picture</h3>
-    <figure class="debug introContainer__figure" itemprop="image">
-      <%= image_tag("Dillon-500x333.jpg", width:"500", height:"333", alt:"Dillon Downey\'s portfolio picture", class:"debug") %>
+    <figure class=" introContainer__figure" itemprop="image">
+      <%= image_tag("Dillon-500x333.jpg",
+      width:"500",
+      height:"333",
+      alt:"Dillon Downey\'s portfolio picture",
+      class:"") %>
       <figcaption>
-        <h3 class="debug">Junior Web Developer Seeking New Opportunities </h3>
+        <h3>Junior Web Developer Seeking New Opportunities </h3>
       </figcaption>
     </figure>
     <%= render 'shared/social_media_nav' %>
   </section>
 
-  <section class="debug introContainer__aboutMeSection">
+  <section class="introContainer__aboutMeSection">
     <h2 class="sr-only">About Me</h2>
-    <p class="debug aboutMeSection__paragraph">
-      Hi, my name is <span itemprop="name" translate="no" >Dillon </span><span itemprop="familyName" translate="no">Downey</span>.
-      I am a Dev Bootcamp graduate from <time datetime="2015-05">May 2015</time>.  Prior to attending DBC, I was a Senior Store Manager for <span translate="no">GNC (General Nutrition Center)</span> in the San Francisco region for the last three years where my store was ranked in the top five.
+    <p>
+      Hi, my name is <span itemprop="name" translate="no" >Dillon </span>
+      <span itemprop="familyName" translate="no">Downey</span>.
+      I am a Dev Bootcamp graduate from San Francisco.  Prior to attending DBC,
+      I was a Senior Store Manager for <span translate="no">GNC (General Nutrition Center)
+      </span> in the San Francisco region for the last three years where my store
+      was ranked in the top five.
     </p>
-
-    <p class="debug aboutMeSection__paragraph">
-      Through personal acquaintances I became intrigued by the tech industry.  As I researched the possibility of becoming a <span itemprop="JobTitle">web developer</span>, I discovered this would be a fulfilling path to utilize my creativity and analytical thinking. Having gone through <span itemprop="alumniof" translate="no"> Dev BootCamp</span>’s 19-week intensive course, I feel my decision is the right one and I look forward to the many challenges and opportunities that the tech community will provide.
+    <p>
+      Through personal acquaintances I became intrigued by the tech industry.
+      As I researched the possibility of becoming a <span itemprop="JobTitle">web developer</span>,
+      I discovered this would be a fulfilling path to utilize my creativity and
+      analytical thinking. Having gone through <span itemprop="alumniof" translate="no"> Dev BootCamp</span>’s
+      19-week intensive course, I feel my decision is the right one and I look
+      forward to the many challenges and opportunities that the tech community will provide.
     </p>
   </section>
 </div>
 <!-- TODO: Refactor so the h1 tag is within the section. -->
 
-<div class="debug projectsHeader">
-  <h1 class="debug">Projects</h1>
+<div class="projectsHeader">
+  <h1>Projects</h1>
 </div>
+<div class="projectSection">
+  <% @projects.each do |project| %>
+    <section>
+      <h2><%= project.name %></h2>
 
-<div class="debug projectSection">
-  <% if @projects.present? %>
-    <% @projects.each do |project| %>
-      <section class="debug">
-        <h2 class="debug"><%= project.name %></h2>
-
-        <figure class="debug projectSection__figure">
-          <%= link_to project.url, class:"projectSection__Link" do %>
-          <%# image_tag("https://s3-us-west-2.amazonaws.com/downeyd27/projects/avatars/000/000/013/medium/Dillon.jpg?X-Amz-Date=20160510T215537Z&X-Amz-Expires=300&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Signature=1ead70c1814e016a73c7297bdd9c911981e87ee6f615022dc725cb390b221dfc&X-Amz-Credential=ASIAJKFUBC3SOWOONFVQ/20160510/us-west-2/s3/aws4_request&X-Amz-SignedHeaders=Host&x-amz-security-token=FQoDYXdzEPb//////////wEaDBy2d3qwq0JAfMtQYiLHAXrY97L8ues%2BmWONNczd3hnVnDjLaqujNMN3kA9FTtuJ2UegH07SnKmWdJGRMwxzbbIc06gR0hma2WwCF0kYftYEPSAZRRblCEe3dKqN6crCSi0Uw3HZyW0ishzWiryvb/YVyZKcJBXdmFk/C9UOLA4HU8wI/988XgEOSS1CsGNXMJlw4wB2fjEG%2B6xMJlfxoNQZ1zkKl4ks3VhRE/IAC6aUYPLIg15/gpJWkioM7gL3HQMjzGfuDYSI%2BDHWwMx9NhB48k7FeeQoqZDJuQU%3D") %>
-            <%= image_tag(project.avatar.url(:medium), width: "300", height: "300", alt: "#{project.description}", class: "debug projectSection__image") %>
-          <% end %>
-
-          <figcaption class="debug projectSection__figcaption">
-            <ul class="debug">
-              <li>
-                <span class="figcaption__projectAttribute">Description:</span> <%= project.description %>
-              </li>
-              <li>
-                <span class="figcaption__projectAttribute">Purpose:</span> <%= project.purpose %>
-              </li>
-              <li>
-                <span class="figcaption__projectAttribute">Technology:</span> <%= project.technology %>
-              </li>
-              <li>
-                <span class="figcaption__projectAttribute">Project Url:</span> <%= link_to project.url do %>
-                  <%= project.url %>
-                  <% end %>
-              </li>
-            </ul>
-          </figcaption>
-        </figure>
-      </section>
-    <% end %>
+      <figure id="<%= project.name %>" class=" projectSection__figure">
+        <%= link_to project.url, class:"projectSection__Link" do %>
+          <%= image_tag(project.avatar.url(:medium),
+          width: "300",
+          height: "300",
+          alt: "#{project.description}",
+          class: " projectSection__image") %>
+        <% end %>
+        <figcaption class="projectSection__figcaption">
+          <ul>
+            <li><span>Description:</span><%= project.description %></li>
+            <li><span>Purpose:</span><%= project.purpose %></li>
+            <li><span>Technology:</span><%= project.technology %></li>
+            <li><span>Project Url:</span>
+              <%= link_to project.url do %>
+                <%= project.url %>
+              <% end %>
+            </li>
+          </ul>
+        </figcaption>
+      </figure>
+    </section>
   <% end %>
 </div>

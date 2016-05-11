@@ -1,12 +1,6 @@
-$orange: #c86208;
-$grey: #e6eaed;
-$blue: #b5cae1;
-$navy:  #455060;
-$black: #05080f;
-$white: #fdfdfd;
-
 .debug  { outline: 1px solid red }
 h1,h2,h2,h4,h5,h6,p,div,section,figure,img,ul,ol,li,a,footer,nav,article,body { @extend .debug }
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -54,7 +48,6 @@ ul {
   list-style-type: none;
 }
 
-
 a {
   color: $black;
   text-decoration: none;
@@ -74,8 +67,6 @@ figure {
     display: table-cell;
   }
 }
-
-
 
 // NAVBAR CSS
 
@@ -132,12 +123,18 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
 
 // FLASH MESSAGE CSS
 
-.flash-message {
+.flashMessageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.flash_message {
   font-size: 2em;
   color: black;
   z-index: 999;
@@ -145,28 +142,23 @@ footer {
   font-weight: bold;
   width: 96%;
   margin: 20px;
-
   .flash_error {
-    border: solid 4px #900;
-    background-color: #FF6565;
+    border: solid 4px $errorBorder;
+    background-color: $error;
   }
-
   .flash_success {
-    border: solid 4px #26722D;
-    background-color: #A4E7A0;
+    border: solid 4px $successBorder;
+    background-color: $success;
   }
-
   .flash_notice {
-    border: solid 4px;
-    background-color: #f8f99d;
-    /* need to fill in border and background color for flash notice */
+    border: solid 4px $noticeBorder;
+    background-color: $notice;
   }
   p {
     font-size: 110%;
     margin: 15px 0;
   }
 }
-
 
 /* Medium screens */
 @media all and (max-width: 800px) {
