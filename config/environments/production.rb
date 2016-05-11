@@ -91,6 +91,6 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Recommendation to try and fix background image not deploying to heroku
-  config.serve_static_assets = true
+  config.serve_static_files = true
   config.assets.compile = true
 end
