@@ -3,10 +3,6 @@ class  Project < ActiveRecord::Base
 
   validates :name, length: { maximum: 50 }
 
-  validates :description, length: { maximum: 140 }
-  validates :purpose,     length: { maximum: 140 }
-  validates :technology,  length: { maximum: 140 }
-
   # This method associates the attribute ":avatar" with a file attachment
   has_attached_file :avatar,
   styles: {

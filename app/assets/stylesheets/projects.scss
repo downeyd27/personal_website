@@ -1,13 +1,4 @@
-.crudLinkContainer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border: 1px solid $black;
-  margin: 0 20px;
-  & a:hover {
-    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
-  }
-}
+
 
 .projectsSection {
   display: flex;
@@ -24,6 +15,7 @@
     overflow-y: scroll;
     p {
       border: 1px solid $black;
+      padding: 5px;
     }
     span {
       font-weight: bold;
