@@ -1,6 +1,6 @@
 <h2 class="sr-only">Project Form</h2>
 
-<%= form_for @project, multipart: true do |f| %>
+<%= form_for @project, html: { role: "form" } do |f| %>
   <%= render "shared/errors", object: @project %>
 
     <%= f.label      :name, "Name:" %>
