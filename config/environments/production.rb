@@ -73,7 +73,7 @@ Rails.application.configure do
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # TODO: Refactor Amazon cloudfront distribution name to be to dillondowney.herokuapp.com
   # url: https://console.aws.amazon.com/cloudfront/home
-  config.action_controller.asset_host = 'dfg4bcc9lmlk6.cloudfront.net'
+  config.action_controller.asset_host = 'd14ky878s1t2ku.cloudfront.net'
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
