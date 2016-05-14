@@ -2,16 +2,14 @@
 <html>
 <head>
   <title><%= full_title(yield(:title)) %></title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= render 'layouts/favicon' %>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta content='IE=edge' http-equiv='X-UA-Compatible'>
   <%= display_meta_tags %>
   <%= csrf_meta_tags %>
-  <%= stylesheet_link_tag 'application'
-  media: 'all',
-  'data-turbolinks-track' => true %>
 
-  <%= render 'layouts/favicon' %>
   <%= render 'layouts/shim' %>
 </head>
 
