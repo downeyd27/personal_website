@@ -71,7 +71,9 @@ Rails.application.configure do
   # config.cache_store = :mem_cache_store
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  # config.action_controller.asset_host = 'http://assets.example.com'
+  # TODO: Refactor Amazon cloudfront distribution name to be to dillondowney.herokuapp.com
+  # url: https://console.aws.amazon.com/cloudfront/home
+  config.action_controller.asset_host = 'dfg4bcc9lmlk6.cloudfront.net'
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
