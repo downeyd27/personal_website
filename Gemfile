@@ -1,8 +1,11 @@
 source 'https://rubygems.org'
 ruby '2.2.2'
 
+gem 'awesome_print'
 gem 'autoprefixer-rails'
 gem 'coffee-rails', '~> 4.1.0'
+gem 'connection_pool' # Added for dalli
+gem 'dalli' # memcache
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'meta-tags', '~> 2.1'
@@ -23,10 +26,12 @@ group :development do
   gem 'binding_of_caller', '~> 0.7.2'
   gem 'byebug', '~> 8.2', '>= 8.2.4'
   gem 'guard'
+  gem 'guard-s3', require: false
   gem 'guard-sass', require: false
   gem 'guard-rspec', require: false
-  # gem 'guard-livereload', '~> 2.5', require: false
-  # gem 'meta_request' 
+  gem 'guard-uglify', require: false
+  gem 'letter_opener'
+  # gem 'meta_request'
   # For Rails Panel in Chrome Dev Tools... May need to specificy livereload/Rack::Reload to ignore tmp/ folder
   gem 'rack-livereload'
   gem 'quiet_assets', '~> 1.1'
