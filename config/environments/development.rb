@@ -1,4 +1,20 @@
 Rails.application.configure do
+  # Add Rack::LiveReload to the bottom of the middleware stack with the default options:
+  # config.middleware.insert_after ActionDispatch::Static, Rack::LiveReload
+  # or, if you're using better_errors:
+  config.middleware.insert_before Rack::Lock, Rack::LiveReload
+  config.middleware.use(Rack::LiveReload,
+    min_delay:        500,    # default 1000
+    max_delay:        10_000, # default 60_000
+    live_reload_port: 56789,  # default 35729
+    host:             'localhost://3000',
+    ignore:           [ %r{dont/modify\.html$} ]
+  )
+
+
+
+
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -29,7 +45,7 @@ Rails.application.configure do
 
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
   # yet still be able to expire them through the digest params.
-  
+
   # COMMENT OUT WHEN SETTING UP PAPERCLIP
   # config.assets.digest = true
 
