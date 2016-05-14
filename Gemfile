@@ -23,11 +23,11 @@ group :development do
   gem 'binding_of_caller', '~> 0.7.2'
   gem 'byebug', '~> 8.2', '>= 8.2.4'
   gem 'guard'
-  gem 'guard-coffeescript', require: false
   gem 'guard-sass', require: false
   gem 'guard-rspec', require: false
-  gem 'guard-livereload', '~> 2.5', require: false
-  gem 'meta_request' # For Rails Panel in Chrome Dev Tools... May need to specificy livereload/Rack::Reload to ignore tmp/ folder
+  # gem 'guard-livereload', '~> 2.5', require: false
+  # gem 'meta_request' 
+  # For Rails Panel in Chrome Dev Tools... May need to specificy livereload/Rack::Reload to ignore tmp/ folder
   gem 'rack-livereload'
   gem 'quiet_assets', '~> 1.1'
   gem 'rails_real_favicon'
