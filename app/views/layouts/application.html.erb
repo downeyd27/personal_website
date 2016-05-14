@@ -7,18 +7,16 @@
   <meta content='IE=edge' http-equiv='X-UA-Compatible'>
   <%= display_meta_tags %>
   <%= csrf_meta_tags %>
-  <%= stylesheet_link_tag 'application',
-  'https://fonts.googleapis.com/css?family=Droid+Sans:400,700,300',
-  'https://fonts.googleapis.com/css?family=Droid+Serif:400,700,300',
+  <%= stylesheet_link_tag 'application'
   media: 'all',
   'data-turbolinks-track' => true %>
 
-  <%= render 'layouts/shim' %>
   <%= render 'layouts/favicon' %>
+  <%= render 'layouts/shim' %>
 </head>
 
 <body class="<%= controller_name %> <%= action_name %>">
-  <h1 class="sr-only">Dillon Downey's Website</h1>
+  <h1 class="sr-only">Dillon Downeys Website</h1>
   <%= link_to "Skip to main content", "#mainSection", class:"sr-only" %>
   <%= link_to "Skip to project section", "#projectSection", class:"sr-only" %>
   <%= link_to "Skip to footer", "#footerSection", class:"sr-only" %>
