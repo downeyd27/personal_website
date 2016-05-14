@@ -11,6 +11,7 @@ Rails.application.configure do
     ignore:           [ %r{dont/modify\.html$} ]
   )
 
+  config.action_mailer.delivery_method = :letter_opener
 
 
 
