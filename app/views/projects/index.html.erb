@@ -1,46 +1,5 @@
 <h1>Project Index</h1>
 
-<% @projects.each do |project| %>
-  <section>
-    <h2><%= project.name %></h2>
-
-    <figure class="projectSection__figure">
-      <%= link_to project_path(project), class:"projectSection__Link" do %>
-        <%= image_tag("#{project.avatar.url}",
-        width: "500",
-        height: "500",
-        alt: "#{project.description}",
-        class: "projectSection__image") %>
-      <% end %>
-      <figcaption class="projectSection__figcaption">
-        <ul>
-          <li>Description: <%= project.description %></li>
-          <li>Purpose: <%= project.purpose %></li>
-          <li>Technology: <%= project.technology %></li>
-          <li>Project Url: <%= project.url %></li>
-        </ul>
-      </figcaption>
-    </figure>
-
-    <div class="crudLinks">
-      <ul class="crudLinkContainer">
-        <li>
-          <%= link_to "All Projects Page", projects_path, class:"crudLinkContainer_link" %>
-        </li>
-        <li>
-          <%= link_to 'Load New Project', new_project_path, class:"crudLinkContainer_link" %>
-        </li>
-        <li>
-          <%= link_to "Edit Project Page", edit_project_path(project), class:"crudLinkContainer_link" %>
-        </li>
-        <li>
-          <%= link_to "Delete Project", project_path(project), class:"crudLinkContainer_link"
-          data: {
-            confirm: "Are you sure you want to delete this project?",
-            method: :delete
-          } %>
-        </li>
-      </ul>
-    </div>
-  </section>
-<% end %>
+<%= render partial: "projects",
+           locals: { projects: @projects } %>
+  

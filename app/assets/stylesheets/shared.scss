@@ -1,4 +1,4 @@
-.debug { outline: 0 solid red }
+.debug { outline: 1px solid red }
 
 h1,h2,h3,h4,h5,h6,p,div,span,section,figure,img,ul,ol,li,a,footer,nav,article,body { @extend .debug }
 
@@ -18,14 +18,14 @@ html { height: 100%; }
 body {
   background-color: $navy;
   color: $black;
-  font-family: 'Droid Sans', serif;
+  font-family: "Times New Roman", Georgia, Serif;
 }
 
 h1, h2 {
   letter-spacing: 1px;
 }
 h2 {
-  width: 90%;
+  width: 95%;
 }
 
 h1, h2, h3 {
@@ -33,7 +33,6 @@ h1, h2, h3 {
   background-color: $grey;
   border: 2px solid $black;
   padding: .4em .4em;
-  font-family: 'Droid Serif', serif;
 }
 
 p {
