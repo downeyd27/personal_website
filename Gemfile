@@ -1,30 +1,61 @@
 source 'https://rubygems.org'
-
 ruby '2.2.2'
-gem 'rails', '4.2.6'
-gem 'pg'
-gem 'sass-rails', '~> 5.0'
+
+gem 'awesome_print'
 gem 'autoprefixer-rails'
-gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
+gem 'connection_pool' # Added for dalli
+gem 'dalli' # memcache
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
-gem 'turbolinks'
 gem 'meta-tags', '~> 2.1'
+gem 'newrelic_rpm'
+gem 'paperclip'
+gem 'puma'
+gem 'pg'
+gem 'rails', '4.2.6'
+gem 'sass-rails', '~> 5.0'
+gem 'sprockets', '~> 3.0'
+gem 'turbolinks'
+gem 'uglifier', '>= 1.3.0'
+
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'web-console', '~> 2.0', group: :development
-# Recommendation for Heroku
-gem 'rails_12factor', group: :production
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-# Use Unicorn as the app server
-# gem 'unicorn'
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+
+group :development do
+  gem 'better_errors', '~> 2.1', '>= 2.1.1'
+  gem 'binding_of_caller', '~> 0.7.2'
+  gem 'byebug', '~> 8.2', '>= 8.2.4'
+  gem 'guard'
+  gem 'guard-s3', require: false
+  gem 'guard-sass', require: false
+  gem 'guard-rspec', require: false
+  gem 'guard-uglify', require: false
+  gem 'letter_opener'
+  # gem 'meta_request'
+  # For Rails Panel in Chrome Dev Tools... May need to specificy livereload/Rack::Reload to ignore tmp/ folder
+  gem 'rack-livereload'
+  gem 'quiet_assets', '~> 1.1'
+  gem 'rails_real_favicon'
+  gem 'spring', '~> 1.7', '>= 1.7.1'
+  gem 'web-console', '~> 2.0'
+end
+
+group :test do
+  gem 'capybara', '~> 2.7'
+  gem 'factory_girl_rails', '~> 4.7'
+  gem 'shoulda-matchers', '~> 3.1', '>= 3.1.1'
+  gem 'simplecov', '~> 0.11.2', require: false
+  gem 'faker', '~> 1.6', '>= 1.6.3'
+end
 
 group :development, :test do
+  gem 'launchy', '~> 2.4', '>= 2.4.3'
+  gem 'pry', '~> 0.10.3'
+  gem 'pry-rails'
   gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-  gem 'spring'
+end
+
+group :production do
+  gem 'aws-sdk', '< 2.0'
+  gem 'rails_12factor' # Recommended for Heroku
 end

@@ -1,0 +1,37 @@
+<section class="introContainer" itemscope itemtype="http://schema.org/Person">
+  <h2><span translate="no">Dillon Downey</span> - Junior Web Developer</h2>
+  <div class=" introContainer__portfolioPicSection">
+    <h3 class="sr-only">Portfolio picture</h3>
+    <figure class="introContainer__figure" itemprop="image">
+      <!-- TODO: Fix file path of image to offload to Amazon cloudfront as cdn -->
+      <%= image_tag("Dillon-500x333.jpg",
+      width:"500",
+      height:"333",
+      alt:"Dillon Downey\'s portfolio picture",
+      class:"portfolioPic") %>
+      <figcaption>
+        <h3>Junior Web Developer Seeking New Opportunities </h3>
+      </figcaption>
+    </figure>
+    <%= render 'shared/social_media_nav' %>
+  </div>
+  <div class="introContainer__aboutMeSection">
+    <h2 class="sr-only">About Me</h2>
+    <p>
+      Hi, my name is <span itemprop="name" translate="no" >Dillon </span>
+      <span itemprop="familyName" translate="no">Downey</span>.
+      I am a Dev Bootcamp graduate from San Francisco.  Prior to attending DBC,
+      I was a Senior Store Manager for <span translate="no">GNC (General Nutrition Center)
+      </span> in the San Francisco region for the last three years where my store
+      was ranked in the top five.
+    </p>
+    <p>
+      Through personal acquaintances I became intrigued by the tech industry.
+      As I researched the possibility of becoming a <span itemprop="JobTitle">web developer</span>,
+      I discovered this would be a fulfilling path to utilize my creativity and
+      analytical thinking. Having gone through <span itemprop="alumniof" translate="no"> Dev BootCamp</span>’s
+      19-week intensive course, I feel my decision is the right one and I look
+      forward to the many challenges and opportunities that the tech community will provide.
+    </p>
+  </div>
+</section>

@@ -1,4 +1,17 @@
 Rails.application.configure do
+
+  config.paperclip_defaults = {
+  storage: :s3,
+  s3_host_name: 'https://s3-us-west-2.amazonaws.com',
+  s3_credentials: {
+    bucket: ENV.fetch('S3_BUCKET_NAME'),
+    access_key_id: ENV.fetch('AWS_ACCESS_KEY_ID'),
+    secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY'),
+    s3_region: ENV.fetch('AWS_REGION'),
+  }
+}
+
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -58,7 +71,9 @@ Rails.application.configure do
   # config.cache_store = :mem_cache_store
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  # config.action_controller.asset_host = 'http://assets.example.com'
+  # TODO: Refactor Amazon cloudfront distribution name to be to dillondowney.herokuapp.com
+  # url: https://console.aws.amazon.com/cloudfront/home
+  config.action_controller.asset_host = 'd14ky878s1t2ku.cloudfront.net'
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
@@ -78,6 +93,6 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Recommendation to try and fix background image not deploying to heroku
-  config.serve_static_assets = true
+  config.serve_static_files = true
   config.assets.compile = true
 end

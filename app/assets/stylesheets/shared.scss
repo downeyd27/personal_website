@@ -1,0 +1,128 @@
+.debug { outline: 0px solid red }
+h1,h2,h3,h4,h5,h6,p,div,span,section,figure,img,ul,ol,li,a,footer,nav,article,body { @extend .debug }
+
+.blue   { background-color: $blue; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.btn {
+  background-color: $grey;
+  border: 1px solid $black;
+  border-radius: 5px;
+  margin: 10px;
+  transition: all 0.5s ease-in-out;
+  padding: 5px;
+  &:hover { box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75); }
+}
+
+html { height: 100%; }
+
+.site {
+  display: flex;
+  flex-direction: column;
+  background-color: $navy;
+  color: $black;
+  font-family: "Times New Roman", Georgia, Serif;
+  .siteContent {
+    flex: 1;
+  }
+}
+
+h1, h2 {
+  letter-spacing: 1px;
+}
+h2 {
+  width: 95%;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  background-color: $grey;
+  border: 2px solid $black;
+  padding: .4em .4em;
+}
+
+p {
+  margin: 0.5em 25px;
+  font-size: 1.2em;
+  color: $black;
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+  //&:visited { color: #0c0 }
+  &:link    { color: #c00; }
+  &:hover   { color: #00c }
+  &:active  { color: #ccc }
+}
+
+figure {
+  overflow-y: auto;
+  img {
+    margin: 0 auto;
+    max-width: 90%;
+    border: 1px solid $black;
+    box-shadow: 7px 7px 5px 0px;
+    display: table-cell;
+  }
+}
+
+// FOOTER
+footer {
+  border-top: 1px solid $black;
+  box-shadow: 0px -2px 7px 0px rgba(50, 50, 50, 0.75);
+  background-color: $blue;
+}
+
+// CRUD LINK CONTAINER
+.crudLinkContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid $black;
+  margin: 0 20px;
+}
+
+// FLASH MESSAGE CSS
+.flashMessageContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  .flash_message {
+    font-size: 2em;
+    color: black;
+    font-weight: bold;
+    margin: 20px;
+    .flash_error { @include borderAndBGColor($errorBorder, $error) }
+    .flash_success { @include borderAndBGColor($successBorder, $success)}
+    .flash_notice { @include borderAndBGColor($noticeBorder, $notice) }
+    p {
+      font-size: 110%;
+      margin: 15px 0;
+    }
+  }
+}
+
+.socialMediaContainer {
+  display: flex;
+  justify-content: center;
+  img {
+    margin: 4px 0 0 0;
+  }
+}

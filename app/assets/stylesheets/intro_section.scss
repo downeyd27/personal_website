@@ -1,0 +1,24 @@
+.introContainer {
+  @include flex_direction_wrap_justify_align(flex, row, wrap, space-around, initial);
+  .introContainer__portfolioPicSection {
+    @include flex_direction_wrap_justify_align(flex, column, nowrap, center, center);
+    figure {
+      margin: 20px 0 0 0;
+    }
+    h3 {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    .socialMediaContainer {
+      margin-bottom: 20px;
+    }
+  }
+  .introContainer__aboutMeSection,
+  .introContainer__portfolioPicSection {
+    width: 45%;
+    background-color: $grey;
+    border: 2px solid $black;
+    overflow-y: auto;
+    border-radius: 5px;
+  }
+}

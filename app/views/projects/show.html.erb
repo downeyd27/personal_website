@@ -1,0 +1,27 @@
+<h1><%= @project.name %></h1>
+
+<ul>
+  <li>
+    <%= link_to @project.url do %>
+      <%= image_tag("#{@project.avatar.url}",
+      width: "500",
+      height: "500",
+      alt: "#{@project.description}",
+      class: "debug projectSection__image") %>
+    <% end %>
+  </li>
+  <li>Technology: <%= @project.technology %></li>
+  <li>Description:<%= @project.description %></li>
+  <li>Purpose:    <%= @project.purpose %></li>
+  <li>URL:        <%= @project.url %></li>
+</ul>
+
+<div>
+  <%= link_to "Edit Project Page", edit_project_path(@project) %>
+  <%= link_to "Delete Project",    project_path(@project),
+  data: {
+    confirm: "Are you sure you want to delete this project?",
+    method: :delete
+  } %>
+  <%= link_to "All Projects Page", projects_path %>
+</div>

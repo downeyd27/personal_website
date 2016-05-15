@@ -1,0 +1,25 @@
+<h2 class="sr-only">Project Form</h2>
+
+<%= form_for @project, html: { role: "form" } do |f| %>
+  <%= render "shared/errors", object: @project %>
+
+    <%= f.label      :name, "Name:" %>
+    <%= f.text_field :name, class: "form-control" %>
+
+    <%= f.label      :technology, "Technology:" %>
+    <%= f.text_field :technology, class: "form-control" %>
+
+    <%= f.label      :description, "Description:" %>
+    <%= f.text_area  :description, class: "form-control" %>
+
+    <%= f.label      :purpose, "Purpose:" %>
+    <%= f.text_area  :purpose, class: "form-control" %>
+
+    <%= f.label      :url, "Url:" %>
+    <%= f.text_field  :url, class: "form-control" %>
+
+    <%= f.label      :avatar, "Image Url:" %>
+    <%= f.file_field :avatar, class: "form-control" %>
+
+    <%= f.submit %>
+<% end %>
