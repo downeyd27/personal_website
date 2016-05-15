@@ -1,5 +1,5 @@
-.debug { outline: 0px solid red }
-h1,h2,h3,h4,h5,h6,p,div,span,section,figure,img,ul,ol,li,a,footer,nav,article,body { @extend .debug }
+.debug { outline: 1px solid red }
+h1,h2,h3,h4,h5,h6,p,div,span,section,figure,img,ul,ol,li,a,footer,nav,article,body, input { @extend .debug }
 
 .blue   { background-color: $blue; }
 
@@ -27,11 +27,10 @@ h1,h2,h3,h4,h5,h6,p,div,span,section,figure,img,ul,ol,li,a,footer,nav,article,bo
 html { height: 100%; }
 
 .site {
-  display: flex;
-  flex-direction: column;
+  @include flex_direction_wrap_justify_align(flex, column, initial, initial, initial);
   background-color: $navy;
   color: $black;
-  font-family: "Times New Roman", Georgia, Serif;
+
   .siteContent {
     flex: 1;
   }
@@ -74,49 +73,36 @@ a {
 figure {
   overflow-y: auto;
   img {
-    margin: 0 auto;
+    display: table-cell;
     max-width: 90%;
     border: 1px solid $black;
+    margin: 0 auto;
     box-shadow: 7px 7px 5px 0px;
-    display: table-cell;
   }
 }
 
 // FOOTER
 footer {
   border-top: 1px solid $black;
-  box-shadow: 0px -2px 7px 0px rgba(50, 50, 50, 0.75);
   background-color: $blue;
+  box-shadow: 0px -2px 7px 0px rgba(50, 50, 50, 0.75);
 }
 
 // CRUD LINK CONTAINER
 .crudLinkContainer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  @include flex_direction_wrap_justify_align(flex, row, wrap, space-around, center)
   border: 1px solid $black;
   margin: 0 20px;
 }
 
 // FLASH MESSAGE CSS
-.flashMessageContainer {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  .flash_message {
-    font-size: 2em;
-    color: black;
-    font-weight: bold;
-    margin: 20px;
-    .flash_error { @include borderAndBGColor($errorBorder, $error) }
-    .flash_success { @include borderAndBGColor($successBorder, $success)}
-    .flash_notice { @include borderAndBGColor($noticeBorder, $notice) }
-    p {
-      font-size: 110%;
-      margin: 15px 0;
-    }
-  }
+.flash_message {
+  @include flex_direction_wrap_justify_align(flex, row, wrap, center, center);
+  @include color_size_weight_family($black, 2em, bold, $font_family);
+  margin: 20px;
+  .flash_error   { @include borderAndBGColor($errorBorder, $error) }
+  .flash_success { @include borderAndBGColor($successBorder, $success)}
+  .flash_notice  { @include borderAndBGColor($noticeBorder, $notice) }
 }
 
 .socialMediaContainer {

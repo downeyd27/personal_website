@@ -19,3 +19,11 @@
   border: solid 4px $borderColor;
   background-color: $bgColor;
 }
+
+// Mixin for text style
+@mixin color_size_weight_family($color, $size, $weight, $family) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+  font-family: $family;
+}
