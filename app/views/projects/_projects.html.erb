@@ -19,5 +19,7 @@
         <% end %>
       </p>
     </div>
-  <% end %>
+    <%= render partial: "shared/crud_links",
+    locals: { project: project } %>
+    <% end %>
 </section>
