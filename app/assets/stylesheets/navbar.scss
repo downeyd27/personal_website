@@ -1,0 +1,17 @@
+nav {
+  background-color: $blue;
+  border-bottom: 1px solid black;
+  box-shadow: 0px 3px 7px 0px rgba(50, 50, 50, 0.75);
+  font-size: 1.5em;
+  .navContainer {
+    @include flex_direction_wrap_justify_align(flex, row, nowrap, space-between, center);
+  }
+  ul {
+    @include flex_direction_wrap_justify_align(flex, row, nowrap, flex-end, center);
+    list-style-type: none;
+    padding: 0;
+  }
+  a {
+    @extend .btn;
+  }
+}

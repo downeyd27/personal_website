@@ -14,8 +14,12 @@
  */
 
 // IMPORT CSS FILES INDIVIDUALLY
-@import "colors";
-@import "shared";
-@import "normalize";
-@import "custom";
-@import "projects";
+@import 'colors';
+@import 'media_queries';
+@import 'default_variables';
+@import 'mixins';
+@import 'shared';
+@import 'normalize';
+@import 'navbar';
+@import 'intro_section';
+@import 'projects';

@@ -26,8 +26,10 @@ group :development do
   gem 'binding_of_caller', '~> 0.7.2'
   gem 'byebug', '~> 8.2', '>= 8.2.4'
   gem 'guard'
-  gem 'guard-s3', require: false
+  gem 'guard-concat', require: false
+  # gem 'guard-s3', require: false
   gem 'guard-sass', require: false
+  # gem 'guard-sprockets2', require: false
   gem 'guard-rspec', require: false
   gem 'guard-uglify', require: false
   gem 'letter_opener'
@@ -45,6 +47,7 @@ group :test do
   gem 'factory_girl_rails', '~> 4.7'
   gem 'shoulda-matchers', '~> 3.1', '>= 3.1.1'
   gem 'simplecov', '~> 0.11.2', require: false
+  gem 'faker', '~> 1.6', '>= 1.6.3'
 end
 
 group :development, :test do

@@ -1,0 +1,43 @@
+/* Medium screens */
+@media all and (max-width: 800px) {
+  .navContainer {
+    justify-content: space-around;
+  }
+  .introContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .introContainer__portfolioPicSection,
+  .introContainer__aboutMeSection {
+    width: 95%;
+    max-height: 600px;
+    font-size: 12px;
+  }
+  .projectsSection {
+    flex-direction: column;
+    align-items: center;
+    & :first-child {
+      margin-top: 10px;
+    }
+    section {
+      margin-top: 20px;
+      width: 95%
+    }
+    .projectCard {
+      width: 95%;
+    }
+  }
+}
+
+/* Small screens */
+@media all and (max-width: 500px) {
+  .navContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .introContainer__aboutMeSection,
+  .introContainer__portfolioPicSection,
+  .projectSection {
+    width: 95%;
+  }
+}

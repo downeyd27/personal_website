@@ -1,0 +1,29 @@
+// Mixin to use on flex container
+@mixin flex_direction_wrap_justify_align($display, $direction, $wrap, $justify, $align) {
+  display: $display;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: $align;
+}
+// Mixin to use on flex item
+@mixin order_grow_shrink_basis_align($order, $grow, $shrink, $basis, $align) {
+  order: $order;
+  flex-grow: $grow;
+  flex-shrink: $shrink;
+  flex-basis: $basis;
+  align-self: $align;
+}
+
+@mixin borderAndBGColor($borderColor, $bgColor) {
+  border: solid 4px $borderColor;
+  background-color: $bgColor;
+}
+
+// Mixin for text style
+@mixin color_size_weight_family($color, $size, $weight, $family) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+  font-family: $family;
+}

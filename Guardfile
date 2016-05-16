@@ -70,3 +70,27 @@ guard :rspec, cmd: "bundle exec rspec" do
 end
 
 guard 'sass', input: 'app/assets/stylesheets', noop: true
+
+###
+# Sample Guardfile block for Guard::Uglify
+#
+# :input        - input file to compress
+# :output       - file to write compressed output to
+# :run_at_start - compressed input file when guard starts
+# :uglifier     - options to be passed to the uglifier gem
+###
+guard "uglify", :input => "app/assets/javascripts/application.js", :output => "public/assets/javascripts/application.js"
+
+# This will concatenate the javascript files specified in :files to public/js/all.js
+#
+# Specifying every single file in the array like %w(a b c) to maintain the loading order is suggested - See https://github.com/makevoid/guard-concat for more info
+#
+# guard :concat, type: "js",
+#                files: %w(javascripts/* static_pages_index.js canvas_art.js application.js, canvas_art.js),
+#                input_dir: "app/assets/javascripts",
+#                output: "app/assets/javascripts/application"
+
+# guard :concat, type: "css",
+#                files: %w(),
+#                input_dir: "public/css",
+#                output: "public/css/all"

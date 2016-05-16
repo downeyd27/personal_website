@@ -1,5 +1,13 @@
 class  Project < ActiveRecord::Base
-  validates_presence_of :name, :description, :purpose, :technology, :url
+  validates_presence_of :name,
+                        :description,
+                        :purpose,
+                        :technology,
+                        :url
+
+  # TODO: "Figure out how to reset test data base after tests so there is not more than one unique name in the data base when testing for name uniqueness. Test database builds to have LOTS of examples."
+  # validates_uniqueness_of :name
+
   validates :name, length: { maximum: 50 }
 
   # This method associates the attribute ":avatar" with a file attachment

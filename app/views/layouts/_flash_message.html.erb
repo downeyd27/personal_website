@@ -1,5 +1,5 @@
 <%if flash.present? %>
-  <div class="flashMessageContainer alert flash-message">
+  <div class="alert flash_message">
       <% flash.each do |name, msg| %>
         <% if msg.is_a?(String) %>
           <%= content_tag(:div, msg, class: "alert alert_#{name} flash_#{name}") %>
