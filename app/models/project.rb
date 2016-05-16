@@ -19,7 +19,7 @@ class  Project < ActiveRecord::Base
   },
   default_url: "/images/:style/missing.png",
   storage: :s3,
-  s3_host_alias: "https://#{Rails.application.secrets.aws_region}.amazonaws.com/#{Rails.application.secrets.s3_bucket_name}"
+  s3_host_alias: "https://#{Rails.application.secrets.aws_region}.amazonaws.com/#{Rails.application.secrets.s3_bucket_name}",
   s3_credentials: Proc.new{ |a| a.instance.s3_credentials }
 
   # Validate the attached image is image/jpg, image/png, etc
