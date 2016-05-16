@@ -1,3 +1,4 @@
+
 source 'https://rubygems.org'
 ruby '2.2.2'
 
@@ -27,10 +28,10 @@ group :development do
   gem 'byebug', '~> 8.2', '>= 8.2.4'
   gem 'guard'
   gem 'guard-concat', require: false
-  # gem 'guard-s3', require: false
-  gem 'guard-sass', require: false
-  # gem 'guard-sprockets2', require: false
-  gem 'guard-rspec', require: false
+  # gem 'guard-s3',   require: false
+  gem 'guard-sass',   require: false
+  # gem 'guard-spork',  require: false
+  gem 'guard-rspec',  require: false
   gem 'guard-uglify', require: false
   gem 'letter_opener'
   # gem 'meta_request'
