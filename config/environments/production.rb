@@ -2,7 +2,7 @@ Rails.application.configure do
 
   config.paperclip_defaults = {
     storage: :s3,
-    s3_host_alias: "https://#{Rails.application.secrets.aws_region}.amazonaws.com/#{Rails.application.secrets.s3_bucket_name}",
+    s3_host_alias: ENV.fetch('S3_HOST_ALIAS')
     # s3_host_name: 's3-us-west-2.amazonaws.com',
     s3_credentials: {
       bucket: ENV.fetch('S3_BUCKET_NAME'),
