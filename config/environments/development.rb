@@ -11,6 +11,17 @@ Rails.application.configure do
     ignore:           [ %r{dont/modify\.html$} ]
   )
 
+  config.paperclip_defaults = {
+    storage: :s3,
+    s3_host_name:        Rails.application.secrets.s3_host_name,
+    bucket:              Rails.application.secrets.s3_bucket_name,
+    s3_credentials: {
+      access_key_id:     Rails.application.secrets.aws_access_key_id,
+      secret_access_key: Rails.application.secrets.aws_secret_access_key,
+      s3_region:         Rails.application.secrets.aws_region
+    }
+  }
+
   config.action_mailer.delivery_method = :letter_opener
 
   # Settings specified here will take precedence over those in config/application.rb.
