@@ -31,5 +31,8 @@ module PersonalSite
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    #  HTML, JSON and other Rails-generated responses will be compressed.
+    config.middleware.use Rack::Deflater
   end
 end
