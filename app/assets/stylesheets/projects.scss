@@ -1,7 +1,7 @@
 .projectsSection {
   @include flex_direction_wrap_justify_align(flex, row, wrap, space-around, initial);
   .projectCard {
-    @include flex_direction_wrap_justify_align(flex, column, nowrap, initial, intiail);
+    @include flex_direction_wrap_justify_align(flex, column, nowrap, initial, initial);
     width: 45%;
     margin-bottom: 20px;
     background-color: $grey;
@@ -36,23 +36,6 @@
     .projectCard__url {
       display: inline-block;
       text-decoration: underline;
-    }
-  }
-}
-
-@media all and (max-width: 800px) {
-  .projectsSection {
-    flex-direction: column;
-    align-items: center;
-    & :first-child {
-      margin-top: 10px;
-    }
-    section {
-      margin-top: 20px;
-      width: 95%
-    }
-    .projectCard {
-      width: 95%;
     }
   }
 }
