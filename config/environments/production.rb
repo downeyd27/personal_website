@@ -1,15 +1,15 @@
 Rails.application.configure do
 
   config.paperclip_defaults = {
-  storage: :s3,
-  s3_host_name: 'https://s3-us-west-2.amazonaws.com',
-  s3_credentials: {
-    bucket: ENV.fetch('S3_BUCKET_NAME'),
-    access_key_id: ENV.fetch('AWS_ACCESS_KEY_ID'),
-    secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY'),
-    s3_region: ENV.fetch('AWS_REGION'),
+    storage: :s3,
+    s3_host_alias: "https://#{Rails.application.secrets.aws_region}.amazonaws.com/#{Rails.application.secrets.s3_bucket_name}",
+    s3_credentials: {
+      bucket: ENV.fetch('S3_BUCKET_NAME'),
+      access_key_id: ENV.fetch('AWS_ACCESS_KEY_ID'),
+      secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY'),
+      s3_region: ENV.fetch('AWS_REGION'),
+    }
   }
-}
 
 
   # Settings specified here will take precedence over those in config/application.rb.
@@ -39,10 +39,10 @@ Rails.application.configure do
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
-  # config.assets.css_compressor = :sass
+  config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
   # yet still be able to expire them through the digest params.
@@ -68,7 +68,7 @@ Rails.application.configure do
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
 
   # Use a different cache store in production.
-  # config.cache_store = :mem_cache_store
+  config.cache_store = :dalli_store, 'localhost', { namespace: '1' }
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # TODO: Refactor Amazon cloudfront distribution name to be to dillondowney.herokuapp.com
@@ -94,5 +94,4 @@ Rails.application.configure do
 
   # Recommendation to try and fix background image not deploying to heroku
   config.serve_static_files = true
-  config.assets.compile = true
 end
