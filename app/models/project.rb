@@ -28,7 +28,6 @@ class  Project < ActiveRecord::Base
     {
       bucket: "downeyd27",
       access_key_id: Rails.application.secrets.aws_access_key_id, secret_access_key: Rails.application.secrets.aws_secret_access_key,
-      s3_host_alias: "https://#{Rails.application.secrets.aws_region}.amazonaws.com/#{Rails.application.secrets.s3_bucket_name}"
     }
   end
 
