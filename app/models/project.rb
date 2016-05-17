@@ -23,10 +23,11 @@ class  Project < ActiveRecord::Base
 
   # Validate the attached image is image/jpg, image/png, etc
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
-
+  # TODO: Figure out if s3_credentials are no longer necessary in config/environments/production and config/environments/development
   def s3_credentials
     {
-      bucket: "downeyd27",
+      bucket:        "downeyd27",
+      s3_host_name:  Rails.application.secrets.s3_host_name,
       access_key_id: Rails.application.secrets.aws_access_key_id, secret_access_key: Rails.application.secrets.aws_secret_access_key,
     }
   end
