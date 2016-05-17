@@ -17,7 +17,7 @@ class  Project < ActiveRecord::Base
     square: '200x200#',
     medium: '300x300>'
   },
-  default_url: "/images/:style/missing.png",
+  default_url: "https://#{Rails.application.secrets.s3_host_name}/#{Rails.application.secrets.s3_bucket_name}/images/:style/missing.png",
   storage: :s3,
   s3_credentials: Proc.new{ |a| a.instance.s3_credentials }
 
