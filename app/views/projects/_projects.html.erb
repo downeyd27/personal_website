@@ -1,4 +1,4 @@
-<%= cache do %>
+<%# cache do %>
   <section class="projectsSection">
     <h2>Projects</h2>
     <% @projects.each do |project| %>
@@ -6,9 +6,9 @@
         <h3 class="projectCard__header"><%= project.name %></h3>
         <%= link_to project.url do %>
           <%= image_tag(project.avatar.url(:medium),
-          width: "300",
+          width:  "300",
           height: "300",
-          alt: "#{project.description}") %>
+          alt:    "#{project.description}") %>
         <% end %>
         <span>Description: </span><p><%= project.description %></p>
         <span>Purpose:     </span><p><%= project.purpose     %></p>
@@ -22,4 +22,4 @@
       </div>
     <% end %>
   </section>
-<% end %>
+<%# end %>
