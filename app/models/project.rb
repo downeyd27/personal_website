@@ -18,12 +18,12 @@ class  Project < ActiveRecord::Base
     medium: '300x300>'
   },
   default_url: "https://#{Rails.application.secrets.s3_host_name}/#{Rails.application.secrets.s3_bucket_name}/images/:style/missing.png"
-  storage: :s3,
-  s3_region: Rails.application.secrets.s3_region
-  # s3_credentials: Proc.new{ |a| a.instance.s3_credentials }
 
   # Validate the attached image is image/jpg, image/png, etc
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
+
+  # s3_credentials: Proc.new{ |a| a.instance.s3_credentials }
+
   # TODO: Figure out if s3_credentials are no longer necessary in config/environments/production and config/environments/development
   # def s3_credentials
   #   {
