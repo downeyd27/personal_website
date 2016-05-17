@@ -12,7 +12,8 @@
 !/log/.keep
 /tmp
 
-config/secrets.yml
+/config/secrets.yml
 
-/coverage
+coverage/*
 */.env
+.gitignore
