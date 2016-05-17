@@ -12,12 +12,12 @@ Rails.application.configure do
   # }
   config.paperclip_defaults = {
     storage: :s3,
-    s3_host_name:        "s3-us-west-2.amazonaws.com",
-    bucket:              ENV.fetch(["s3_bucket_name"]),
+    s3_host_name:        Rails.application.secrets.s3_host_name,
+    bucket:              Rails.application.secrets.s3_bucket_name,
     s3_credentials: {
-      access_key_id:     ENV.fetch(["aws_access_key_id"]),
-      secret_access_key: ENV.fetch(["aws_secret_access_key"]),
-      s3_region:         ENV.fetch(["aws_region"])
+      access_key_id:     Rails.application.secrets.aws_access_key_id,
+      secret_access_key: Rails.application.secrets.aws_secret_access_key,
+      s3_region:         Rails.application.secrets.aws_region
     }
   }
 
