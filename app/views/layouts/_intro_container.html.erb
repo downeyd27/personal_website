@@ -3,12 +3,12 @@
   <div class=" introContainer__portfolioPicSection">
     <h3 class="sr-only">Portfolio picture</h3>
     <figure class="introContainer__figure" itemprop="image">
-      <!-- TODO: image url results in 403 forbidden from Amazon Cloudfront-->
-      <%= image_tag("https://s3-us-west-2.amazonaws.com/downeyd27/images/Dillon-500x333.jpg",
-      width:"500",
-      height:"333",
-      alt:"Dillon Downey\'s portfolio picture",
-      class:"portfolioPic") %>
+      <!-- TODO: Fix file path of image to offload to Amazon cloudfront as cdn -->
+      <%= image_tag("dillon-500x333.jpg",
+        width: "500",
+        height:"333",
+        alt:   "Dillon Downey\'s portfolio picture",
+        class: "portfolioPic") %>
       <figcaption>
         <h3>Junior Web Developer Seeking New Opportunities </h3>
       </figcaption>
