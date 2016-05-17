@@ -12,7 +12,7 @@
   <%= display_meta_tags %>
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim' %>
-  <!-- TODO: <title>Dillon Downey | Index</title> and <title>Dillon Downey's | Index</title> both render due to display_meta_tags method. --> 
+  <!-- TODO: <title>Dillon Downey | Index</title> and <title>Dillon Downey's | Index</title> both render due to display_meta_tags method. -->
   <!-- TODO: 2 inline script blocks were found in the head between an external CSS file and another resource. To allow parallel downloading, move the inline script before the external CSS file, or after the next resource. -->
 </head>
 <body class="<%= controller_name %> <%= action_name %> site">
@@ -27,7 +27,7 @@
   </main>
   <%= render 'layouts/footer.html' %>
 
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true, defer: :defer %>
     <!-- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
 </body>
 </html>
