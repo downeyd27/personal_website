@@ -1,12 +1,12 @@
 <div class="debug socialMediaContainer" itemscope itemtype="http://schema.org/Person" role="navigation">
   <h4 class="sr-only">Social Media Navigation</h4>
-  <a class="socialMediaContainerLink" href="mailto:downeydillon@gmail.com" itemprop="email">
-    <%= image_tag("social-icons/gmail-64x64.png", width:"64", height:"64", alt:"Gmail link icon", class:"gmail-icon icon") %>
-  </a>
-  <a class="socialMediaContainerLink" href="https://github.com/downeyd27" itemprop="url">
-    <%= image_tag("social-icons/github-64x64.png", width:"64", height:"64", alt:"Github link icon", class:"github-icon icon") %>
-  </a>
-  <a class="socialMediaContainerLink" href="https://www.linkedin.com/in/dillondowney" itemprop="url">
-    <%= image_tag("social-icons/linkedin-64x64.png", width:"64", height:"64", alt:"Linkedin link icon", class:"linkedin-icon icon") %>
-  </a>
+  <%= mail_to "mailto:downeydillon@gmail.com", itemprop:"email" do %>
+    <%= image_tag("https://#{Rails.application.secrets.s3_host_name}/#{Rails.application.secrets.s3_bucket_name}/images/social-icons/gmail-64x64.png", width:"64", height:"64", alt:"Gmail link icon", id:"gmail-icon") %>
+  <% end %>
+  <%= link_to "https://github.com/downeyd27", itemprop:"url" do %>
+    <%= image_tag("https://#{Rails.application.secrets.s3_host_name}/#{Rails.application.secrets.s3_bucket_name}/images/social-icons/github-64x64.png", width:"64", height:"64", alt:"Github link icon", class:"github-icon") %>
+  <% end %>
+  <%= link_to "https://www.linkedin.com/in/dillondowney", itemprop:"url" do %>
+    <%= image_tag("https://#{Rails.application.secrets.s3_host_name}/#{Rails.application.secrets.s3_bucket_name}/images/social-icons/linkedin-64x64.png", width:"64", height:"64", alt:"Linkedin link icon", class:"linkedin-icon") %>
+  <% end %>
 </div>
