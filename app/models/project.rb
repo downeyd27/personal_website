@@ -40,11 +40,11 @@ class  Project < ActiveRecord::Base
   after_destroy :expire_project_all_cache
 
   def self.all_cached
-    Rails.cache.fetch('Project.all') { all }
+    Rails.cache.fetch('Project.all', expires_in: 2.minutes) { all }
   end
 
   def self.cache_find(id)
-    Rails.cache.fetch(['project, id'], expires_in: 5.minutes) { find(id) }
+    Rails.cache.fetch(['project, id'], expires_in: 2.minutes) { find(id) }
   end
 
   private
