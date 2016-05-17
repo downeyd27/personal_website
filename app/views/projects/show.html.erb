@@ -1,27 +1,29 @@
-<h1><%= @project.name %></h1>
-
-<ul>
-  <li>
+<section class="projectsSection">
+  <div class="project<%= @project.id %> projectCard">
+    <h3 class="projectCard__header"><%= @project.name %></h3>
     <%= link_to @project.url do %>
-      <%= image_tag("#{@project.avatar.url}",
-      width: "500",
-      height: "500",
-      alt: "#{@project.description}",
-      class: "debug projectSection__image") %>
+      <%= image_tag(@project.avatar.url(:medium),
+      width:  "300",
+      height: "300",
+      alt:    "#{@project.description}") %>
     <% end %>
-  </li>
-  <li>Technology: <%= @project.technology %></li>
-  <li>Description:<%= @project.description %></li>
-  <li>Purpose:    <%= @project.purpose %></li>
-  <li>URL:        <%= @project.url %></li>
-</ul>
-
-<div>
-  <%= link_to "Edit Project Page", edit_project_path(@project) %>
-  <%= link_to "Delete Project",    project_path(@project),
-  data: {
-    confirm: "Are you sure you want to delete this project?",
-    method: :delete
-  } %>
-  <%= link_to "All Projects Page", projects_path %>
-</div>
+    <span>Description: </span><p><%= @project.description %></p>
+    <span>Purpose:     </span><p><%= @project.purpose     %></p>
+    <span>Technology:  </span><p><%= @project.technology  %></p>
+    <span>Project Url: </span>
+    <p>
+      <%= link_to @project.url, class:"projectCard__url" do %>
+      <%= @project.url %>
+      <% end %>
+    </p>
+    <div>
+      <%= link_to "Edit", edit_project_path(@project) %>
+      <%= link_to "Delete",    project_path(@project),
+      data: {
+        confirm: "Are you sure you want to delete this project?",
+        method: :delete
+        } %>
+        <%= link_to "Show all Projects", projects_path %>
+    </div>
+  </div>
+</section>
