@@ -12,8 +12,9 @@
   <%= display_meta_tags %>
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim' %>
+  <!-- TODO: <title>Dillon Downey | Index</title> and <title>Dillon Downey's | Index</title> both render due to display_meta_tags method. --> 
+  <!-- TODO: 2 inline script blocks were found in the head between an external CSS file and another resource. To allow parallel downloading, move the inline script before the external CSS file, or after the next resource. -->
 </head>
-
 <body class="<%= controller_name %> <%= action_name %> site">
   <h1 class="sr-only">Dillon Downeys Website</h1>
   <%= link_to "Skip to main content", "#mainSection", class:"sr-only" %>
