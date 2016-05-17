@@ -3,7 +3,7 @@ class  Project < ActiveRecord::Base
                         :description,
                         :purpose,
                         :technology,
-                        :url
+                        :urlw
 
   # TODO: "Figure out how to reset test data base after tests so there is not more than one unique name in the data base when testing for name uniqueness. Test database builds to have LOTS of examples."
   # validates_uniqueness_of :name
