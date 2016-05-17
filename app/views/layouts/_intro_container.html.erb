@@ -3,8 +3,8 @@
   <div class=" introContainer__portfolioPicSection">
     <h3 class="sr-only">Portfolio picture</h3>
     <figure class="introContainer__figure" itemprop="image">
-      <!-- TODO: Fix file path of image to offload to Amazon cloudfront as cdn -->
-      <%= image_tag("https://#{Rails.application.secrets.s3_host_name}/#{Rails.application.secrets.s3_bucket_name}/images/Dillon-500x333.jpg",
+      <!-- TODO: image url results in 403 forbidden from Amazon Cloudfront-->
+      <%= image_tag("https://s3-us-west-2.amazonaws.com/downeyd27/images/Dillon-500x333.jpg",
       width:"500",
       height:"333",
       alt:"Dillon Downey\'s portfolio picture",

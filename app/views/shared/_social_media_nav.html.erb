@@ -1,6 +1,7 @@
 <div class="debug socialMediaContainer" itemscope itemtype="http://schema.org/Person" role="navigation">
   <h4 class="sr-only">Social Media Navigation</h4>
   <%= mail_to "mailto:downeydillon@gmail.com", itemprop:"email" do %>
+  <!-- TODO: image url results in 403 forbidden from Amazon Cloudfront-->
     <%= image_tag("https://s3-us-west-2.amazonaws.com/downeyd27/images/icons/gmail-64x64.png", width:"64", height:"64", alt:"Gmail link icon", id:"gmail-icon") %>
   <% end %>
   <%= link_to "https://github.com/downeyd27", itemprop:"url" do %>
