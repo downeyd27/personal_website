@@ -29,7 +29,10 @@ class  Project < ActiveRecord::Base
       bucket:        "downeyd27",
       # TODO: Why can't host s3_host_name work with secrets
       s3_host_name:  "s3-us-west-2.amazonaws.com",
-      access_key_id: Rails.application.secrets.aws_access_key_id, secret_access_key: Rails.application.secrets.aws_secret_access_key,
+      # access_key_id: Rails.application.secrets.aws_access_key_id,
+      # secret_access_key: Rails.application.secrets.aws_secret_access_key,
+      access_key_id: ENV.fetch([AWS_ACCESS_KEY_ID]),
+      secret_access_key: ENV.fetch([AWS_SECRET_ACCESS_KEY]),
     }
   end
 
