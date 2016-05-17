@@ -30,7 +30,7 @@ group :development do
   gem 'guard-concat', require: false
   # gem 'guard-s3',   require: false
   gem 'guard-sass',   require: false
-  # gem 'guard-spork',  require: false
+  gem 'guard-spork'
   gem 'guard-rspec',  require: false
   gem 'guard-uglify', require: false
   gem 'letter_opener'
@@ -45,6 +45,9 @@ end
 
 group :test do
   gem 'capybara', '~> 2.7'
+  # TODO: configure database cleaner with RSpec/Capybara
+  # https://github.com/DatabaseCleaner/database_cleaner
+  gem 'database_cleaner'
   gem 'factory_girl_rails', '~> 4.7'
   gem 'shoulda-matchers', '~> 3.1', '>= 3.1.1'
   gem 'simplecov', '~> 0.11.2', require: false
