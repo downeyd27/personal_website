@@ -1,6 +1,7 @@
+<!-- <%# cache do %> -->
 <section class="projectsSection">
   <h2>Projects</h2>
-  <%# cache do %>
+  <h3>Cache Stats</h3>
     <% @projects.each do |project| %>
     <div id="project<%= project.id %>" class="projectCard">
       <h3 class="projectCard__header"><%= project.name %></h3>
@@ -21,5 +22,5 @@
       </p>
     </div>
     <% end %>
-  <# end %>
 </section>
+<% end %>

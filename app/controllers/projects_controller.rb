@@ -2,7 +2,8 @@ class ProjectsController < ApplicationController
   before_filter :find_project, only: [:show, :edit, :update, :destroy]
 
   def index
-    @projects = Project.all
+    @stats = Rails.cache.stats.first.last
+    @projects = Project.all_cached
     @project = Project.new
   end
 
@@ -48,19 +49,18 @@ class ProjectsController < ApplicationController
   end
 
   private
+    def project_params
+      params.require(:project).permit(
+        :name,
+        :description,
+        :purpose,
+        :technology,
+        :url,
+        :avatar
+      )
+    end
 
-  def project_params
-    params.require(:project).permit(
-      :name,
-      :description,
-      :purpose,
-      :technology,
-      :url,
-      :avatar
-    )
-  end
-
-  def find_project
-    @project = Project.find(params[:id])
-  end
+    def find_project
+      @project = Project.cache_find(params[:id])
+    end
 end

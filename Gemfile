@@ -5,8 +5,9 @@ ruby '2.2.2'
 gem 'awesome_print'
 gem 'autoprefixer-rails'
 gem 'coffee-rails', '~> 4.1.0'
-gem 'connection_pool' # Added for dalli
+gem 'connection_pool' # Added for dalli to thread with puma
 gem 'dalli' # memcache
+gem 'memcachier'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'meta-tags', '~> 2.1'

@@ -36,8 +36,23 @@ class  Project < ActiveRecord::Base
   #     secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"],
   #   }
   # end
+  after_save    :expire_project_all_cache
+  after_destroy :expire_project_all_cache
 
-  def self.cached_find(id)
-    Rails.cache.fetch(['project, id'], expires_in: 1.day) { find(id) }
+  def self.all_cached
+    Rails.cache.fetch('Project.all') { all }
   end
+
+  def self.cache_find(id)
+    Rails.cache.fetch(['project, id'], expires_in: 5.minutes) { find(id) }
+  end
+
+  private
+    def expire_individual_cache
+      Rails.cache.delete(['project, id'])
+    end
+
+    def expire_project_all_cache
+      Rails.cache.delete('Project.all')
+    end
 end
