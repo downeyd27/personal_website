@@ -34,6 +34,27 @@ module PersonalSite
 
     #  HTML, JSON and other Rails-generated responses will be compressed.
     config.middleware.use Rack::Deflater # Not sure if working 05/18/16 11:00am
+    options = {
+      :enabled => true,
+      :remove_multi_spaces => true,
+      :remove_comments => true,
+      :remove_intertag_spaces => false,
+      :remove_quotes => false,
+      :compress_css => false,
+      :compress_javascript => false,
+      :simple_doctype => false,
+      :remove_script_attributes => false,
+      :remove_style_attributes => false,
+      :remove_link_attributes => false,
+      :remove_form_attributes => false,
+      :remove_input_attributes => false,
+      :remove_javascript_protocol => false,
+      :remove_http_protocol => false,
+      :remove_https_protocol => false,
+      :preserve_line_breaks => false,
+      :simple_boolean_attributes => false,
+      :compress_js_templates => false
+    }
     config.middleware.use HtmlCompressor::Rack, options
   end
 end
