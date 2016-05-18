@@ -3,8 +3,9 @@
   <div class=" introContainer__portfolioPicSection">
     <h3 class="sr-only">Portfolio picture</h3>
     <figure class="introContainer__figure" itemprop="image">
-      <!-- TODO: Fix file path of image to offload to Amazon cloudfront as cdn -->
-      <%= image_tag("https://dfg4bcc9lmlk6.cloudfront.net/images/Dillon-500x333.jpg",
+      <!-- TODO: Fix file path of image to offload to Amazon cloudfront as cdn.  File path gives 403 forbidden -->
+      <%# image_tag "https://DomainName.cloudfront.net/images/Dillon-500x333" %>
+      <%= image_tag("dillon-500x333.jpg",
         width: "500",
         height:"333",
         alt:   "Dillon Downey\'s portfolio picture",
@@ -27,9 +28,11 @@
     </p>
     <p>
       Through personal acquaintances I became intrigued by the tech industry.
-      As I researched the possibility of becoming a <span itemprop="JobTitle">web developer</span>,
+      As I researched the possibility of becoming a
+      <span itemprop="JobTitle">web developer</span>,
       I discovered this would be a fulfilling path to utilize my creativity and
-      analytical thinking. Having gone through <span itemprop="alumniof" translate="no"> Dev BootCamp</span>’s
+      analytical thinking. Having gone through
+      <span itemprop="alumniof" translate="no"> Dev BootCamp</span>’s
       19-week intensive course, I feel my decision is the right one and I look
       forward to the many challenges and opportunities that the tech community will provide.
     </p>
