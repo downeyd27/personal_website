@@ -5,10 +5,10 @@
   <!-- Stylesheets need to be before meta tags.  New Relic
   creates a script tag that gets inserted after meta content='IE=edge'  -->
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= render 'layouts/favicon' %>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+  <%= render 'layouts/favicon' %>
   <%= display_meta_tags %>
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim' %>
