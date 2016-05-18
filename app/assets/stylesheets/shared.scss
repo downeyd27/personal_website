@@ -1,3 +1,15 @@
+// TODO: Google Page Speed Size content to viewport
+// The page content is too wide for the viewport, forcing the user to scroll horizontally. Size the page content to the viewport to provide a better user experience.
+// The page content is 412 CSS pixels wide, but the viewport is only 411 CSS pixels wide. The following elements fall outside the viewport:
+// The element <h2>Dillon Downey…Web Developer</h2> falls outside the viewport.
+// The element <h2>Projects</h2> falls outside the viewport.
+
+// TODO: Eliminate render-blocking JavaScript and CSS in above-the-fold content
+// Your page has 1 blocking CSS resources. This causes a delay in rendering your page.
+// None of the above-the-fold content on your page could be rendered without waiting for the following resources to load. Try to defer or asynchronously load blocking resources, or inline the critical portions of those resources directly in the HTML.
+// Optimize CSS Delivery of the following:
+// http://d14ky878s1t2ku.cloudfront.net/…b06232aff859436867f6bc2f739af9a28ffa.css
+
 .debug { outline: 0px solid red }
 h1,h2,h3,h4,h5,h6,p,div,span,section,figure,img,ul,ol,li,a,footer,nav,article,body, input { @extend .debug; }
 

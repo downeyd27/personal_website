@@ -14,3 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+// TODO: Google Pagespeed
+// Minify JavaScript
+// Compacting JavaScript code can save many bytes of data and speed up downloading, parsing, and execution time.
+// Minify JavaScript for the following resources to reduce their size by 48KiB (50% reduction).
+// Minifying http://d14ky878s1t2ku.cloudfront.net/…44066e0c569bcdfae05d7d28287d229497547.js could save 48KiB (50% reduction) after compression.

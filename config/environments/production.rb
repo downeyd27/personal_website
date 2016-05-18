@@ -25,8 +25,8 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   #########################################
-  # Code is not reloaded between requests.
   # Changed to false 05/18/16 9:23am
+  # Code is not reloaded between requests.
   config.cache_classes = false
   #########################################
 
@@ -52,6 +52,7 @@ Rails.application.configure do
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
+  # NO NEED TO SPECIFY IF USEING SASS-RAILS GEM
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
