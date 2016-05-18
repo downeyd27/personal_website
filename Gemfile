@@ -65,4 +65,5 @@ end
 group :production do
   gem 'aws-sdk', '< 2.0'
   gem 'rails_12factor' # Recommended for Heroku
+  gem 'htmlcompressor', '~> 0.3.0'
 end

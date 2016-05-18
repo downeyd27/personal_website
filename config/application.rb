@@ -33,6 +33,7 @@ module PersonalSite
     config.active_record.raise_in_transactional_callbacks = true
 
     #  HTML, JSON and other Rails-generated responses will be compressed.
-    config.middleware.use Rack::Deflater
+    config.middleware.use Rack::Deflater # Not sure if working 05/18/16 11:00am
+    config.middleware.use HtmlCompressor::Rack, options
   end
 end
