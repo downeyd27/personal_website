@@ -34,6 +34,7 @@ Personal portfolio website to primaly showcase my web development projects.  Thi
  * Mobile viewport is 412px with a 411px viewport(h2 elements falling outside viewport)
  * Eliminate render-blocking JavaScript and CSS in above-the-fold content. Asychronously load from Amazon CloudFront.
  * Optimize images for mobile by losslessly compressing images from CloudFront 
+
 ## Dependencies
 
 More gems than probably necessary, but I have been using my website as a playground for teaching myself about new gems.
