@@ -5,9 +5,11 @@ ruby '2.2.2'
 gem 'awesome_print'
 gem 'autoprefixer-rails'
 gem 'coffee-rails', '~> 4.1.0'
-gem 'connection_pool' # Added for dalli to thread with puma
-gem 'dalli' # memcache
-gem 'memcachier'
+# TODO: Set up caching for images and objects compatible with Heroku
+# gem 'connection_pool' # Added for dalli to thread with puma
+# gem 'dalli' # memcache
+# gem 'memcachier'
+gem 'htmlcompressor', '~> 0.3.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'meta-tags', '~> 2.1'
@@ -28,15 +30,16 @@ group :development do
   gem 'binding_of_caller', '~> 0.7.2'
   gem 'byebug', '~> 8.2', '>= 8.2.4'
   gem 'guard'
-  gem 'guard-concat', require: false
+  # TODO: Set up and test to make sure javascript files are watched and compiled on reload
+  # gem 'guard-concat', require: false
   # gem 'guard-s3',   require: false
+  # gem 'guard-spork', require: false
   gem 'guard-sass',   require: false
-  gem 'guard-spork'
   gem 'guard-rspec',  require: false
   gem 'guard-uglify', require: false
   gem 'letter_opener'
+  # TODO: set up Rails Panel in Chrome Dev Tools... May need to specificy livereload/Rack::Reload to ignore tmp/ folder
   # gem 'meta_request'
-  # For Rails Panel in Chrome Dev Tools... May need to specificy livereload/Rack::Reload to ignore tmp/ folder
   gem 'rack-livereload'
   gem 'quiet_assets', '~> 1.1'
   gem 'rails_real_favicon'
@@ -48,7 +51,7 @@ group :test do
   gem 'capybara', '~> 2.7'
   # TODO: configure database cleaner with RSpec/Capybara
   # https://github.com/DatabaseCleaner/database_cleaner
-  gem 'database_cleaner'
+  # gem 'database_cleaner'
   gem 'factory_girl_rails', '~> 4.7'
   gem 'shoulda-matchers', '~> 3.1', '>= 3.1.1'
   gem 'simplecov', '~> 0.11.2', require: false
@@ -65,5 +68,4 @@ end
 group :production do
   gem 'aws-sdk', '< 2.0'
   gem 'rails_12factor' # Recommended for Heroku
-  gem 'htmlcompressor', '~> 0.3.0'
 end
