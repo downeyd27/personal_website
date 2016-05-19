@@ -33,7 +33,7 @@ Personal portfolio website to primaly showcase my web development projects.  Thi
  * Leverage broswer caching
  * Mobile viewport is 412px with a 411px viewport(h2 elements falling outside viewport)
  * Eliminate render-blocking JavaScript and CSS in above-the-fold content. Asychronously load from Amazon CloudFront.
-
+ * Optimize images for mobile by losslessly compressing images from CloudFront 
 ## Dependencies
 
 More gems than probably necessary, but I have been using my website as a playground for teaching myself about new gems.
@@ -46,7 +46,6 @@ More gems than probably necessary, but I have been using my website as a playgro
 * [Better Errors](https://github.com/charliesome/better_errors)
 * [Binding of caller]()
 * [RSpec](http://rspec.info/)
-* [Shoulda-Matchers](https://github.com/thoughtbot/shoulda-matchers)
 * [Rails 12factor](https://github.com/heroku/rails_12factor)
 * [Guard](https://github.com/guard/guard)
 * [Rack Live Reload](https://github.com/johnbintz/rack-livereload)
