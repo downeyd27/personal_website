@@ -1,10 +1,11 @@
-## README
+## Personal Website
 
-Personal Website to learn a little bit about myself and to show my growing web development skills and projects.
+This website is intended to display my on going web development work and to learn a little bit more about me.   
 [My personal website] (dillondowney.herokuapp.com)
 
 ## Motivation
 
-This project is intended to act like a resume.  This website will help showcase my web development potential along with being an easy access point for visiting projects and learning more about me personally.
+##Author
+Dill
 
 ## Project under MIT license
