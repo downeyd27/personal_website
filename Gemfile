@@ -6,9 +6,9 @@ gem 'awesome_print'
 gem 'autoprefixer-rails'
 gem 'coffee-rails', '~> 4.1.0'
 # TODO: Set up caching for images and objects compatible with Heroku
-# gem 'connection_pool' # Added for dalli to thread with puma
-# gem 'dalli' # memcache
-# gem 'memcachier'
+gem 'connection_pool' # Added for dalli to thread with puma
+gem 'dalli' # memcache
+gem 'memcachier'
 gem 'htmlcompressor', '~> 0.3.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
