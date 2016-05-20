@@ -1,5 +1,5 @@
 ## Personal Website
- * [Homepage](dillondowney.herokuapp.com)
+ * [Homepage](https://dillondowney.herokuapp.com/)
  * [Github Project](https://github.com/downeyd27/personal_website)
  * [My email](mailto:dillondowney@gmail.com)
   
