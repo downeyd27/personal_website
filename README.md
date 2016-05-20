@@ -10,7 +10,7 @@
 ## Features
 
 * Responsive with [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) and [media queries](http://www.w3schools.com/css/css3_mediaqueries.asp).
-* Complete [CRUD actions](http://guides.rubyonrails.org/routing.html#crud-verbs-and-actions) for Project objects, so they are dynamic.  
+* Complete [RESTful CRUD actions](http://guides.rubyonrails.org/routing.html#crud-verbs-and-actions) for Project objects, so they are dynamic.  
 * Project objects are stored in an [Amazon Web Services's](https://aws.amazon.com/) S3 bucket.
 * Assets minified, compressed, and served through [Amazon Web Services's](https://aws.amazon.com/) Cloudfront distrubtion.
 * View website analytics through [New Relic](https://newrelic.com/).
