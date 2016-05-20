@@ -17,7 +17,7 @@ Personal portfolio website to primaly showcase my web development projects.  Thi
 * [W3C HTML5 Validator](https://validator.w3.org/nu/?showsource=yes&doc=http%3A%2F%2Fdillondowney.herokuapp.com%2F)
 * [W3C CSS Validator](http://www.css-validator.org/validator?uri=dillondowney.herokuapp.com&profile=css21&usermedium=all&warning=1&lang=en)
 * Guard files and use Live Reload for development efficiency.
-* Optimized for SEO, Mobile, Usability, Environment Integration, and Performance with the chrome extension Web Developer Checklist. (Only one HTML validation error from title tag addressed in TODO and green checks on the rest.
+* Optimized for SEO, Mobile, Usability, Environment Integration, and Performance with the chrome extension [Web Developer Checklist](http://webdevchecklist.com/). Only one HTML validation error from title tag addressed in TODO and green checks on the rest.
 
 ## TODO
 
