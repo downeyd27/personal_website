@@ -37,8 +37,6 @@ Personal portfolio website to primaly showcase my web development projects.  Thi
 
 ## Dependencies
 
-More gems than probably necessary, but I have been using my website as a playground for teaching myself about new gems.
-
 * [Ruby](https://www.ruby-lang.org/en/)
 * [Ruby on Rails](http://rubyonrails.org/)
 * [PostgreSQL](http://www.postgresql.org/)
