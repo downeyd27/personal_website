@@ -9,6 +9,7 @@ Personal portfolio website to primaly showcase my web development projects.  Thi
 
 ## Features
 
+* Responsive with flexbox and media queries.
 * Complete CRUD actions for Project objects, so they are dynamic.  
 * Project objects are stored in an Amazon S3 bucket.
 * Assets minified, compressed, and served through Amazon Cloudfront distrubtion.
