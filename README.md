@@ -9,16 +9,16 @@ Personal portfolio website to primaly showcase my web development projects.  Thi
 
 ## Features
 
-* Responsive with flexbox and media queries.
+* Responsive with [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) and [media queries](http://www.w3schools.com/css/css3_mediaqueries.asp).
 * Complete CRUD actions for Project objects, so they are dynamic.  
-* Project objects are stored in an Amazon S3 bucket.
-* Assets minified, compressed, and served through Amazon Cloudfront distrubtion.
+* Project objects are stored in an [Amazon Web Services's](https://aws.amazon.com/) S3 bucket.
+* Assets minified, compressed, and served through [Amazon Web Services's](https://aws.amazon.com/) Cloudfront distrubtion.
 * View website analytics through [New Relic](https://newrelic.com/).
 * [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/?url=dillondowney.herokuapp.com&tab=desktop)
 * [W3C HTML5 Validator](https://validator.w3.org) and then type in https://dillondowney.herokuapp.com/
-* [W3C CSS Validator](http://www.css-validator.org/validator?uri=dillondowney.herokuapp.com&profile=css21&usermedium=all&warning=1&lang=en)
-* Guard files and use Live Reload for development efficiency.
-* Optimized for SEO, Mobile, Usability, Environment Integration, and Performance with the chrome extension [Web Developer Checklist](http://webdevchecklist.com/).
+* [W3C CSS Validator](https://www.css-validator.org/validator?uri=dillondowney.herokuapp.com&profile=css21&usermedium=all&warning=1&lang=en)
+* Guard files and use [LiveReload](https://livereload.com/) for development efficiency.
+* Optimized for SEO, Mobile, Usability, Environment Integration, and Performance with the chrome extension [Web Developer Checklist](https://webdevchecklist.com/).
 
 ## TODO
 
@@ -29,9 +29,9 @@ Personal portfolio website to primaly showcase my web development projects.  Thi
 * When static image urls point to Amazon CloudFront distribution linked to Amazon S3 bucket 403 forbidden error occurs.
 * Remove second title tag created from display_meta_data method
  
- ###Google PageSpeed recommendations
+ ###[Google PageSpeed recommendations](https://developers.google.com/speed/pagespeed/insights/?url=dillondowney.herokuapp.com&tab=desktop)
 
- * Leverage broswer caching
+ * [Leverage broswer caching](https://devcenter.heroku.com/articles/http-caching-ruby-rails)
  * Mobile viewport is 412px with a 411px viewport(h2 elements falling outside viewport)
  * Eliminate render-blocking JavaScript and CSS in above-the-fold content. Asychronously load from Amazon CloudFront.
  * Optimize images for mobile by losslessly compressing images from CloudFront 
