@@ -1,7 +1,7 @@
 ## Personal Website
  * [Homepage](https://dillondowney.herokuapp.com/)
  * [Github Project](https://github.com/downeyd27/personal_website)
- * [My email](mailto:dillondowney@gmail.com)
+ * [Email me](mailto:dillondowney@gmail.com)
   
 ## Description
 
