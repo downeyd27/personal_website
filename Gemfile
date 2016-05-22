@@ -37,7 +37,7 @@ group :development do
   gem 'guard-sass',   require: false
   gem 'guard-rspec',  require: false
   gem 'guard-uglify', require: false
-  gem 'letter_opener'
+  # gem 'letter_opener'
   # TODO: set up Rails Panel in Chrome Dev Tools... May need to specificy livereload/Rack::Reload to ignore tmp/ folder
   # gem 'meta_request'
   gem 'rack-livereload'
