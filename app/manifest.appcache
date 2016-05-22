@@ -1,0 +1,32 @@
+CACHE MANIFEST
+
+#version 1.0 5-21-2016
+
+CACHE:
+
+#images
+http://dillondowney.herokuapp.com/assets/dillon-500x333.jpg
+http://dillondowney.herokuapp.com/assets/icons/github-64x64.png
+http://dillondowney.herokuapp.com/assets/icons/gmail-64x64.png
+http://dillondowney.herokuapp.com/assets/icons/linkedin-64x64.png
+http://s3-us-west-2.amazonaws.com/downeyd27/projects/avatars/000/000/001/medium/team-yago-300x225.jpg?1463454638
+http://s3-us-west-2.amazonaws.com/downeyd27/projects/avatars/000/000/002/medium/website-screenshot-300x250.jpg?1463454540
+http://s3-us-west-2.amazonaws.com/downeyd27/projects/avatars/000/000/003/medium/something-like-twitter-screenshot-300x200.jpg?1463454577
+http://s3-us-west-2.amazonaws.com/downeyd27/projects/avatars/000/000/004/medium/workout-journal-screenshot-300x215.jpg?1463454601
+
+#internal HTML documents
+http://dillondowney.herokuapp.com/
+
+#style sheets
+http://d14ky878s1t2ku.cloudfront.net/assets/application-aa9bd4fff93ca0511e7f6e83e092de5f7bffb7cb8d25b6d4ab47d68494a5efeb.css
+
+#style sheet images
+
+
+#javascript files
+http://bam.nr-data.net/1/4b021b8312?a=15066282&v=943.9bd99bf&to=IQ0PF0VeCApWSkpKEAMWCABoQQUBVktKUAoGBxk%3D&rst=1098&ref=http://dillondowney.herokuapp.com/&qt=2&ap=26&be=596&fe=372&dc=82&perf=%7B%22timing%22:%7B%22of%22:1463897290156,%22n%22:0,%22u%22:312,%22ue%22:312,%22dl%22:325,%22di%22:609,%22ds%22:671,%22de%22:679,%22dc%22:967,%22l%22:967,%22le%22:968,%22f%22:1,%22dn%22:10,%22dne%22:84,%22c%22:84,%22ce%22:177,%22rq%22:177,%22rp%22:309,%22rpe%22:311%7D,%22navigation%22:%7B%22ty%22:1%7D%7D&jsonp=NREUM.setToken
+http://js-agent.newrelic.com/nr-943.min.js
+http://d14ky878s1t2ku.cloudfront.net/assets/application-7e93c59e2b6a575eb41181a20c773e95cbc38cedaf8b6c36e769223eaeee0675.js
+
+NETWORK:
+*
