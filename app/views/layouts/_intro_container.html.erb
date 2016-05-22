@@ -3,9 +3,10 @@
   <div class=" introContainer__portfolioPicSection">
     <h3 class="sr-only">Portfolio picture</h3>
     <figure class="introContainer__figure" itemprop="image">
-      <!-- TODO: Fix file path of image to offload to Amazon cloudfront as cdn.  File path gives 403 forbidden -->
+      <!-- TODO: Fix file path of image to server through S3 and Amazon cloudfront.  File path gives 403 forbidden -->
       <%# image_tag "https://DomainName.cloudfront.net/images/Dillon-500x333" %>
-      <%= image_tag("dillon-500x333.jpg",
+      <%= image_tag("",
+        data: { "src" => "assets/dillon-500x333.jpg" },
         width: "500",
         height:"333",
         alt:   "Dillon Downey\'s portfolio picture",

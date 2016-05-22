@@ -61,7 +61,16 @@ p {
   font-size: 1em;
   color: $black;
   display: block;
-  line-height: 110%
+  line-height: 110%;
+}
+
+img {
+  opacity: 1;
+  transition: opacity 0.3;
+}
+
+img[data-src] {
+  opacity: 0;
 }
 
 ul {
