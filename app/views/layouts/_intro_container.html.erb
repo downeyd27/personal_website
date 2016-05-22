@@ -1,4 +1,4 @@
-<section class="introContainer" itemscope itemtype="http://schema.org/Person">
+<section class="introContainer">
   <h2><span translate="no">Dillon Downey</span> - Junior Web Developer</h2>
   <div class=" introContainer__portfolioPicSection">
     <h3 class="sr-only">Portfolio picture</h3>
@@ -20,18 +20,25 @@
   <div class="introContainer__aboutMeSection">
     <h2 class="sr-only">About Me</h2>
     <p>
-      Hi, my name is <span itemprop="name" translate="no" >Dillon </span>
+      Hi, my name is
+      <span itemprop="givenName" translate="no" >Dillon </span>
       <span itemprop="familyName" translate="no">Downey</span>.
       I am currently enjoying life in the beautiful Portland, Oregon area where my lovely wife and I decided to dive head first into our careers as web developers.  Prior to changing careers, I worked in customer service as a
-      <span translate="no">GNC (General Nutrition Center)</span> Senior Store Manager.
+      <span translate="no">GNC (General Nutrition Center)</span>
+      Senior Store Manager.
     </p>
     <p>
-      I enjoyed my customer service work, but saw a career on my feet undesirable after hurting my back. While on my back, I took the opportunity to build on previous interest of becoming a
-      <span itemprop="JobTitle">junior web developer</span> by completing three online web development courses through the local community college.  This led me to
-      <span itemprop="alumniof" translate="no">Dev BootCamp</span> in San Francisco where I emerged myself in their 19 week curriculum of emotional empathy training, yoga, Ruby on Rails, JavaScript and jQuery
+      I became interested in becoming a
+      <span itemprop="JobTitle">junior web developer</span>
+      because I had an injury that required me to take some time off of work.  During that time, I explored web development by completing three online computerscience courses through the local community college.  This led me to
+      <span itemprop="alumniof" translate="no">Dev BootCamp</span>
+      in San Francisco where I immersed myself in their 19 week curriculum whichincluded SQL, algorithms, JavaScript, jQuery, Ajax, and Ruby on Rails. I alsoparticipated in a final group project that created an operating interface for aParrot AR Drone.  One of the greatest tools I walked away with is the ability toacknowledge and embrace confusion and to believe with enough effort anybody canlearn just about anything.
     </p>
     <p>
-      With my new found passion for programming, I find myself obsessing over clean looking resuable code, user experience, and web performance.  I am continually looking for new technologies and best practices to further my journey to becoming an expert at my craft.  If you would like to drop me a line, I always appreciate actionable, specific, and kind <%= mail_to "downeydillon@gmail.com", "feedback", subject: "Feedback on dillondowney.herokuapp.com" %>.
+      With my new found passion for programming, I find myself obsessing over clean looking resuable code, user experience, and web performance.  I am continually looking for new technologies and best practices to further my journey to becoming an expert at my craft.  If you would like to drop me a line, I always appreciate actionable, specific, and kind
+      <%= mail_to "downeydillon@gmail.com", "feedback",
+        subject: "Feedback on dillondowney.herokuapp.com",
+        itemprop:"email" %>.
     </p>
   </div>
 </section>
