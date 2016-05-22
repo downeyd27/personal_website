@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
   root 'static_pages#index'
-  
+
   resources :projects
+
+  if Rails.env.production?
+    offline = Rack::Offline.configure :cache_interval => 120 do
+      cache ActionController::Base.helpers.asset_path("application.css")
+      cache ActionController::Base.helpers.asset_path("application.js")
+      # cache other assets
+      network "/"
+    end
+    get "/application.manifest" => offline
+  end
 end
