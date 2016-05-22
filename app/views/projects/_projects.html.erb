@@ -5,7 +5,8 @@
       <div id="project<%= project.id %>" class="projectCard">
         <h3 class="projectCard__header"><%= project.name %></h3>
         <%= link_to project.url do %>
-          <%= image_tag(project.avatar.url(:medium),
+          <%= image_tag("",
+          data:   { "src" => project.avatar.url(:medium) },
           width:  "300",
           height: "300",
           alt:    "#{project.description}") %>

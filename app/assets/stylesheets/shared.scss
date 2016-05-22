@@ -13,7 +13,7 @@
 .debug { outline: 0px solid red }
 h1,h2,h3,h4,h5,h6,p,div,span,section,figure,img,ul,ol,li,a,footer,nav,article,body, input { @extend .debug; }
 
-.blue   { background-color: $blue; }
+.blue { background-color: $blue; }
 
 .sr-only {
   position: absolute;
@@ -36,8 +36,6 @@ h1,h2,h3,h4,h5,h6,p,div,span,section,figure,img,ul,ol,li,a,footer,nav,article,bo
   &:hover { box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75); }
 }
 
-html { height: 100%; }
-
 .site {
   @include flex_direction_wrap_justify_align(flex, column, initial, initial, initial);
   background-color: $navy;
@@ -48,26 +46,31 @@ html { height: 100%; }
   }
 }
 
-h1, h2 {
-  letter-spacing: 1px;
-}
-
 h2 {
-  width: 95%;
+  flex: 1 1 auto;
+  width: 100%;
 }
 
 h1, h2, h3 {
   text-align: center;
-  background-color: $grey;
-  border: 2px solid $black;
   padding: .4em .4em;
 }
 
 p {
   margin: 0.5em 25px;
-  font-size: 1.2em;
+  font-size: 1em;
   color: $black;
   display: block;
+  line-height: 110%;
+}
+
+img {
+  opacity: 1;
+  transition: opacity 0.3;
+}
+
+img[data-src] {
+  opacity: 0;
 }
 
 ul {
@@ -94,21 +97,13 @@ figure {
   }
 }
 
-// FOOTER
 footer {
   border-top: 1px solid $black;
   background-color: $blue;
   box-shadow: 0px -2px 7px 0px rgba(50, 50, 50, 0.75);
 }
 
-// CRUD LINK CONTAINER
-.crudLinkContainer {
-  @include flex_direction_wrap_justify_align(flex, row, wrap, space-around, center);
-  border: 1px solid $black;
-  margin: 0 20px;
-}
 
-// FLASH MESSAGE CSS
 .flash_message {
   @include flex_direction_wrap_justify_align(flex, row, wrap, center, center);
   @include color_size_weight_family($black, 2em, bold, $font_family);
@@ -116,6 +111,12 @@ footer {
   .flash_error   { @include borderAndBGColor($errorBorder, $error) }
   .flash_success { @include borderAndBGColor($successBorder, $success)}
   .flash_notice  { @include borderAndBGColor($noticeBorder, $notice) }
+}
+
+.crudLinkContainer {
+  @include flex_direction_wrap_justify_align(flex, row, wrap, space-around, center);
+  border: 1px solid $black;
+  margin: 0 20px;
 }
 
 .socialMediaContainer {

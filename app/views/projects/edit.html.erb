@@ -3,7 +3,8 @@
 <section>
   <figure class="projectSection__figure">
     <%= link_to "#{@project.url}", class:"projectSection__Link" do %>
-      <%= image_tag("#{@project.avatar.url}",
+      <%= image_tag("",
+      data: { "#{@project.avatar.url}" },
       width: "300",
       height: "300",
       alt: "#{@project.description}",

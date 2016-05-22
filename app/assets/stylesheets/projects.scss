@@ -1,12 +1,13 @@
 .projectsSection {
-  @include flex_direction_wrap_justify_align(flex, row, wrap, space-around, initial);
+  @include flex_direction_wrap_justify_align(flex, row, wrap, space-around, center);
   .projectCard {
-    @include flex_direction_wrap_justify_align(flex, column, nowrap, initial, initial);
+    @include flex_direction_wrap_justify_align(flex, column, wrap, initial, initial);
     width: 45%;
     margin-bottom: 20px;
     background-color: $grey;
     border: 1px solid $black;
-    border-radius: 5px;
+    border-radius: 10px;
+    height: 900px;
     p {
       border: 1px solid $black;
       padding: 5px;
@@ -20,11 +21,12 @@
     }
     .projectCard__header {
       align-self: center;
-      width: 90%;
+      // width: 100%;
     }
     a {
       display: flex;
       justify-content: center;
+
     }
     .projectCard__url {
       display: inline-block;
