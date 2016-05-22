@@ -62,8 +62,8 @@
 * [Meta Tags](https://github.com/kpumuk/meta-tags)
 * [Dalli](https://github.com/petergoldstein/dalli)
 * [Memcachier](https://github.com/memcachier/dalli)
-* [Launchy]()
-* [Sass Rails]()
+* [Launchy](https://github.com/copiousfreetime/launchy)
+* [Sass Rails](https://github.com/rails/sass-rails)
  
 ##Author
 
