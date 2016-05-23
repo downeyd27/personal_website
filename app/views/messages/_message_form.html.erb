@@ -1,0 +1,4 @@
+<%= form_tag reply_messages_path, method: :post, class:"" do %>
+  <%= text_area_tag :body, "", placeholder:"Drop me a line", size: "36x12"  %>
+  <%= submit_tag "Send" %>
+<% end %>

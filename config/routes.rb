@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'messages/reply'
+  # get 'messages/reply'
 
   root 'static_pages#index'
 
@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resource :messages do
     collection do
       post 'reply'
+      get 'reply'
     end
   end
 

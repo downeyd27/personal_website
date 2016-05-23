@@ -1,18 +1,7 @@
-<h1>Messages#reply</h1>
-<p>Find me in app/views/messages/reply.html.erb</p>
+<%= content_for :title do %><%= action_name %><% end %>
+<h1>Contact me</h1>
+
 
 <%= form_tag reply_messages_path, method: :post, class: "navbar-form navbar-left search-form" do %>
-  <%# text_field_tag(
-    :From,
-    params[:From],
-    placeholder:"Enter phone number",
-    class: "form-control"
-  ) %>
-  <%# text_field_tag(
-      :Body,
-      params[:Body],
-      placeholder: "Body",
-      class: "form-control"
-  ) %>
-  <%= submit_tag "Send" %>
+  <%= render "message_form" %>
 <% end %>
