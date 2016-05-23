@@ -1,0 +1,24 @@
+<h1>Messages#reply</h1>
+<p>Find me in app/views/messages/reply.html.erb</p>
+
+<%= form_tag reply_messages_path, class: "navbar-form navbar-left search-form" do %>
+  <%# phone_field_tag(
+    :From,
+    params[:From],
+    placeholder:"Enter phone number",
+    class: "form-control"
+  ) %>
+  <%# phone_field_tag(
+    :To,
+    params[:To],
+    value:"+18056805036",
+    class: "form-control"
+  ) %>
+  <%# text_field_tag(
+      :Body,
+      params[:Body],
+      placeholder: "Body",
+      class: "form-control"
+  ) %>
+  <%= submit_tag "Send" %>
+<% end %>
