@@ -6,6 +6,7 @@ class MessagesController < ApplicationController
   #skip_before_filter :authenticate_user!, :only => "reply"
 
   def new
+    boot_twilio
   end
 
   def reply
