@@ -17,11 +17,13 @@ gem 'newrelic_rpm'
 gem 'paperclip'
 gem 'puma'
 gem 'pg'
+gem 'phony'
 gem 'rack-offline'
 gem 'rails', '4.2.6'
 gem 'sass-rails', '~> 5.0'
 gem 'sprockets', '~> 3.0'
 gem 'turbolinks'
+gem 'twilio-ruby', '~> 4.11.1'
 gem 'uglifier', '>= 1.3.0'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
