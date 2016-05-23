@@ -55,6 +55,7 @@ class MessagesController < ApplicationController
       to:   '18056805036',
       body: "#{body}",
     })
+    flash[:success] = "Thank you for sending me a message!"
     redirect_to root_path
   end
 
@@ -70,7 +71,7 @@ class MessagesController < ApplicationController
     def send_message(phone_number, alert_message, image_url)
 
       @twilio_number = ENV['TWILIO_NUMBER']
-      
+
       boot_twilio
 
       message = @client.account.messages.create(
