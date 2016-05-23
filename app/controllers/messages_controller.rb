@@ -6,14 +6,18 @@ class MessagesController < ApplicationController
   #skip_before_filter :authenticate_user!, :only => "reply"
 
   def new
-    boot_twilio
+    account_sid = Rails.application.secrets.twilio_sid
+    auth_token  = Rails.application.secrets.twilio_token
+    @client = Twilio::REST::Client.new account_sid, auth_token
   end
 
   def reply
     body = params[:body]
     from_phone_number = params[:phone]
+    account_sid = Rails.application.secrets.twilio_sid
+    auth_token  = Rails.application.secrets.twilio_token
+    @client = Twilio::REST::Client.new account_sid, auth_token
 
-    boot_twilio
     @twilio_number = Rails.application.secrets.twilio_number
 
     @client.account.messages.create({
