@@ -23,7 +23,7 @@ class MessagesController < ApplicationController
     @client.account.messages.create({
       from: @twilio_number,
       # from: '+15005550006', # Twilio test number
-      to:   '18056805036',
+      to:   '19252128979',
       body: "#{body}",
     })
     redirect_to root_path
