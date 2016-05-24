@@ -20,11 +20,16 @@
 * Guard files and use [LiveReload](https://livereload.com/) for development efficiency.
 * Optimized for SEO, Mobile, Usability, Environment Integration, and Performance with the chrome extension [Web Developer Checklist](https://webdevchecklist.com/).
 
+## API's
+* [Twilio Website](https://www.twilio.com/)
+* [Twilio Ruby on Rails tutorial](https://www.twilio.com/docs/tutorials/walkthrough/server-notifications/ruby/rails)
+Integrate the Twilio API to allow a user visiting my website to contact me via a text message.  (BUG: After hitting contact button refresh the page and the form to send me a text will appear.)
+
 ## TODO
 
+* Fix issue: After hitting contact button you must refresh page manually to view the page contents.
 * Refactor Project model.  Separate Projects's avatar(image)into its own Image class, so a Project can have many Images and an Image belongs to a Project.
 * Add side bar with list of skills
-* Add twilio api to integrate sending messages to my phone from a 'send me feedback.'
 * Change styling colors and verify their accessibility
 * When static image urls point to Amazon CloudFront distribution linked to Amazon S3 bucket 403 forbidden error occurs.
 * Remove second title tag created from display_meta_data method
