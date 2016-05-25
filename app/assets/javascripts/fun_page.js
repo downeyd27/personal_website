@@ -61,19 +61,11 @@ $('#clear-local-storage').on('click', function clearLocalStorage(){
 
 // GEO LOCATION API JS
 
-// function showPosition(position) {
-//   console.log("latitude  is: " + position.coords.latitude);
-//   console.log("longitude is: " + position.coords.longitude);
-// }
-//
-// function onError(err) {
-//   console.log("Could not get the position");
-// }
-
 var displayCoords = document.getElementById("geo-message");
+
 function getLocation(){
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
+    navigator.geolocation.getCurrentPosition(showPosition, errorPosition);
   }
   else {
     displayCoords.innerHTML = "Geolocation API is not supported by your browser.";
@@ -84,22 +76,29 @@ function showPosition(position) {
   displayCoords.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
   console.log("Latitude  is: " + position.coords.latitude);
   console.log("Longitude is: " + position.coords.longitude);
+  console.log("Longitude is: " + position.coords.longitude);
 }
 
-function onError(err) {
-    console.log("Could not get the position");
+function errorPosition(error) {
+  var info = "Error during gelocation: ";
+  
+  switch (error.code) {
+    case error.TIMEOUT:
+      info += "The request to get user location timed out.";
+      break;
+    case error.PERMISSION_DENIED:
+      info += "User denied the request for Geolcation.";
+      break;
+    case error.POSITION_UNAVAILABLE:
+      info += "Location information is unavailable.";
+      break;
+    case error.UKNOWN_ERROR:
+      info += "An uknown error occured.";
+      break;
+  }
+  console.log(info);
 }
 
 $("#remove-location").on("click", function removePosition(){
   displayCoords.innerHTML = "";
 });
-
-
-// function getLocation() {
-//   if (navigator.geolocation) {
-//     navigator.geolocation.getCurrentPosition(showPosition);
-//   }
-//   else {
-//     displayCoordinates.innerHTML = "Geolocation is not supported by this browser.";
-//   }
-// }
