@@ -3,7 +3,7 @@ class  Project < ActiveRecord::Base
                         :description,
                         :purpose,
                         :technology,
-                        :urlw
+                        :url
 
   # TODO: "Figure out how to reset test data base after tests so there is not more than one unique name in the data base when testing for name uniqueness. Test database builds to have LOTS of examples."
   # validates_uniqueness_of :name
@@ -17,42 +17,13 @@ class  Project < ActiveRecord::Base
     square: '200x200#',
     medium: '300x300>'
   },
-  default_url: "https://#{Rails.application.secrets.s3_host_name}/#{Rails.application.secrets.s3_bucket_name}/images/:style/missing.png"
+  default_url:  "https://#{Rails.application.secrets.s3_host_name}/#{Rails.application.secrets.s3_bucket_name}/images/:style/missing.png",
+  storage: :s3,
+  s3_host_name:      "s3-us-west-2.amazonaws.com",
+  access_key_id:     Rails.application.secrets.aws_access_key_id,
+  secret_access_key: Rails.application.secrets.aws_secret_access_key
+
 
   # Validate the attached image is image/jpg, image/png, etc
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
-
-  # s3_credentials: Proc.new{ |a| a.instance.s3_credentials }
-
-  # TODO: Figure out if s3_credentials are no longer necessary in config/environments/production and config/environments/development
-  # def s3_credentials
-  #   {
-  #     bucket:        "downeyd27",
-  #     # TODO: Why can't host s3_host_name work with secrets
-  #     s3_host_name:  "s3-us-west-2.amazonaws.com",
-  #     # access_key_id: Rails.application.secrets.aws_access_key_id,
-  #     # secret_access_key: Rails.application.secrets.aws_secret_access_key,
-  #     access_key_id: ENV["AWS_ACCESS_KEY_ID"],
-  #     secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"],
-  #   }
-  # end
-  after_save    :expire_project_all_cache
-  after_destroy :expire_project_all_cache
-
-  def self.all_cached
-    Rails.cache.fetch('Project.all', expires_in: 2.minutes) { all }
-  end
-
-  def self.cache_find(id)
-    Rails.cache.fetch(['project, id'], expires_in: 2.minutes) { find(id) }
-  end
-
-  private
-    def expire_individual_cache
-      Rails.cache.delete(['project, id'])
-    end
-
-    def expire_project_all_cache
-      Rails.cache.delete('Project.all')
-    end
 end

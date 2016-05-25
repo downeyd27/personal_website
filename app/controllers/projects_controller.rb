@@ -2,9 +2,8 @@ class ProjectsController < ApplicationController
   before_filter :find_project, only: [:show, :edit, :update, :destroy]
 
   def index
-    @stats = Rails.cache.stats.first.last
-    @projects = Project.all_cached
-    @project = Project.new
+    @projects = Project.all
+    @project  = Project.new
   end
 
   def new
@@ -61,6 +60,6 @@ class ProjectsController < ApplicationController
     end
 
     def find_project
-      @project = Project.cache_find(params[:id])
+      @project = Project.find(params[:id])
     end
 end
