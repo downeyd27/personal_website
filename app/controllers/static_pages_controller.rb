@@ -7,6 +7,6 @@ class StaticPagesController < ApplicationController
 
   def fun_page
     @description = "A playground page for displaying mini components of stuff
-    I am learning about. "
+    I am learning about."
   end
 end

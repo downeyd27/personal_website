@@ -1,7 +1,17 @@
 <%= content_for :title do %><%= action_name %><% end %>
 <div class="fun-page-container">
   <h2>Fun Page!</h2>
-    <div class="local-storage">
-      
-    </div>
+  <div class="local-storage">
+    <h3>locaStorage API in action</h3>
+      <output id="counter"></output>
+
+      <button onclick="displayAllLocalStorageItems()">
+        Show all data in localStorage
+      </button>
+      <output id="list"></output>
+
+      <button onclick="addItemToLocalStorage()">Add data to localStorage</button>
+      <button onclick="removeItemFromLocalStorage()">Remove data from localStorage</button>
+      <button onclick="clearLocalStorage()">Clear data in localStorage</button>
+  </div>
 </div>
