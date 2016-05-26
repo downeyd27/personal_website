@@ -9,20 +9,6 @@ function getCountValue() {
   console.log(localStorage.numberOfPageReloads);
 }
 
-function displayAllLocalStorageItems() {
-  // Clear list before displaying
-  document.getElementById('list').innerHTML = "";
-
-  for(var i = 0; i < localStorage.length; i++) {
-    var key   = localStorage.key(i);
-    var value = localStorage[key];
-    console.log(key + ": " + value);
-    var li =  document.createElement('li');
-    li.innerHTML = key + ": " + value;
-    document.getElementById('list').insertBefore(li, null);
-  }
-}
-
 $('#show-local-storage').on("click", function displayAllLocalStorageItems(){
   // Clear list before displaying
   document.getElementById('list').innerHTML = "";
@@ -57,6 +43,9 @@ $('#clear-local-storage').on('click', function clearLocalStorage(){
 // GEO LOCATION API JS
 
 window.onload = function() {
+  var startingPosition;
+  $("#trip-meter").hide();
+
   $("#remove-location").on("click", function(){
     $("#trip-meter").hide();
   });
@@ -65,7 +54,7 @@ window.onload = function() {
     $("#trip-meter").show();
   });
 
-  var startingPosition;
+
 
   navigator.geolocation.getCurrentPosition(showPosition, showError);
 
@@ -73,6 +62,7 @@ window.onload = function() {
     startingPosition = position;
     document.getElementById("starting-latitude").innerHTML = startingPosition.coords.latitude;
     document.getElementById("starting-longitude").innerHTML = startingPosition.coords.longitude;
+    document.getElementById("altitude").innerHTML = startingPosition.coords.altitude || "Can't get altitude information.";
   }
 
   function showError(error) {
@@ -95,12 +85,14 @@ window.onload = function() {
     alert(info);
   }
 
+  // Watch users position and calculate distance between start position and
+  // the current position.
   navigator.geolocation.watchPosition(function(position) {
     document.getElementById('current-latitude').innerHTML = position.coords.latitude;
     document.getElementById('current-longitude').innerHTML = position.coords.longitude;
     document.getElementById('distance-travelled').innerHTML =
     calculateDistance(startingPosition.coords.latitude, startingPosition.coords.longitude, position.coords.latitude, position.coords.longitude);
-  }, showError,{ enableHighAccuracy:true, maximumAge:30000, timeout:27000 });
+  }, showError,{ enableHighAccuracy:true, maximumAge:300000, timeout:270000 });
 
   function calculateDistance(lat1, lon1, lat2, lon2) {
     var R = 6371; // km
@@ -117,4 +109,23 @@ window.onload = function() {
   Number.prototype.toRad = function() {
     return this * Math.PI / 180;
   };
+
+
 }; // Closes on Window load
+/////////////////////////////////////////
+function initMap() {
+  // Default google maps position
+  var centerpos = new google.maps.LatLng(48.579400,7.7519);
+
+  // default options for the google map
+  var optionsGmaps = {
+    center: centerpos,
+    navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    zoom: 15
+  };
+
+  // Init map object
+  var map = new google.maps.Map(document.getElementById("map"), optionsGmaps);
+
+}
