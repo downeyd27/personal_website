@@ -76,7 +76,7 @@ window.onload = function() {
       info += "The request to get user location timed out.";
       break;
       case error.PERMISSION_DENIED:
-      info += "User denied the request for Geolcation.";
+      info += "User denied the request for Geolocation.";
       break;
       case error.POSITION_UNAVAILABLE:
       info += "Location information is unavailable.";
@@ -93,6 +93,26 @@ window.onload = function() {
     document.getElementById('current-longitude').innerHTML = position.coords.longitude;
     document.getElementById('distance-travelled').innerHTML =
     calculateDistance(startingPosition.coords.latitude, startingPosition.coords.longitude, position.coords.latitude, position.coords.longitude);
+  }, function(error) {
+    var info = "Error during gelocation: ";
+
+    switch (error.code) {
+      case error.TIMEOUT:
+      info += "The request to get user location timed out.";
+      break;
+      case error.PERMISSION_DENIED:
+      info += "User denied the request for Geolocation.";
+      break;
+      case error.POSITION_UNAVAILABLE:
+      info += "Location information is unavailable.";
+      break;
+      case error.UKNOWN_ERROR:
+      info += "An uknown error occured.";
+      break;
+    }
+    alert(info);
+  },{
+    enableHighAccuracy:true, maximumAge:30000, timeout:27000
   });
 
   function calculateDistance(lat1, lon1, lat2, lon2) {
@@ -104,28 +124,18 @@ window.onload = function() {
             Math.sin(dLon / 2) * Math.sin(dLon / 2);
     var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     var d = R * c;
-    return d;
+    // TODO: convert number into
+    return d + " km";
   }
   Number.prototype.toRad = function() {
     return this * Math.PI / 180;
   };
 
+  $("#remove-location").on("click", function(){
+    $("#trip-meter").hide();
+  });
+
+  $("#get-location").on("click", function(){
+    $("#trip-meter").show();
+  });
 };
-
-var displayCoords = document.getElementById("geo-message");
-function getLocation(){
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition, errorPosition);
-  }
-  else {
-    displayCoords.innerHTML = "Geolocation API is not supported by your browser.";
-  }
-}
-
-$("#remove-location").on("click", function(){
-  $("#trip-meter").hide();
-});
-
-$("#get-location").on("click", function(){
-  $("#trip-meter").show();
-});
