@@ -61,8 +61,58 @@ $('#clear-local-storage').on('click', function clearLocalStorage(){
 
 // GEO LOCATION API JS
 
-var displayCoords = document.getElementById("geo-message");
+window.onload = function() {
+  var startingPosition;
 
+  navigator.geolocation.getCurrentPosition(function(position) {
+    startingPosition = position;
+    document.getElementById("starting-latitude").innerHTML = startingPosition.coords.latitude;
+    document.getElementById("starting-longitude").innerHTML = startingPosition.coords.longitude;
+  }, function(error) {
+    var info = "Error during gelocation: ";
+
+    switch (error.code) {
+      case error.TIMEOUT:
+      info += "The request to get user location timed out.";
+      break;
+      case error.PERMISSION_DENIED:
+      info += "User denied the request for Geolcation.";
+      break;
+      case error.POSITION_UNAVAILABLE:
+      info += "Location information is unavailable.";
+      break;
+      case error.UKNOWN_ERROR:
+      info += "An uknown error occured.";
+      break;
+    }
+    alert(info);
+  });
+
+  navigator.geolocation.watchPosition(function(position) {
+    document.getElementById('current-latitude').innerHTML = position.coords.latitude;
+    document.getElementById('current-longitude').innerHTML = position.coords.longitude;
+    document.getElementById('distance-travelled').innerHTML =
+    calculateDistance(startingPosition.coords.latitude, startingPosition.coords.longitude, position.coords.latitude, position.coords.longitude);
+  });
+
+  function calculateDistance(lat1, lon1, lat2, lon2) {
+    var R = 6371; // km
+    var dLat = (lat2 - lat1).toRad();
+    var dLon = (lon2 - lon1).toRad();
+    var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+            Math.cos(lat1.toRad()) * Math.cos(lat2.toRad()) *
+            Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    var d = R * c;
+    return d;
+  }
+  Number.prototype.toRad = function() {
+    return this * Math.PI / 180;
+  };
+
+};
+
+var displayCoords = document.getElementById("geo-message");
 function getLocation(){
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition, errorPosition);
@@ -72,33 +122,10 @@ function getLocation(){
   }
 }
 
-function showPosition(position) {
-  displayCoords.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
-  console.log("Latitude  is: " + position.coords.latitude);
-  console.log("Longitude is: " + position.coords.longitude);
-  console.log("Longitude is: " + position.coords.longitude);
-}
+$("#remove-location").on("click", function(){
+  $("#trip-meter").hide();
+});
 
-function errorPosition(error) {
-  var info = "Error during gelocation: ";
-  
-  switch (error.code) {
-    case error.TIMEOUT:
-      info += "The request to get user location timed out.";
-      break;
-    case error.PERMISSION_DENIED:
-      info += "User denied the request for Geolcation.";
-      break;
-    case error.POSITION_UNAVAILABLE:
-      info += "Location information is unavailable.";
-      break;
-    case error.UKNOWN_ERROR:
-      info += "An uknown error occured.";
-      break;
-  }
-  console.log(info);
-}
-
-$("#remove-location").on("click", function removePosition(){
-  displayCoords.innerHTML = "";
+$("#get-location").on("click", function(){
+  $("#trip-meter").show();
 });
