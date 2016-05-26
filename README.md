@@ -2,10 +2,10 @@
  * [Homepage](https://dillondowney.herokuapp.com/)
  * [Github Project](https://github.com/downeyd27/personal_website)
  * [Email me](mailto:dillondowney@gmail.com)
-  
+
 ## Description
 
-[Personal portfolio website](https://dillondowney.herokuapp.com/) to primaly showcase my web development projects.  This will also be a future hub for my personal hobbies and endeavors.
+[Personal portfolio website](https://dillondowney.herokuapp.com/) to primaly showcase my web development projects.  This will also be a future hub for my personal hobbies and endeavors.  Visit my fun page for a random grouping of mini projects.
 
 ## Features
 
@@ -19,6 +19,7 @@
 * [W3C CSS Validator](https://www.css-validator.org/validator?uri=dillondowney.herokuapp.com&profile=css21&usermedium=all&warning=1&lang=en)
 * Guard files and use [LiveReload](https://livereload.com/) for development efficiency.
 * Optimized for SEO, Mobile, Usability, Environment Integration, and Performance with the chrome extension [Web Developer Checklist](https://webdevchecklist.com/).
+* Demonstration of [HTML5 Local Storage API](http://www.w3schools.com/html/html5_webstorage.asp).
 
 ## API's
 * [Twilio Website](https://www.twilio.com/)
@@ -33,13 +34,13 @@ Integrate the Twilio API to allow a user visiting my website to contact me via a
 * Change styling colors and verify their accessibility
 * When static image urls point to Amazon CloudFront distribution linked to Amazon S3 bucket 403 forbidden error occurs.
 * Remove second title tag created from display_meta_data method
- 
+
  ###[Google PageSpeed recommendations](https://developers.google.com/speed/pagespeed/insights/?url=dillondowney.herokuapp.com&tab=desktop)
 
  * [Leverage broswer caching](https://devcenter.heroku.com/articles/http-caching-ruby-rails)
  * Mobile viewport is 412px with a 411px viewport(h2 elements falling outside viewport)
  * Eliminate render-blocking JavaScript and CSS in above-the-fold content. Asychronously load from Amazon CloudFront.
- * Optimize images for mobile by losslessly compressing images from CloudFront 
+ * Optimize images for mobile by losslessly compressing images from CloudFront
 
 ## Dependencies
 
@@ -69,7 +70,7 @@ Integrate the Twilio API to allow a user visiting my website to contact me via a
 * [Memcachier](https://github.com/memcachier/dalli)
 * [Launchy](https://github.com/copiousfreetime/launchy)
 * [Sass Rails](https://github.com/rails/sass-rails)
- 
+
 ##Author
 
 [Dillon Downey](https://github.com/downeyd27/)

@@ -5,14 +5,20 @@
     <%= link_to "Home", root_path %>
     <ul>
       <li>
-        <%= link_to "Old Blog", "https://downeyd27.github.io/blog/blog-index.html",
-        target: "blank" %>
+        <%= link_to "Old Blog",
+          "https://downeyd27.github.io/blog/blog-index.html",
+          target:"blank" %>
       </li>
       <li>
-        <%= link_to "Resume", "https://resume.creddle.io/resume/1rktq4ubpei"  %>
+        <%= link_to "Resume",
+          "https://resume.creddle.io/resume/1rktq4ubpei",
+          target:"blank"  %>
       </li>
       <li>
         <%= link_to "Contact", new_messages_path %>
+      </li>
+      <li>
+        <%= link_to "Fun Page", fun_page_path %>
       </li>
     </ul>
   </div>

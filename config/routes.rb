@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-  # get 'messages/reply'
-
   root 'static_pages#index'
 
-  resources :projects
+  get  '/fun_page' => 'static_pages#fun_page'
 
+  resources :projects
   resource :messages do
     collection do
       post 'reply'

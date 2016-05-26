@@ -4,8 +4,8 @@
   <figure class="projectSection__figure">
     <%= link_to "#{@project.url}", class:"projectSection__Link" do %>
       <%= image_tag("",
-      data: { "#{@project.avatar.url}" },
-      width: "300",
+      data:   "#{@project.avatar.url}",
+      width:  "300",
       height: "300",
       alt: "#{@project.description}",
       class: " projectSection__image") %>
@@ -13,7 +13,6 @@
     <!-- FORM -->
     <%= render "projects/form" %>
   </figure>
-
   <div class=" crudLinks">
     <%= link_to "Edit Project Page", edit_project_path(@project) %>
     <%= link_to "Delete Project", project_path(@project),
