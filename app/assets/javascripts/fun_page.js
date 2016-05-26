@@ -37,12 +37,6 @@ $('#show-local-storage').on("click", function displayAllLocalStorageItems(){
   }
 });
 
-
-
-
-
-
-
 $("#add-item-to-local-storage").on("click", function addItemToLocalStorage(){
   localStorage.setItem("Junior_Web_Developer", "Dillon Downey");
   displayAllLocalStorageItems();
@@ -58,17 +52,22 @@ $('#clear-local-storage').on('click', function clearLocalStorage(){
   displayAllLocalStorageItems();
 });
 
+///////////////////////////////////////////////////
 
 // GEO LOCATION API JS
 
 window.onload = function() {
   var startingPosition;
 
-  navigator.geolocation.getCurrentPosition(function(position) {
+  navigator.geolocation.getCurrentPosition(showPosition, showError);
+
+  function showPosition(position) {
     startingPosition = position;
     document.getElementById("starting-latitude").innerHTML = startingPosition.coords.latitude;
     document.getElementById("starting-longitude").innerHTML = startingPosition.coords.longitude;
-  }, function(error) {
+  }
+
+  function showError(error) {
     var info = "Error during gelocation: ";
 
     switch (error.code) {
@@ -86,7 +85,7 @@ window.onload = function() {
       break;
     }
     alert(info);
-  });
+  }
 
   navigator.geolocation.watchPosition(function(position) {
     document.getElementById('current-latitude').innerHTML = position.coords.latitude;
