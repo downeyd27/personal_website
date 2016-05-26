@@ -21,6 +21,7 @@
 * Optimized for SEO, Mobile, Usability, Environment Integration, and Performance with the chrome extension [Web Developer Checklist](https://webdevchecklist.com/).
 * Demonstration of [HTML5 Local Storage API](http://www.w3schools.com/html/html5_webstorage.asp).
 * Demonstartion of using [HTML5 Geolocation API](http://www.w3schools.com/html/html5_geolocation.asp) to find users starting position, current position, and distance travelled with error handling.
+* Table of Contents button to display heading tag outline for better accessibility.
 
 ## API's
 * [Twilio Website](https://www.twilio.com/)
