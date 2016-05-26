@@ -57,6 +57,14 @@ $('#clear-local-storage').on('click', function clearLocalStorage(){
 // GEO LOCATION API JS
 
 window.onload = function() {
+  $("#remove-location").on("click", function(){
+    $("#trip-meter").hide();
+  });
+
+  $("#get-location").on("click", function(){
+    $("#trip-meter").show();
+  });
+
   var startingPosition;
 
   navigator.geolocation.getCurrentPosition(showPosition, showError);
@@ -92,27 +100,7 @@ window.onload = function() {
     document.getElementById('current-longitude').innerHTML = position.coords.longitude;
     document.getElementById('distance-travelled').innerHTML =
     calculateDistance(startingPosition.coords.latitude, startingPosition.coords.longitude, position.coords.latitude, position.coords.longitude);
-  }, function(error) {
-    var info = "Error during gelocation: ";
-
-    switch (error.code) {
-      case error.TIMEOUT:
-      info += "The request to get user location timed out.";
-      break;
-      case error.PERMISSION_DENIED:
-      info += "User denied the request for Geolocation.";
-      break;
-      case error.POSITION_UNAVAILABLE:
-      info += "Location information is unavailable.";
-      break;
-      case error.UKNOWN_ERROR:
-      info += "An uknown error occured.";
-      break;
-    }
-    alert(info);
-  },{
-    enableHighAccuracy:true, maximumAge:30000, timeout:27000
-  });
+  }, showError,{ enableHighAccuracy:true, maximumAge:30000, timeout:27000 });
 
   function calculateDistance(lat1, lon1, lat2, lon2) {
     var R = 6371; // km
@@ -129,12 +117,4 @@ window.onload = function() {
   Number.prototype.toRad = function() {
     return this * Math.PI / 180;
   };
-
-  $("#remove-location").on("click", function(){
-    $("#trip-meter").hide();
-  });
-
-  $("#get-location").on("click", function(){
-    $("#trip-meter").show();
-  });
-};
+}; // Closes on Window load
