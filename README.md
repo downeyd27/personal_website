@@ -5,7 +5,7 @@
 
 ## Description
 
-[Personal portfolio website](https://dillondowney.herokuapp.com/) to primaly showcase my web development projects.  This will also be a future hub for my personal hobbies and endeavors.  Visit my fun page for a random grouping of mini projects.
+[Personal portfolio website](https://dillondowney.herokuapp.com/) to showcase my web development projects.  This will also be a future hub for my personal hobbies and endeavors.  Visit my fun page for a random grouping of mini projects.
 
 ## Features
 
@@ -20,6 +20,7 @@
 * Guard files and use [LiveReload](https://livereload.com/) for development efficiency.
 * Optimized for SEO, Mobile, Usability, Environment Integration, and Performance with the chrome extension [Web Developer Checklist](https://webdevchecklist.com/).
 * Demonstration of [HTML5 Local Storage API](http://www.w3schools.com/html/html5_webstorage.asp).
+* Demonstartion of using [HTML5 Geolocation API](http://www.w3schools.com/html/html5_geolocation.asp) to find users starting position, current position, and distance travelled with error handling.
 
 ## API's
 * [Twilio Website](https://www.twilio.com/)
@@ -28,7 +29,7 @@ Integrate the Twilio API to allow a user visiting my website to contact me via a
 
 ## TODO
 
-* Fix issue: After hitting contact button you must refresh page manually to view the page contents.
+* Fix issue: After hitting a route you must refresh page manually to view the page contents. I believe it started after adding twilio /messages/reply route.
 * Refactor Project model.  Separate Projects's avatar(image)into its own Image class, so a Project can have many Images and an Image belongs to a Project.
 * Add side bar with list of skills
 * Change styling colors and verify their accessibility
