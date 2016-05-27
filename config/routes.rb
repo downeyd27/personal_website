@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   root 'static_pages#index'
 
   get  '/fun_page' => 'static_pages#fun_page'
-
+  get  '/googleef3be4909b8502a4.html', to: redirect('/public/googleef3be4909b8502a4.html')
+  
   resources :projects
   resource :messages do
     collection do
