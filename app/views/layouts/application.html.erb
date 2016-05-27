@@ -16,13 +16,15 @@
   <!-- TODO: 2 inline script blocks were found in the head between an external CSS file and another resource. To allow parallel downloading, move the inline script before the external CSS file, or after the next resource. -->
 </head>
 <body class="<%= controller_name %> <%= action_name %> site" itemscope itemtype="http://schema.org/Person">
-  <h1 class="sr-only">Dillon Downeys Website</h1>
-  <%= link_to "Skip to main content", "#mainSection", class:"sr-only" %>
-  <%= link_to "Skip to project section", "#projectSection", class:"sr-only" %>
-  <%= link_to "Skip to footer", "#footerSection", class:"sr-only" %>
-  <%= render "layouts/navbar" %>
-  <%= render "layouts/flash_message" %>
   <main id="mainSection" class="siteContent">
+    <header>
+      <h1 class="sr-only">Dillon Downeys Website</h1>
+      <%= link_to "Skip to main content", "#mainSection", class:"sr-only" %>
+      <%= link_to "Skip to project section", "#projectSection", class:"sr-only" %>
+      <%= link_to "Skip to footer", "#footerSection", class:"sr-only" %>
+      <%= render "layouts/navbar" %>
+      <%= render "layouts/flash_message" %>
+    </header>
     <%= yield %>
   </main>
   <%= render 'layouts/footer.html' %>

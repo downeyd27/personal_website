@@ -16,14 +16,14 @@ h1,h2,h3,h4,h5,h6,p,div,span,section,figure,img,ul,ol,li,a,footer,nav,article,bo
 .blue { background-color: $blue; }
 
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  border: 0;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(1px,1px,1px,1px) !important; // IE6, IE7
 }
 
 .btn {
